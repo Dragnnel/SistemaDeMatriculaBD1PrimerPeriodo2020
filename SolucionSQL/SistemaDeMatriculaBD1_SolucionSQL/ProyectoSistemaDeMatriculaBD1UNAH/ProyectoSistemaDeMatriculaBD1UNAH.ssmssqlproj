@@ -15,17 +15,17 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName />
         </ConnectionNode>
-        <ConnectionNode Name="DESKTOP-HMLAOH1:DESKTOP-HMLAOH1\alexa">
-          <Created>2020-03-25T14:31:38.8884033-06:00</Created>
+        <ConnectionNode Name="DESKTOP-HMLAOH1:is">
+          <Created>2020-03-25T14:53:12.0744107-06:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-HMLAOH1</Server>
-          <UserName />
-          <Authentication>Windows Authentication</Authentication>
+          <UserName>is</UserName>
+          <Authentication>SQL</Authentication>
           <InitialDB />
           <LoginTimeout>30</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+          <ApplicationName />
         </ConnectionNode>
         <ConnectionNode Name="DESKTOP-OQK3OK8:">
           <Created>2020-03-24T19:46:05.6840362-06:00</Created>
@@ -56,10 +56,16 @@
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>creacionDeTablas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="SQLQuery1.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>SQLQuery1.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
