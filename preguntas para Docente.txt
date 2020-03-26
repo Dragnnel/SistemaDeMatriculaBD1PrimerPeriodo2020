@@ -1,0 +1,42 @@
+Preguntas
+
+
+Relacion de Facultad y Centro Universitario 
+1:n O n:n
+
+
+Al normalizar la tabla empleado creamos dos tablas
+1 Tipo Empleado
+2 Cargo 
+
+Y nos generan muchas tablas normalizadas. 
+Coordinador
+Docente
+Decano
+Instructor
+
+
+
+
+Referencia Personal
+Parestento normalizamos en otra tabla o en un varchar 
+
+
+
+
+
+
+Instructor necesaria mente debe ser estudiante 
+
+
+
+
+Que si se puede una llave foranea ser primaria y foranea
+Que al coordinador y jefe de departamento 
+las clave primaria es
+idJefeDepartamento / idCoordinador
+idEmpleado
+fechaInicio 
+
+
+
