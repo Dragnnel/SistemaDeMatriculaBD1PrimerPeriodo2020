@@ -15,7 +15,12 @@ Docente
 Decano
 Instructor
 
-
+Que si se puede una llave foranea ser primaria y foranea
+Que al coordinador y jefe de departamento 
+las clave primaria es
+idJefeDepartamento / idCoordinador
+idEmpleado
+fechaInicio 
 
 
 Referencia Personal
@@ -31,12 +36,22 @@ Instructor necesaria mente debe ser estudiante
 
 
 
-Que si se puede una llave foranea ser primaria y foranea
-Que al coordinador y jefe de departamento 
-las clave primaria es
-idJefeDepartamento / idCoordinador
-idEmpleado
-fechaInicio 
+
+
+
+
+Tabla 
+Horario si es necesario tomarlo en cuenta 
+
+
+
+
+Requisitos de las clases
+si se manejaran varios 
+
+
+
+
 
 
 
