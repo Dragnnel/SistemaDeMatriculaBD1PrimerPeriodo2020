@@ -1,8 +1,7 @@
 Preguntas
 
-
 Relacion de Facultad y Centro Universitario 
-1:n O n:n
+ n:n
 
 
 Al normalizar la tabla empleado creamos dos tablas
@@ -18,7 +17,6 @@ Instructor
 Que si se puede una llave foranea ser primaria y foranea
 Que al coordinador y jefe de departamento 
 las clave primaria es
-idJefeDepartamento / idCoordinador
 idEmpleado
 fechaInicio 
 
@@ -28,21 +26,12 @@ Parestento normalizamos en otra tabla o en un varchar
 
 
 
-
-
-
 Instructor necesaria mente debe ser estudiante 
-
-
-
-
-
 
 
 
 Tabla 
 Horario si es necesario tomarlo en cuenta 
-
 
 
 
