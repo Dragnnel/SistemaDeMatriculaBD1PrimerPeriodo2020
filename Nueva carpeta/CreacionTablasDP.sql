@@ -206,7 +206,7 @@ CREATE TABLE CoordinadorAsignatura(idCoordinadorAsignatura INT PRIMARY KEY NOT N
 /*
 	Varios
 */
-CREATE TABLE PlanEstudio(idPlanEstidio INT PRIMARY KEY NOT NULL,
+CREATE TABLE PlanEstudio(idPlanEstudio INT PRIMARY KEY NOT NULL,
 						 nombre VARCHAR(80),
 						 duracionCarrera VARCHAR(25),
 						 totalUV INT,
@@ -255,5 +255,116 @@ CREATE TABLE DepartamentoCarrera(idDeptoCarrera INT PRIMARY KEY NOT NULL,
 								 coordinadorDepto INT,
 								 FOREIGN KEY(idCarrera) REFERENCES Carrera(idCarrera),
 								 FOREIGN KEY(jefeDepto) REFERENCES JefeDepartamento(idJefeDepto),
-								 FOREIGN KEY(coordinadorDepto) REFERENCES CoordinadorDepartamento(idCoordinadorDepto),
+								 FOREIGN KEY(coordinadorDepto) REFERENCES CoordinadorDepartamento(idCoordinadorDepto)
 								 )
+
+
+
+/* Estudiantes */
+
+CREATE TABLE NotaExamenAptitud(idNotaAptitud INT PRIMARY KEY NOT NULL,
+							   notaPaa INT,
+							   notaPam INT,
+							   notaPccns INT
+							   )
+
+
+CREATE TABLE TipoPeriodo(idTipoPeriodo INT PRIMARY KEY NOT NULL,
+						 descripcion VARCHAR(15)
+						 )
+
+
+CREATE TABLE Periodo(idPeriodo INT PRIMARY KEY NOT NULL,
+					fechaInicio DATE,
+					fechaFinalizacion DATE, /* POrque ño tienen VARCHAR*/
+					anio INT,
+					idTipoPeriodo INT,
+					FOREIGN KEY(idTipoPeriodo) REFERENCES TipoPeriodo(idTipoPeriodo)
+					)
+
+
+CREATE TABLE HistorialAcademico(idHistorial INT PRIMARY KEY NOT NULL,
+								indicePeriodo INT,
+								indiceGlobal INT,
+								idEstudiante INT,/* se convierten en una llave foranea */
+								idPeriodo INT
+								)
+
+
+CREATE TABLE NotaFinal(idNotaFinal INT PRIMARY KEY NOT NULL,
+					   descripcion VARCHAR(20)
+					   )
+
+
+CREATE TABLE Asignatura(idAsignatura INT PRIMARY KEY NOT NULL,
+						codigoAsignatura VARCHAR(15),
+						nombreAsignatura VARCHAR(45),
+						unidadesValorativas INT,
+						codAsignatura VARCHAR(20),
+						examenUnificado BIT(2),
+						poseeLaboratorio BIT(2),
+						idTipoPeriodo INT,
+					    FOREIGN KEY(idTipoPeriodo) REFERENCES IpoPeriodo(idTipoPeriodo)
+					    )
+
+						
+CREATE TABLE PensumAcademico(idAsignatura INT PRIMARY KEY NOT NULL,
+							 idPlanEstudio INT PRIMARY KEY NOT NULL
+							 )
+
+
+CREATE TABLE Requisitos(idAsignatura INT PRIMARY KEY NOT NULL,
+						idPlanEstudio INT PRIMARY KEY NOT NULL  /* DUDAS no se si dejaarla como lo tenemos en word o en lo otro*/
+						)
+
+
+CREATE TABLE Seccion(idSeccion INT PRIMARY KEY NOT NULL,
+                     horaInicial INT,
+					 horaFinal INT,
+					 observaciones VARCHAR(45),
+					 idDocente INT,
+					 idAula INT,
+					 idEdificio INT,
+					 idPeriodo INT,
+					 FOREIGN KEY(idDocente) REFERENCES Docente(idDocente),
+					 FOREIGN KEY(idAula) REFERENCES Aula(idAula),
+					 FOREIGN KEY(idEdificio) REFERENCES Edificio(idEdificio),
+					 FOREIGN KEY(idPeriodo) REFERENCES Periodo(idPeriodo),
+					 )
+
+					 
+CREATE TABLE Matricula(idMatricula INT PRIMARY KEY NOT NULL,
+					   fechaInicio DATE,
+					   fechaFin DATE,
+					   notaFinal INT,
+					   confirmacionPago BIT(2),
+					   idSeccion INT,
+					   idPeriodo INT,
+	                   idNotaFinal INT
+					   FOREIGN KEY(idSeccion) REFERENCES Seccion(idSeccion),
+					   FOREIGN KEY(idPeriodo) REFERENCES Periodo(idPeriodo),
+					   FOREIGN KEY(idNotaFinal) REFERENCES NotaFinal(idNotaFinal)
+					   )
+
+					   		 
+   					   					
+CREATE TABLE Estudiante(idEstudiante INT PRIMARY KEY NOT NULL,
+						perteneceDeportes BIT(2),
+						contrasenia VARCHAR(45),
+						idCentro INT,
+						idNotaAptitud INT,
+						idDeptoCarrera INT,
+						idpersona INT,
+						idHistorial INT,
+						idMatricula INT,
+						FOREIGN KEY(idCentro) REFERENCES CentroUniversitario(idCentro),
+						FOREIGN KEY(idNotaAptitud) REFERENCES NotaExamenAtitud(idNotaAptitud),
+						FOREIGN KEY(idDeptoCarrera) REFERENCES DepartamentoCarrera(idDeptoCarrera),
+						FOREIGN KEY(idPersona) REFERENCES Persona(idPersona),
+						FOREIGN KEY(idHistorial) REFERENCES HistorialAcademico(idHistorial),
+						FOREIGN KEY(idMatricula) REFERENCES Matricula(idMatricula),
+						)
+
+
+
+						
