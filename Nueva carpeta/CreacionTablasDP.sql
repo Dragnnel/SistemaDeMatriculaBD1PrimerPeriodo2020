@@ -139,5 +139,121 @@ CREATE TABLE Telefono(idTelefono INT PRIMARY KEY NOT NULL,
 					  )
 
 /*
-	
+	EMPLEADO
 */
+CREATE TABLE TipoEmpleado(idTipoEmpleado INT PRIMARY KEY NOT NULL,
+						  descripcion VARCHAR(50)
+						  )
+
+CREATE TABLE Cargo(idCargo INT PRIMARY KEY NOT NULL,
+				   tipoCargo VARCHAR(45)
+				   )
+
+CREATE TABLE Contrato(idContrato INT PRIMARY KEY NOT NULL,
+					  descripcion VARCHAR(45)
+					  )
+
+
+CREATE TABLE Empleado(idEmpleado INT NOT NULL,
+					  fechaInicio DATE NOT NULL,
+					  fechaFin DATE,
+					  idPersona VARCHAR(15),
+					  idDeptoCarrera INT,
+					  tipoEmpleado INT,
+					  cargo INT,
+					  contrato INT,
+					  PRIMARY KEY(idEmpleado, fechaInicio),
+					  FOREIGN KEY(idPersona) REFERENCES Persona(idPersona),
+					  FOREIGN KEY(idDeptoCarrera) REFERENCES DepartamentoCarrera(idDeptoCarrera),
+					  FOREIGN KEY(tipoEmpleado) REFERENCES TipoEmpleado(idTipoEmpleado),
+					  FOREIGN KEY(cargo) REFERENCES Cargo(idCargo),
+					  FOREIGN KEY(Contrato) REFERENCES Contrato(idContrato)
+					  )
+
+CREATE TABLE GradoAcademico(idGradoAcademico INT PRIMARY KEY NOT NULL,
+							tituloObtenido VARCHAR(50),
+							nombreInstitucion VARCHAR(45),
+							fechaAdquisicion DATE,
+							idEmpleado INT,
+							idPais INT
+							FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado),
+							FOREIGN KEY(idPais) REFERENCES Pais(idPais)
+							)
+
+CREATE TABLE Instructor(idInstructor INT PRIMARY KEY NOT NULL,
+						idEmpleado INT,
+						FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado)
+						)
+
+CREATE TABLE Docente(idDocente INT PRIMARY KEY NOT NULL,
+					 idEmpleado INT,
+					 idDepartamento INT,
+					 FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado),
+					 FOREIGN KEY(idDepartamento) REFERENCES DepartamentoCarrera(idDeptoCarrera)
+					 )
+
+CREATE TABLE CoordinadorAsignatura(idCoordinadorAsignatura INT PRIMARY KEY NOT NULL,
+								   fechaInicio DATE,
+								   fechaFin DATE,
+								   idAsignatura INT,
+								   idDocente INT,
+								   idEmpleado INT,
+								   FOREIGN KEY(idAsignatura) REFERENCES Asignatura(idAsignatura),
+								   FOREIGN KEY(idDocente) REFERENCES Docente(idDocente),
+								   FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado)
+								   )
+
+/*
+	Varios
+*/
+CREATE TABLE PlanEstudio(idPlanEstidio INT PRIMARY KEY NOT NULL,
+						 nombre VARCHAR(80),
+						 duracionCarrera VARCHAR(25),
+						 totalUV INT,
+						 fechaRevision DATE
+						 )
+
+CREATE TABLE Carrera(idCarrera INT PRIMARY KEY NOT NULL,
+					 nombreCarrera VARCHAR(100),
+					 requisitoIngreso INT,
+					 fechaCreacion DATE,
+					 idFacultad INT,
+					 idPlanEstudio INT,
+					 FOREIGN KEY(idFacultad) REFERENCES Facultad(idFacultad),
+					 FOREIGN KEY(idPlanEstudio) REFERENCES PlanEstudio(idPlanEstidio)
+					 )
+
+CREATE TABLE JefeDepartamento(idJefeDepto INT NOT NULL,
+							  fechaInicio DATE,
+							  fechaFin DATE,
+							  idEmpleado INT
+							  PRIMARY KEY(idJefeDepto, fechaInicio),
+							  FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado)
+							  )
+
+CREATE TABLE CoordinadorDepartamento(idCoordinadorDepto INT NOT NULL,
+									 fechaInicio DATE,
+									 fechaFin DATE,
+									 idEmpleado INT,
+									 PRIMARY KEY(idCoordinadorDepto, fechaInicio),
+									 FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado)
+									 )
+
+CREATE TABLE Decano(idDecano INT NOT NULL,
+					fechaInicio DATE,
+					fechaFin DATE,
+					idEmpleado INT,
+					idFacultad INT,
+					PRIMARY KEY(idDecano, fechaInicio),
+					FOREIGN KEY(idEmpleado) REFERENCES Empleado(idEmpleado),
+					FOREIGN KEY(idFacultad) REFERENCES Facultad(idFacultad)
+					)
+
+CREATE TABLE DepartamentoCarrera(idDeptoCarrera INT PRIMARY KEY NOT NULL,
+								 idCarrera INT,
+								 jefeDepto INT,
+								 coordinadorDepto INT,
+								 FOREIGN KEY(idCarrera) REFERENCES Carrera(idCarrera),
+								 FOREIGN KEY(jefeDepto) REFERENCES JefeDepartamento(idJefeDepto),
+								 FOREIGN KEY(coordinadorDepto) REFERENCES CoordinadorDepartamento(idCoordinadorDepto),
+								 )
