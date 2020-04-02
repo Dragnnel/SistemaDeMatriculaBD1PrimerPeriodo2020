@@ -304,7 +304,7 @@ CREATE TABLE Asignatura(idAsignatura INT PRIMARY KEY NOT NULL,
 						examenUnificado BIT(2),
 						poseeLaboratorio BIT(2),
 						idTipoPeriodo INT,
-					    FOREIGN KEY(idTipoPeriodo) REFERENCES IpoPeriodo(idTipoPeriodo)
+					    FOREIGN KEY(idTipoPeriodo) REFERENCES TipoPeriodo(idTipoPeriodo)
 					    )
 
 						
@@ -337,7 +337,7 @@ CREATE TABLE Matricula(idMatricula INT PRIMARY KEY NOT NULL,
 					   fechaInicio DATE,
 					   fechaFin DATE,
 					   notaFinal INT,
-					   confirmacionPago BIT(2),
+					   confirmacionPago BIT(2),/* DUDAS si asi es boolean*/
 					   idSeccion INT,
 					   idPeriodo INT,
 	                   idNotaFinal INT
@@ -354,11 +354,11 @@ CREATE TABLE Estudiante(idEstudiante INT PRIMARY KEY NOT NULL,
 						idCentro INT,
 						idNotaAptitud INT,
 						idDeptoCarrera INT,
-						idpersona INT,
+						idpersona VARCHAR(15),
 						idHistorial INT,
 						idMatricula INT,
 						FOREIGN KEY(idCentro) REFERENCES CentroUniversitario(idCentro),
-						FOREIGN KEY(idNotaAptitud) REFERENCES NotaExamenAtitud(idNotaAptitud),
+						FOREIGN KEY(idNotaAptitud) REFERENCES NotaExamenAPtitud(idNotaAptitud),
 						FOREIGN KEY(idDeptoCarrera) REFERENCES DepartamentoCarrera(idDeptoCarrera),
 						FOREIGN KEY(idPersona) REFERENCES Persona(idPersona),
 						FOREIGN KEY(idHistorial) REFERENCES HistorialAcademico(idHistorial),
