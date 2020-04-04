@@ -3,6 +3,18 @@
   <Items>
     <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
       <Items>
+        <ConnectionNode Name="DESKTOP-D62KKT0:DESKTOP-D62KKT0\Francis Gonzales">
+          <Created>2020-04-04T14:43:07.5010344-06:00</Created>
+          <Type>SQL</Type>
+          <Server>DESKTOP-D62KKT0</Server>
+          <UserName />
+          <Authentication>Autenticación de Windows</Authentication>
+          <InitialDB>Datos</InitialDB>
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+        </ConnectionNode>
         <ConnectionNode Name="DESKTOP-OQK3OK8:is">
           <Created>2020-04-04T14:24:03.4046585-06:00</Created>
           <Type>SQL</Type>
@@ -20,8 +32,8 @@
     <LogicalFolder Name="Consultas" Type="0" Sorted="true">
       <Items>
         <FileNode Name="creacionDeTablas.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>creacionDeTablas.sql</FullPath>
         </FileNode>
@@ -31,11 +43,11 @@
           <AssociatedConnUserName />
           <FullPath>ingreso de datos.sql</FullPath>
         </FileNode>
-        <FileNode Name="procedimientoInsertarDatosDemograficos.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+        <FileNode Name="Pocedimiento almacenado 1.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>procedimientoInsertarDatosDemograficos.sql</FullPath>
+          <FullPath>Pocedimiento almacenado 1.sql</FullPath>
         </FileNode>
         <FileNode Name="Prueba.sql">
           <AssociatedConnectionMoniker />

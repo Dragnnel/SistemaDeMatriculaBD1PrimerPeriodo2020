@@ -10,7 +10,7 @@ CREATE SCHEMA unah;
 	Datos Demograficos
 */
 
-CREATE TABLE ProyectoSistemaMatricula.unah.Continente(idContinente INT PRIMARY KEY NOT NULL,
+CREATE TABLE Continente(idContinente INT PRIMARY KEY NOT NULL,
 						continente VARCHAR(45)
 						);
 
