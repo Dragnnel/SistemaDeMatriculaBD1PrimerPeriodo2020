@@ -4,7 +4,7 @@
     <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="DESKTOP-OQK3OK8:is">
-          <Created>2020-03-26T21:21:42.9511521-06:00</Created>
+          <Created>2020-04-04T14:24:03.4046585-06:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-OQK3OK8</Server>
           <UserName>is</UserName>
@@ -20,10 +20,22 @@
     <LogicalFolder Name="Consultas" Type="0" Sorted="true">
       <Items>
         <FileNode Name="creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
           <FullPath>creacionDeTablas.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ingreso de datos.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>ingreso de datos.sql</FullPath>
+        </FileNode>
+        <FileNode Name="procedimientoInsertarDatosDemograficos.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>procedimientoInsertarDatosDemograficos.sql</FullPath>
         </FileNode>
         <FileNode Name="Prueba.sql">
           <AssociatedConnectionMoniker />
