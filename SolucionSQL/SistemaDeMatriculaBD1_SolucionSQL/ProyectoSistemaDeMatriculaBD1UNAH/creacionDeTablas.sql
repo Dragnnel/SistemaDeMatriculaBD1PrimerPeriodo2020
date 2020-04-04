@@ -311,7 +311,8 @@ CREATE TABLE ProyectoSistemaMatricula.unah.tipoSeccion (
 							tipo VARCHAR (25)
 							);
 
-CREATE TABLE ProyectoSistemaMatricula.unah.Seccion(idSeccion INT PRIMARY KEY NOT NULL,
+CREATE TABLE ProyectoSistemaMatricula.unah.Seccion(
+					 idSeccion INT NOT NULL,
                      horaInicial INT,
 					 horaFinal INT,
 					 observaciones VARCHAR(45),
@@ -323,6 +324,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Seccion(idSeccion INT PRIMARY KEY NOT
 					 idAula INT,
 					 idEdificio INT,
 					 idPeriodo INT,
+					 PRIMARY KEY (idSeccion,idAsignatura),
 					 FOREIGN KEY(idDocente,fechaInicioCargo) REFERENCES ProyectoSistemaMatricula.unah.Docente(idDocente,fechaInicioCargo),
 					 FOREIGN KEY(idAsignatura) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura),
 					  FOREIGN KEY(idTipoSeccion) REFERENCES ProyectoSistemaMatricula.unah.tipoSeccion(idTipoSeccion),
@@ -374,12 +376,13 @@ CREATE TABLE ProyectoSistemaMatricula.unah.ObservacionNotaFinal(
 					    
 CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatricula(
 							  idMatricula INT,
+							  idAsignatura INT,
 							  idSeccion INT,
 							  notaFinal DECIMAL (2,2),
 							  idObservacionNota INT,
 							  PRIMARY KEY (idMatricula ,idSeccion),
 							  FOREIGN KEY(idMatricula) REFERENCES ProyectoSistemaMatricula.unah.Matricula(idMatricula),
-							  FOREIGN KEY(idSeccion) REFERENCES ProyectoSistemaMatricula.unah.Seccion(idSeccion),
+							  FOREIGN KEY(idSeccion,idAsignatura) REFERENCES ProyectoSistemaMatricula.unah.Seccion(idSeccion,idAsignatura),
 							  FOREIGN KEY(idObservacionNota) REFERENCES ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal)
 							  );
 
