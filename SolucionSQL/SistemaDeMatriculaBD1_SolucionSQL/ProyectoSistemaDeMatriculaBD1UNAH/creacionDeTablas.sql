@@ -1,5 +1,7 @@
 print 'Proyecto Sistema de matricula de la UNAH BD 1'
-
+/*
+	Hola
+*/
 
 CREATE DATABASE ProyectoSistemaMatricula;
 
