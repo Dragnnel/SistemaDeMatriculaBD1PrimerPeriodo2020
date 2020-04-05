@@ -7,9 +7,9 @@ CREATE DATABASE ProyectoSistemaMatricula;
 
 CREATE SCHEMA unah;
 
-
+ 
 /*
-	Datos Demograficos
+	Datos Demograficos  
 */
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Continente(idContinente INT PRIMARY KEY NOT NULL,
@@ -185,7 +185,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Carrera(idCarrera INT PRIMARY KEY NOT
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.DepartamentoCarrera(idDeptoCarrera INT PRIMARY KEY NOT NULL,
-								 FOREIGN KEY(idDeptoCarrera) REFERENCES ProyectoSistemaMatricula.unah.Carrera(idCarrera)						
+										FOREIGN KEY(idDeptoCarrera) REFERENCES ProyectoSistemaMatricula.unah.Carrera(idCarrera)						
 									);
 
 

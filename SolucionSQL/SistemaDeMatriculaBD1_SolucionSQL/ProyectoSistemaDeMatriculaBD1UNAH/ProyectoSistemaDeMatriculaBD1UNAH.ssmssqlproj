@@ -3,17 +3,29 @@
   <Items>
     <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="DESKTOP-D62KKT0:DESKTOP-D62KKT0\Francis Gonzales">
+        <ConnectionNode Name="DESKTOP-D62KKT0:">
           <Created>2020-04-04T14:43:07.5010344-06:00</Created>
           <Type>SQL</Type>
           <Server>DESKTOP-D62KKT0</Server>
           <UserName />
-          <Authentication>Autenticación de Windows</Authentication>
+          <Authentication>SQL</Authentication>
           <InitialDB>Datos</InitialDB>
           <LoginTimeout>15</LoginTimeout>
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="DESKTOP-HMLAOH1:is">
+          <Created>2020-04-05T09:27:21.2930453-06:00</Created>
+          <Type>SQL</Type>
+          <Server>DESKTOP-HMLAOH1</Server>
+          <UserName>is</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
         </ConnectionNode>
         <ConnectionNode Name="DESKTOP-OQK3OK8:is">
           <Created>2020-04-04T14:24:03.4046585-06:00</Created>
@@ -32,9 +44,9 @@
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>creacionDeTablas.sql</FullPath>
         </FileNode>
         <FileNode Name="ingreso de datos.sql">
@@ -43,23 +55,29 @@
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>ingreso de datos.sql</FullPath>
         </FileNode>
+        <FileNode Name="Observaciones.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>Observaciones.sql</FullPath>
+        </FileNode>
         <FileNode Name="Pocedimiento almacenado 1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>Pocedimiento almacenado 1.sql</FullPath>
         </FileNode>
-        <FileNode Name="Prueba.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
-          <FullPath>Prueba.sql</FullPath>
-        </FileNode>
         <FileNode Name="Transaccion1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>Transaccion1.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TransaccionesTarea.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>TransaccionesTarea.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
