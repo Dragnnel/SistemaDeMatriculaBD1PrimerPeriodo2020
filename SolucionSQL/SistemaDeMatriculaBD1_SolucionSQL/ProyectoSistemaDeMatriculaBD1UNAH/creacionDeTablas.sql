@@ -12,7 +12,7 @@ CREATE SCHEMA unah;
 	Datos Demograficos
 */
 
-CREATE TABLE Continente(idContinente INT PRIMARY KEY NOT NULL,
+CREATE TABLE ProyectoSistemaMatricula.unah.Continente(idContinente INT PRIMARY KEY NOT NULL,
 						continente VARCHAR(45)
 						);
 
@@ -379,7 +379,6 @@ CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatricula(
 							  idMatricula INT,
 							  idAsignatura INT,
 							  idSeccion INT,
-							  idAsignatura INT,
 							  notaFinal DECIMAL (2,2),
 							  idObservacionNota INT,
 							  PRIMARY KEY (idMatricula ,idSeccion, idAsignatura),
