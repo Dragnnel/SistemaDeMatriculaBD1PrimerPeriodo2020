@@ -49,6 +49,12 @@
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>creacionDeTablas.sql</FullPath>
         </FileNode>
+        <FileNode Name="creacionProcedimientosAlmacenados.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>creacionProcedimientosAlmacenados.sql</FullPath>
+        </FileNode>
         <FileNode Name="ingreso de datos.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
@@ -62,9 +68,9 @@
           <FullPath>Observaciones.sql</FullPath>
         </FileNode>
         <FileNode Name="Pocedimiento almacenado 1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>Pocedimiento almacenado 1.sql</FullPath>
         </FileNode>
         <FileNode Name="Transaccion1.sql">

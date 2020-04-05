@@ -891,7 +891,9 @@ BEGIN TRY
 													  fechaFinCargo)
 											   VALUES(@idDocente,
 													  @idDepartamento,
-													  @
+													  @fechaInicioEmpleado,
+													  @fechaInicioCargo,
+													  @fechaFinCargo
 													  )
 END TRY
 BEGIN CATCH
@@ -902,14 +904,501 @@ GO
 
 
 /*------------------------------------------------------------------
-	TABLA: 
+	TABLA: TipoPeriodo
 */
-CREATE PROCEDURE [unah].[](
-			
+CREATE PROCEDURE [unah].[InsertarDatosTipoPeriodo](
+			@idTipoPeriodo INT,
+			@descripcion VARCHAR(15)
 	)
 AS
 BEGIN TRY
-	
+	INSERT INTO ProyectoSistemaMatricula.unah.TipoPeriodo(idTipoPeriodo,
+														  descripcion)
+												   VALUES(@idTipoPeriodo,
+														  @descripcion)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: Asignatura
+*/
+CREATE PROCEDURE [unah].[InsertarDatosAsignatura](
+			@idAsignatura INT,
+			@codigoAsignatura VARCHAR(15),
+			@nombreAsignatura VARCHAR(45),
+			@unidadesValorativas INT,
+			@examenUnificado BIT,
+			@poseeLaboratorio BIT,
+			@idTipoPeriodo INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,
+														 codigoAsignatura,
+														 nombreAsignatura,
+														 unidadesValorativas,
+														 examenUnificado,
+														 poseeLaboratorio,
+														 idTipoPeriodo)
+												  VALUES(@idAsignatura,
+														 @codigoAsignatura,
+														 @nombreAsignatura,
+														 @unidadesValorativas,
+														 @examenUnificado,
+														 @poseeLaboratorio,
+														 @idTipoPeriodo
+														 )
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: CoordinadorAsignatura
+*/
+CREATE PROCEDURE [unah].[InsertarDatosCoordinadorAsignatura](
+			@idCoordinadorAsignatura INT,
+			@fechaInicioEmpleado VARCHAR(8),
+			@fechaInicioCargo VARCHAR(8),
+			@fechaFinCargo VARCHAR(8),
+			@idAsignatura INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.CoordinadorAsignatura(idCoordinadorAsignatura,
+																	fechaInicioEmpleado,
+																	fechaInicioCargo,
+																	fechaFinCargo,
+																	idAsignatura
+																	)
+															 VALUES(@idCoordinadorAsignatura,
+																	@fechaInicioEmpleado,
+																	@fechaInicioCargo,
+																	@fechaFinCargo,
+																	@idAsignatura
+																	)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+--------------------------------------
+--DATOS ESTUDIANTES
+--------------------------------------
+/*------------------------------------------------------------------
+	TABLA: NotaExamenAptitud
+*/
+CREATE PROCEDURE [unah].[InsertarDatosNotaExamenAptitud](
+			@idNotaAptitud INT,
+			@notaPaa INT,
+			@notaPam INT,
+			@notaPccns INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.NotaExamenAptitud(idNotaAptitud,
+																notaPaa,
+																notaPam,
+																notaPccns)
+														 VALUES(@idNotaAptitud,
+																@notaPaa,
+																@notaPam,
+																@notaPccns)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: Periodo
+*/
+CREATE PROCEDURE [unah].[InsertarDatosPeriodo](
+			@idPeriodo INT,
+			@fechaInicio VARCHAR(8),
+			@fechaFinalizacion VARCHAR(8),
+			@anio INT,
+			@idTipoPeriodo INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Periodo(idPeriodo,
+													  fechaInicio,
+													  fechaFinalizacion,
+													  anio,
+													  idTipoPeriodo)
+											   VALUES(@idPeriodo,
+													  @fechaInicio,
+													  @fechaFinalizacion,
+													  @anio,
+													  @idTipoPeriodo)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: TipoSeccion
+*/
+CREATE PROCEDURE [unah].[InsertarDatosTipoSeccion](
+			@idTipoSeccion INT,
+			@tipo VARCHAR (25)
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.tipoSeccion(idTipoSeccion,
+														  tipo)
+												   VALUES(@idTipoSeccion,
+														  @tipo)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: Seccion
+*/
+CREATE PROCEDURE [unah].[InsertarDatosSeccion](
+			@idSeccion INT,
+            @horaInicial INT,
+			@horaFinal INT,
+			@observaciones VARCHAR(45),
+			@cuposDisponibles INT,
+			@idTipoSeccion INT,
+			@idDocente INT,
+			@fechaInicioCargo VARCHAR(8),
+			@idAsignatura INT,
+			@idAula INT,
+			@idEdificio INT,
+			@idPeriodo INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Seccion(idSeccion,
+													  horaInicial,
+													  horaFinal,
+													  observaciones,
+													  cuposDisponibles,
+													  idTipoSeccion,
+													  idDocente,
+													  fechaInicioCargo,
+													  idAsignatura,
+													  idAula,
+													  idEdificio,
+													  idPeriodo
+													  )
+											   VALUES(@idSeccion,
+													  @horaInicial,
+													  @horaFinal,
+													  @observaciones,
+													  @cuposDisponibles,
+													  @idTipoSeccion,
+													  @idDocente,
+													  @fechaInicioCargo,
+													  @idAsignatura,
+													  @idAula,
+													  @idEdificio,
+													  @idPeriodo
+											          )
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: Estudiante
+*/
+CREATE PROCEDURE [unah].[InsertarDatosEstudiante](
+			@idEstudiante INT,
+			@perteneceDeportes BIT,
+			@UVDisponibles INT,
+			@contrasenia VARCHAR(45),
+			@idCentro INT,
+			@idNotaAptitud INT,
+			@idDeptoCarrera INT,
+			@idpersona VARCHAR(15),
+			@cursoCursoModalidaDeClasesVirtuales BIT,
+			@cursoCursoIntroduccionVidaUniversitaria BIT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Estudiante(idEstudiante,
+														 perteneceDeportes,
+														 UVDisponibles,
+														 contrasenia,
+														 idCentro,
+														 idNotaAptitud,
+														 idDeptoCarrera,
+														 idpersona,
+														 cursoCursoModalidaDeClasesVirtuales,
+														 cursoCursoIntroduccionVidaUniversitaria
+														 )
+												  VALUES(@idEstudiante,
+														 @perteneceDeportes,
+														 @UVDisponibles,
+														 @contrasenia,
+														 @idCentro,
+														 @idNotaAptitud,
+														 @idDeptoCarrera,
+														 @idpersona,
+														 @cursoCursoModalidaDeClasesVirtuales,
+														 @cursoCursoIntroduccionVidaUniversitaria
+														 )
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: HistorialAcademico
+*/
+CREATE PROCEDURE [unah].[InsertarDatosHistorialAcademico](
+			@idHistorial INT,
+			@indicePeriodo INT,
+			@indiceGlobal INT,
+			@idEstudiante INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.HistorialAcademico(idHistorial,
+																 indicePeriodo,
+																 indiceGlobal,
+																 idEstudiante)
+														  VALUES(@idHistorial,
+																 @indicePeriodo,
+																 @indiceGlobal,
+																 @idEstudiante)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: Matricula
+*/
+CREATE PROCEDURE [unah].[InsertarDatosMatricula](
+			@idMatricula INT,
+			@confirmacionPago BIT,
+			@fechaInicio VARCHAR(8),
+			@fechaFin VARCHAR(8),
+			@idPeriodo INT,
+			@idEstudiante INT,
+			@idHistorial INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Matricula(idMatricula,
+														confirmacionPago,
+														fechaInicio,
+														fechaFin,
+														idPeriodo,
+														idEstudiante,
+														idHistorial)
+												 VALUES(@idMatricula,
+														@confirmacionPago,
+														@fechaInicio,
+														@fechaFin,
+														@idPeriodo,
+														@idEstudiante,
+														@idHistorial
+														)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: ObservacionNotaFinal
+*/
+CREATE PROCEDURE [unah].[InsertarDatosObservacionNotaFinal](
+			@idObservacionNotaFinal INT,
+			@descripcion VARCHAR(20)
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,
+																   descripcion)
+															VALUES(@idObservacionNotaFinal,
+																   @descripcion)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: SeccionMatricula
+*/
+CREATE PROCEDURE [unah].[InsertarDatosSeccionMatricula](
+			@idMatricula INT,
+			@idAsignatura INT,
+			@idSeccion INT,
+			@notaFinal DECIMAL (2,2),
+			@idObservacionNota INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,
+															   idAsignatura,
+															   idSeccion,
+															   notaFinal,
+															   idObservacionNota)
+														VALUES(@idMatricula,
+															   @idAsignatura,
+															   @idSeccion,
+															   @notaFinal,
+															   @idObservacionNota)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: PensumAcademico
+*/
+CREATE PROCEDURE [unah].[InsertarDatosPensumAcademico](
+			@idAsignatura INT,
+			@idPlanEstudio INT 
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,
+															  idPlanEstudio)
+													   VALUES(@idAsignatura,
+															  @idPlanEstudio)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: Requisitos
+*/
+CREATE PROCEDURE [unah].[InsertarDatosRequisitos](
+			@idAsignatura INT,
+			@idPlanEstudio INT,  /* DUDAS no se si dejaarla como lo tenemos en word o en lo otro*/
+			@idRequisito1 INT,
+			@idRequisito2 INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,
+														 idPlanEstudio,
+														 idRequisito1,
+														 idRequisito2)
+												  VALUES(@idAsignatura,
+														 @idPlanEstudio,
+														 @idRequisito1,
+														 @idRequisito2)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: HorarioDocente
+*/
+CREATE PROCEDURE [unah].[InsertarDatosHorarioDocente](
+			@idHorario INT,
+			@idDocente INT, 
+			@idPeriodo INT,
+			@idFechaInicioDocente VARCHAR(8),
+			@HoraInicio INT,
+			@HoraFin	INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.HorarioDocente(idHorario,
+															 idDocente,
+															 idPeriodo,
+															 idFechaInicioDocente,
+															 HoraInicio,
+															 HoraFin
+															 )
+													  VALUES(@idHorario,
+															 @idDocente,
+															 @idPeriodo,
+															 @idFechaInicioDocente,
+															 @HoraInicio,
+															 @HoraFin
+															 )
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: HorarioInstructor
+*/
+CREATE PROCEDURE [unah].[InsertarDatosHorarioInstructor](
+			@idHorario INT,
+			@idInstructor INT, 
+			@idPeriodo INT,
+			@idFechaInicioInstructor VARCHAR(8),
+			@HoraInicio INT,
+			@HoraFin	INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.HorarioInstructor(idHorario,
+																idInstructor,
+																idPeriodo,
+																idFechaInicioInstructor,
+																HoraInicio,
+																HoraFin
+																)
+														 VALUES(@idHorario,
+															    @idInstructor,
+															    @idPeriodo,
+															    @idFechaInicioInstructor,
+															    @HoraInicio,
+															    @HoraFin
+															   )
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
