@@ -34,17 +34,17 @@ GO
 	TABLA: Pais
 */
 CREATE PROCEDURE [unah].[InsertarDatosPais](
-			@idPais INT,
+			@codigoPais VARCHAR(6),
 			@pais VARCHAR(45),
 			@idContinente INT
 	)
 AS
 SET NOCOUNT ON
 BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.Pais(idPais,
+	INSERT INTO ProyectoSistemaMatricula.unah.Pais(codigoPais,
 												   pais,
 												   idContinente)
-											VALUES(@idPais,
+											VALUES(@codigoPais,
 												   @pais,
 												   @idContinente)
 END TRY
@@ -61,16 +61,16 @@ GO
 CREATE PROCEDURE [unah].[InsertarDatosDepartamento](
 			@idDepartamento INT,
 			@departamento VARCHAR(45),
-			@idPais INT
+			@codigoPais INT
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,
 														   departamento,
-														   idPais)
+														   codigoPais)
 													VALUES(@idDepartamento,
 														   @departamento,
-														   @idPais)
+														   @codigoPais)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -399,15 +399,18 @@ GO
 CREATE PROCEDURE [unah].[InsertarDatosReferencia](
 			@idReferencia INT,
 			@nombreCompleto VARCHAR(100),
+			@numeroTelefono VARCHAR(15),
 			@idParentesco INT
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Referencia(idReferencia,
 														 nombreCompleto,
+														 numeroTelefono,
 														 idParentesco)
 												  VALUES(@idReferencia,
 														 @nombreCompleto,
+														 @numeroTelefono,
 														 @idParentesco)
 END TRY
 BEGIN CATCH
@@ -507,19 +510,16 @@ GO
 CREATE PROCEDURE [unah].[InsertarDatosTelefono](
 			@idTelefono INT,
 			@telefono VARCHAR(15),
-			@idPersona VARCHAR(15),
-			@idReferencia INT
+			@idPersona VARCHAR(15)
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Telefono(idTelefono,
 													   telefono,
-													   idPersona,
-													   idReferencia)
+													   idPersona)
 												VALUES(@idTelefono,
 													   @telefono,
-													   @idPersona,
-													   @idReferencia)
+													   @idPersona)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -661,26 +661,6 @@ GO
 
 
 /*------------------------------------------------------------------
-	TABLA: DepartamentoCarrera
-*/
-CREATE PROCEDURE [unah].[InsertarDatosDepartamentoCarrera](
-			@idDeptoCarrera INT
-	)
-AS
-BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.DepartamentoCarrera(idDeptoCarrera
-																  )
-														   VALUES(@idDeptoCarrera
-																  )
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
-/*------------------------------------------------------------------
 	TABLA: Empleado
 */
 CREATE PROCEDURE [unah].[InsertarDatosEmpleado](
@@ -689,7 +669,7 @@ CREATE PROCEDURE [unah].[InsertarDatosEmpleado](
 			@fechaFinEmpleado VARCHAR(8),
 			@idPersona VARCHAR(15),
 			@idtipoEmpleado INT,
-			@idDepartamento INT,
+			@idCarrera INT,
 			@idcargo INT,
 			@idContrato INT
 	)
@@ -700,7 +680,7 @@ BEGIN TRY
 													   fechaFinEmpleado,
 													   idPersona,
 													   idtipoEmpleado,
-													   idDepartamento,
+													   idCarrera,
 													   idcargo,
 													   idContrato)
 												VALUES(@idEmpleado,
@@ -708,7 +688,7 @@ BEGIN TRY
 													   @fechaFinEmpleado,
 													   @idPersona,
 													   @idtipoEmpleado,
-													   @idDepartamento,
+													   @idCarrera,
 													   @idcargo,
 													   @idContrato)
 END TRY
@@ -726,18 +706,21 @@ CREATE PROCEDURE [unah].[InsertarDatosJefeDepartamento](
 			@idJefe INT,
 			@fechaInicioCargo VARCHAR(8),
 			@fechaInicioEmpleado VARCHAR(8),
-			@fechaFinCargo VARCHAR(8)
+			@fechaFinCargo VARCHAR(8),
+			@idCarrera INT
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.JefeDepartamento(idJefeDepartamento,
 															   fechaInicioCargo,
 															   fechaInicioEmpleado,
-															   fechaFinCargo)
+															   fechaFinCargo,
+															   idCarrera)
 														VALUES(@idJefe,
 															   @fechaInicioCargo,
 															   @fechaInicioEmpleado,
-															   @fechaFinCargo)
+															   @fechaFinCargo,
+															   @idCarrera)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -753,18 +736,21 @@ CREATE PROCEDURE [unah].[InsertarDatosCoordinadorDepartamento](
 			@idCoordinadorDepto INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
-			@fechaFinCargo VARCHAR(8)
+			@fechaFinCargo VARCHAR(8),
+			@idCarrera INT
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.CoordinadorDepartamento(idCoordinadorDepto,
 																	  fechaInicioEmpleado,
 																	  fechaInicioCargo,
-																	  fechaFinCargo)
+																	  fechaFinCargo,
+																	  idCarrera)
 															   VALUES(@idCoordinadorDepto,
 																	  @fechaInicioEmpleado,
 																	  @fechaInicioCargo,
-																	  @fechaFinCargo)
+																	  @fechaFinCargo,
+																	  @idCarrera)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -814,7 +800,7 @@ CREATE PROCEDURE [unah].[InsertarDatosGradoAcademico](
 			@fechaAdquisicion VARCHAR(8),
 			@idEmpleado INT,
 			@fechaInicioEmpleado VARCHAR(8),
-			@idPais INT
+			@codigoPais INT
 	)
 AS
 BEGIN TRY
@@ -824,7 +810,7 @@ BEGIN TRY
 															 fechaAdquisicion,
 															 idEmpleado,
 															 fechaInicioEmpleado,
-															 idPais
+															 codigoPais
 															 )
 													  VALUES(@idGradoAcademico,
 													         @tituloObtenido,
@@ -832,7 +818,7 @@ BEGIN TRY
 															 @fechaAdquisicion,
 															 @idEmpleado,
 															 @fechaInicioEmpleado,
-															 @idPais
+															 @codigoPais
 															 )
 END TRY
 BEGIN CATCH
@@ -847,23 +833,29 @@ GO
 */
 CREATE PROCEDURE [unah].[InsertarDatosInstructor](
 			@idInstructor INT,
-			@idDepartamento INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
-			@fechaFinCargo VARCHAR(8)
+			@fechaFinCargo VARCHAR(8),
+			@horaInicio TIME,
+			@horaFin TIME,
+			@idCarrera INT
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Instructor(idInstructor,
-														 idDepartamento,
 														 fechaInicioEmpleado,
 														 fechaInicioCargo,
-														 fechaFinCargo)
+														 fechaFinCargo,
+														 horaInicio,
+														 horaFin,
+														 idCarrera)
 												  VALUES(@idInstructor,
-														 @idDepartamento,
 														 @fechaInicioEmpleado,
 														 @fechaInicioCargo,
-														 @fechaFinCargo)
+														 @fechaFinCargo,
+														 @horaInicio,
+														 @horaFin,
+														 @idCarrera)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -877,24 +869,29 @@ GO
 */
 CREATE PROCEDURE [unah].[InsertarDatosDocente](
 			@idDocente INT,
-			@idDepartamento INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
-			@fechaFinCargo VARCHAR(8)
+			@fechaFinCargo VARCHAR(8),
+			@horaInicio TIME,
+			@horaFin TIME,
+			@idCarrera INT
 	)
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Docente(idDocente,
-													  idDepartamento,
 													  fechaInicioEmpleado,
 													  fechaInicioCargo,
-													  fechaFinCargo)
+													  fechaFinCargo,
+													  horaInicio,
+													  horaFin,
+													  idCarrera)
 											   VALUES(@idDocente,
-													  @idDepartamento,
 													  @fechaInicioEmpleado,
 													  @fechaInicioCargo,
-													  @fechaFinCargo
-													  )
+													  @fechaFinCargo,
+													  @horaInicio,
+													  @horaFin,
+													  @idCarrera)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -928,8 +925,7 @@ GO
 	TABLA: Asignatura
 */
 CREATE PROCEDURE [unah].[InsertarDatosAsignatura](
-			@idAsignatura INT,
-			@codigoAsignatura VARCHAR(15),
+			@idAsignatura  VARCHAR(15),
 			@nombreAsignatura VARCHAR(45),
 			@unidadesValorativas INT,
 			@examenUnificado BIT,
@@ -939,14 +935,12 @@ CREATE PROCEDURE [unah].[InsertarDatosAsignatura](
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,
-														 codigoAsignatura,
 														 nombreAsignatura,
 														 unidadesValorativas,
 														 examenUnificado,
 														 poseeLaboratorio,
 														 idTipoPeriodo)
 												  VALUES(@idAsignatura,
-														 @codigoAsignatura,
 														 @nombreAsignatura,
 														 @unidadesValorativas,
 														 @examenUnificado,
@@ -969,7 +963,7 @@ CREATE PROCEDURE [unah].[InsertarDatosCoordinadorAsignatura](
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
 			@fechaFinCargo VARCHAR(8),
-			@idAsignatura INT
+			@idAsignatura VARCHAR(15)
 	)
 AS
 BEGIN TRY
@@ -1027,7 +1021,7 @@ GO
 	TABLA: Periodo
 */
 CREATE PROCEDURE [unah].[InsertarDatosPeriodo](
-			@idPeriodo INT,
+			@idPeriodo CHAR(3),
 			@fechaInicio VARCHAR(8),
 			@fechaFinalizacion VARCHAR(8),
 			@anio INT,
@@ -1089,7 +1083,9 @@ CREATE PROCEDURE [unah].[InsertarDatosSeccion](
 			@idAsignatura INT,
 			@idAula INT,
 			@idEdificio INT,
-			@idPeriodo INT
+			@idPeriodo INT,
+			@fechaInicioPeriodo VARCHAR(8),
+			@idTipoPeriodo INT
 	)
 AS
 BEGIN TRY
@@ -1104,7 +1100,9 @@ BEGIN TRY
 													  idAsignatura,
 													  idAula,
 													  idEdificio,
-													  idPeriodo
+													  idPeriodo,
+													  fechaInicioPeriodo,
+													  idTipoPeriodo
 													  )
 											   VALUES(@idSeccion,
 													  @horaInicial,
@@ -1117,7 +1115,9 @@ BEGIN TRY
 													  @idAsignatura,
 													  @idAula,
 													  @idEdificio,
-													  @idPeriodo
+													  @idPeriodo,
+													  @fechaInicioPeriodo,
+													  @idTipoPeriodo
 											          )
 END TRY
 BEGIN CATCH
@@ -1137,7 +1137,7 @@ CREATE PROCEDURE [unah].[InsertarDatosEstudiante](
 			@contrasenia VARCHAR(45),
 			@idCentro INT,
 			@idNotaAptitud INT,
-			@idDeptoCarrera INT,
+			@idCarrera INT,
 			@idpersona VARCHAR(15),
 			@cursoCursoModalidaDeClasesVirtuales BIT,
 			@cursoCursoIntroduccionVidaUniversitaria BIT
@@ -1150,7 +1150,7 @@ BEGIN TRY
 														 contrasenia,
 														 idCentro,
 														 idNotaAptitud,
-														 idDeptoCarrera,
+														 idCarrera,
 														 idpersona,
 														 cursoCursoModalidaDeClasesVirtuales,
 														 cursoCursoIntroduccionVidaUniversitaria
@@ -1161,7 +1161,7 @@ BEGIN TRY
 														 @contrasenia,
 														 @idCentro,
 														 @idNotaAptitud,
-														 @idDeptoCarrera,
+														 @idCarrera,
 														 @idpersona,
 														 @cursoCursoModalidaDeClasesVirtuales,
 														 @cursoCursoIntroduccionVidaUniversitaria
@@ -1210,6 +1210,8 @@ CREATE PROCEDURE [unah].[InsertarDatosMatricula](
 			@fechaInicio VARCHAR(8),
 			@fechaFin VARCHAR(8),
 			@idPeriodo INT,
+			@fechaInicioPeriodo DATE,
+			@idTipoPeriodo INT,
 			@idEstudiante INT,
 			@idHistorial INT
 	)
@@ -1220,6 +1222,8 @@ BEGIN TRY
 														fechaInicio,
 														fechaFin,
 														idPeriodo,
+														fechaInicioPeriodo,
+														idTipoPeriodo,
 														idEstudiante,
 														idHistorial)
 												 VALUES(@idMatricula,
@@ -1227,6 +1231,8 @@ BEGIN TRY
 														@fechaInicio,
 														@fechaFin,
 														@idPeriodo,
+														@fechaInicioPeriodo,
+														@idTipoPeriodo,
 														@idEstudiante,
 														@idHistorial
 														)
@@ -1281,6 +1287,35 @@ BEGIN TRY
 															   @idSeccion,
 															   @notaFinal,
 															   @idObservacionNota)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+/*------------------------------------------------------------------
+	TABLA: SeccionMatriculaEnEspera
+*/
+CREATE PROCEDURE [unah].[InsertarDatosSeccionMatriculaEnEspera](
+			@idMatricula INT,
+			@idAsignatura VARCHAR(15),
+			@idSeccion INT,
+			@fechaLimite VARCHAR(8)
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera(idMatricula,
+																	   idAsignatura,
+																	   idSeccion,
+																	   fechaLimite
+																	   )
+																VALUES(@idMatricula,
+																	   @idAsignatura,
+																	   @idSeccion,
+																	   @fechaLimite
+																	   )
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'

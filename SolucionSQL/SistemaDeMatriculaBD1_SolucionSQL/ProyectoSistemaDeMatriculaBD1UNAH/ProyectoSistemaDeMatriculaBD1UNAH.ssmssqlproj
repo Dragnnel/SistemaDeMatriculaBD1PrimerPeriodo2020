@@ -56,14 +56,14 @@
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>creacionDeTablas.sql</FullPath>
         </FileNode>
         <FileNode Name="creacionProcedimientosAlmacenados.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>creacionProcedimientosAlmacenados.sql</FullPath>
         </FileNode>

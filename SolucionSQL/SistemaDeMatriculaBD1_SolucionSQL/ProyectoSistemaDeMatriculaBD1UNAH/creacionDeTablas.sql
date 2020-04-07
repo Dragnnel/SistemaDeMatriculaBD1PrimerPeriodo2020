@@ -232,6 +232,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.JefeDepartamento(
 															  FOREIGN KEY(idJefeDepartamento,fechaInicioEmpleado) REFERENCES ProyectoSistemaMatricula.unah.Empleado(idEmpleado,fechaInicioEmpleado)
 															  );
 
+
 CREATE TABLE ProyectoSistemaMatricula.unah.CoordinadorDepartamento(
 																	 idCoordinadorDepto INT,
 																	 fechaInicioEmpleado DATE,
@@ -242,6 +243,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.CoordinadorDepartamento(
 																	 PRIMARY KEY(idCoordinadorDepto, fechaInicioCargo),
 																	 FOREIGN KEY(idCoordinadorDepto,fechaInicioEmpleado) REFERENCES ProyectoSistemaMatricula.unah.Empleado(idEmpleado,fechaInicioEmpleado)
 																	 );
+
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Decano(
@@ -281,6 +283,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Instructor(
 														FOREIGN KEY(idInstructor,fechaInicioEmpleado) REFERENCES ProyectoSistemaMatricula.unah.Empleado(idEmpleado,fechaInicioEmpleado),
 														);
 
+
 CREATE TABLE ProyectoSistemaMatricula.unah.Docente(
 													idDocente INT NOT NULL,
 													fechaInicioCargo DATE,
@@ -293,6 +296,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Docente(
 												    FOREIGN KEY(idCarrera) REFERENCES ProyectoSistemaMatricula.unah.Carrera(idCarrera),
 													FOREIGN KEY(idDocente,fechaInicioEmpleado) REFERENCES ProyectoSistemaMatricula.unah.Empleado(idEmpleado,fechaInicioEmpleado),
 			    								 );
+
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.TipoPeriodo(
@@ -309,7 +313,6 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Asignatura(
 														idTipoPeriodo INT,
 														FOREIGN KEY(idTipoPeriodo) REFERENCES ProyectoSistemaMatricula.unah.TipoPeriodo(idTipoPeriodo)
 														);
-
 
 CREATE TABLE ProyectoSistemaMatricula.unah.CoordinadorAsignatura(
 																   idCoordinadorAsignatura INT,
@@ -372,7 +375,6 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Seccion(
 													 ); 
 
 
-
 CREATE TABLE ProyectoSistemaMatricula.unah.Estudiante(
 														idEstudiante INT PRIMARY KEY NOT NULL,
 														perteneceDeportes BIT,
@@ -413,7 +415,6 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Matricula(
 													   FOREIGN KEY(idHistorial) REFERENCES ProyectoSistemaMatricula.unah.HistorialAcademico(idHistorial)
 													   );
 
-
 CREATE TABLE ProyectoSistemaMatricula.unah.ObservacionNotaFinal(
 																   idObservacionNotaFinal INT PRIMARY KEY NOT NULL,
 																   descripcion VARCHAR(20)
@@ -430,7 +431,6 @@ CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatricula(
 															  FOREIGN KEY(idSeccion, idAsignatura) REFERENCES ProyectoSistemaMatricula.unah.Seccion(idSeccion, idAsignatura),
 															  FOREIGN KEY(idObservacionNota) REFERENCES ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal)
 															  );
-
 					    
 CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera(
 															  idMatricula INT,
@@ -461,8 +461,3 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Requisitos(
 														FOREIGN KEY(idRequisito1) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura),
 														FOREIGN KEY(idRequisito2) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura)
 														);
-
-
-
-
-
