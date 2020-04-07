@@ -1472,7 +1472,7 @@ CREATE PROCEDURE [unah].[InsertarDatosPersonaEstudiante](
 			@contrasenia VARCHAR(45),
 			@idCentro INT,
 			@idNotaAptitud INT,
-			@idDeptoCarrera INT,
+			@idCarrera INT,
 			--@idpersona VARCHAR(15),
 			@cursoCursoModalidaDeClasesVirtuales BIT,
 			@cursoCursoIntroduccionVidaUniversitaria BIT
@@ -1516,7 +1516,7 @@ BEGIN TRY
 														 contrasenia,
 														 idCentro,
 														 idNotaAptitud,
-														 idDeptoCarrera,
+														 idCarrera,
 														 idpersona,
 														 cursoCursoModalidaDeClasesVirtuales,
 														 cursoCursoIntroduccionVidaUniversitaria
@@ -1527,7 +1527,7 @@ BEGIN TRY
 														 @contrasenia,
 														 @idCentro,
 														 @idNotaAptitud,
-														 @idDeptoCarrera,
+														 @idCarrera,
 														 @idpersona,
 														 @cursoCursoModalidaDeClasesVirtuales,
 														 @cursoCursoIntroduccionVidaUniversitaria
@@ -1565,7 +1565,7 @@ CREATE PROCEDURE [unah].[InsertarDatosPersonaEmpleado](
 			@fechaFinEmpleado VARCHAR(8),
 			--@idPersona VARCHAR(15),
 			@idtipoEmpleado INT,
-			@idDepartamento INT,
+			@idCarrera INT,
 			@idcargo INT,
 			@idContrato INT
 	)
@@ -1607,7 +1607,7 @@ BEGIN TRY
 													   fechaFinEmpleado,
 													   idPersona,
 													   idtipoEmpleado,
-													   idDepartamento,
+													   idCarrera,
 													   idcargo,
 													   idContrato)
 												VALUES(@idEmpleado,
@@ -1615,7 +1615,7 @@ BEGIN TRY
 													   @fechaFinEmpleado,
 													   @idPersona,
 													   @idtipoEmpleado,
-													   @idDepartamento,
+													   @idCarrera,
 													   @idcargo,
 													   @idContrato)
 END TRY
