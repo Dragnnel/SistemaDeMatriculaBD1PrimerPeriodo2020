@@ -1407,6 +1407,193 @@ END CATCH
 GO
 
 
+--------------------------------------
+--CORRECCION: Inserción de Estudiante y empleado = Persona
+--------------------------------------
+
+
+/*------------------------------------------------------------------
+	TABLAS: Persona y Estudiante 
+*/
+CREATE PROCEDURE [unah].[InsertarDatosPersonaEstudiante](
+			@idPersona VARCHAR(15),
+			@primerNombre VARCHAR(35),
+			@segundoNombre VARCHAR(35),
+			@primerApellido VARCHAR(35),
+			@segundoApellido VARCHAR(35),
+			@fechaNacimiento VARCHAR(8),
+			@idDireccion INT,
+			@idNacionalidad INT,
+			@idGrupoEtnico INT,
+			@idSexo INT,
+			@idDiscapacidad INT,
+			@idEstadoCivil INT,
+			@idCorreo INT,
+			@idReferencia INT,
+
+			@idEstudiante INT,
+			@perteneceDeportes BIT,
+			@UVDisponibles INT,
+			@contrasenia VARCHAR(45),
+			@idCentro INT,
+			@idNotaAptitud INT,
+			@idDeptoCarrera INT,
+			--@idpersona VARCHAR(15),
+			@cursoCursoModalidaDeClasesVirtuales BIT,
+			@cursoCursoIntroduccionVidaUniversitaria BIT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Persona(idPersona,
+													  primerNombre,
+													  segundoNombre,
+													  primerApellido,
+													  segundoApellido,
+													  fechaNacimiento,
+													  idDireccion,
+													  idNacionalidad,
+													  idGrupoEtnico,
+													  idSexo,
+													  idDiscapacidad,
+													  idEstadoCivil,
+													  idCorreo,
+													  idReferencia
+													  )
+											   VALUES(@idPersona,
+													  @primerNombre,
+													  @segundoNombre,
+													  @primerApellido,
+													  @segundoApellido,
+													  @fechaNacimiento,
+													  @idDireccion,
+													  @idNacionalidad,
+													  @idGrupoEtnico,
+													  @idSexo,
+													  @idDiscapacidad,
+													  @idEstadoCivil,
+													  @idCorreo,
+													  @idReferencia
+													  )
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Estudiante(idEstudiante,
+														 perteneceDeportes,
+														 UVDisponibles,
+														 contrasenia,
+														 idCentro,
+														 idNotaAptitud,
+														 idDeptoCarrera,
+														 idpersona,
+														 cursoCursoModalidaDeClasesVirtuales,
+														 cursoCursoIntroduccionVidaUniversitaria
+														 )
+												  VALUES(@idEstudiante,
+														 @perteneceDeportes,
+														 @UVDisponibles,
+														 @contrasenia,
+														 @idCentro,
+														 @idNotaAptitud,
+														 @idDeptoCarrera,
+														 @idpersona,
+														 @cursoCursoModalidaDeClasesVirtuales,
+														 @cursoCursoIntroduccionVidaUniversitaria
+														 )
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+
+/*------------------------------------------------------------------
+	TABLAS: Persona y Empleado 
+*/
+CREATE PROCEDURE [unah].[InsertarDatosPersonaEmpleado](
+			@idPersona VARCHAR(15),
+			@primerNombre VARCHAR(35),
+			@segundoNombre VARCHAR(35),
+			@primerApellido VARCHAR(35),
+			@segundoApellido VARCHAR(35),
+			@fechaNacimiento VARCHAR(8),
+			@idDireccion INT,
+			@idNacionalidad INT,
+			@idGrupoEtnico INT,
+			@idSexo INT,
+			@idDiscapacidad INT,
+			@idEstadoCivil INT,
+			@idCorreo INT,
+			@idReferencia INT,
+
+			@idEmpleado INT,
+			@fechaInicioEmpleado VARCHAR(8),
+			@fechaFinEmpleado VARCHAR(8),
+			--@idPersona VARCHAR(15),
+			@idtipoEmpleado INT,
+			@idDepartamento INT,
+			@idcargo INT,
+			@idContrato INT
+	)
+AS
+BEGIN TRY
+	INSERT INTO ProyectoSistemaMatricula.unah.Persona(idPersona,
+													  primerNombre,
+													  segundoNombre,
+													  primerApellido,
+													  segundoApellido,
+													  fechaNacimiento,
+													  idDireccion,
+													  idNacionalidad,
+													  idGrupoEtnico,
+													  idSexo,
+													  idDiscapacidad,
+													  idEstadoCivil,
+													  idCorreo,
+													  idReferencia
+													  )
+											   VALUES(@idPersona,
+													  @primerNombre,
+													  @segundoNombre,
+													  @primerApellido,
+													  @segundoApellido,
+													  @fechaNacimiento,
+													  @idDireccion,
+													  @idNacionalidad,
+													  @idGrupoEtnico,
+													  @idSexo,
+													  @idDiscapacidad,
+													  @idEstadoCivil,
+													  @idCorreo,
+													  @idReferencia
+													  )
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Empleado(idEmpleado,
+													   fechaInicioEmpleado,
+													   fechaFinEmpleado,
+													   idPersona,
+													   idtipoEmpleado,
+													   idDepartamento,
+													   idcargo,
+													   idContrato)
+												VALUES(@idEmpleado,
+													   @fechaInicioEmpleado,
+													   @fechaFinEmpleado,
+													   @idPersona,
+													   @idtipoEmpleado,
+													   @idDepartamento,
+													   @idcargo,
+													   @idContrato)
+END TRY
+BEGIN CATCH
+	PRINT 'No se pudo registrar'
+END CATCH
+
+GO
+
+
+
+
+
 /*------------------------------------------------------------------
 	TABLA: 
 */
@@ -1422,4 +1609,3 @@ BEGIN CATCH
 END CATCH
 
 GO
-
