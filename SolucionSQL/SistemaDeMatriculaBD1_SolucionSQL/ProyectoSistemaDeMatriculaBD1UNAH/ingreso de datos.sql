@@ -2,10 +2,10 @@
 --------------------------------------------------------------------------
 
 INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (1, 'America');
-INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (2, 'Europa');
+/*INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (2, 'Europa');
 INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (3, 'Asia');
 INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (4, 'Africa');
-			
+			*/
 SELECT *
 FROM  ProyectoSistemaMatricula.unah.Continente	
 
@@ -71,13 +71,13 @@ INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, i
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (8, 7, 2, 'Calle Comecio');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (9, 8, 2, 'Calle los Profesores');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (10, 9, 2, 'Avenida 12');
-INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (11, 21, 1, 'Boulevar Suyapa');
+INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (1, 4, 1, 'Boulevar Suyapa');
 
 SELECT *
 FROM ProyectoSistemaMatricula.unah.CentroUniversitario
 
 
-INSERT INTO  ProyectoSistemaMatricula.unah.CentroUniversitario(idCentro, centroUniversitario, sigla, fechaFundacion, idDireccion) VALUES (1, 'Ciudad Univercitaria', 'CU', '1965-06-30', 11);
+INSERT INTO ProyectoSistemaMatricula.unah.CentroUniversitario(idCentro, centroUniversitario, sigla, fechaFundacion, idDireccion) VALUES (1, 'Ciudad Univercitaria', 'CU', '1965-06-30', 11);
 
 
 INSERT INTO ProyectoSistemaMatricula.unah.Edificio(idEdificio, codigoEdificio, fechaFundacion, observacion, idCentroUniversitario) VALUES (1, 'A1', '1978-08-09', NULL, 1);

@@ -1,7 +1,4 @@
 print 'Proyecto Sistema de matricula de la UNAH BD 1'
-/*
-	Hola
-*/
 
 CREATE DATABASE ProyectoSistemaMatricula;
 
@@ -35,7 +32,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Municipio(idMunicipio INT PRIMARY KEY
 					   );
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Direccion(idDireccion INT PRIMARY KEY NOT NULL,
-					   idMucicipio INT,
+					   idMunicipio INT,
 					   idDepartamento INT,
 					   descripcion VARCHAR(300),
 					   FOREIGN KEY(idMucicipio) REFERENCES ProyectoSistemaMatricula.unah.Municipio(idMunicipio),
@@ -185,8 +182,8 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Carrera(idCarrera INT PRIMARY KEY NOT
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.DepartamentoCarrera(idDeptoCarrera INT PRIMARY KEY NOT NULL,
-										FOREIGN KEY(idDeptoCarrera) REFERENCES ProyectoSistemaMatricula.unah.Carrera(idCarrera)						
-									);
+										                      FOREIGN KEY(idDeptoCarrera) REFERENCES ProyectoSistemaMatricula.unah.Carrera(idCarrera),				
+															   );
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Empleado(idEmpleado INT NOT NULL,
@@ -239,7 +236,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.GradoAcademico(idGradoAcademico INT P
 							fechaAdquisicion DATE,
 							idEmpleado INT,
 							fechaInicioEmpleado DATE,
-							idPais INT,
+						idPais INT,
 							FOREIGN KEY(idEmpleado,fechaInicioEmpleado) REFERENCES ProyectoSistemaMatricula.unah.Empleado(idEmpleado,fechaInicioEmpleado),
 							FOREIGN KEY(idPais) REFERENCES ProyectoSistemaMatricula.unah.Pais(idPais)
 							);
