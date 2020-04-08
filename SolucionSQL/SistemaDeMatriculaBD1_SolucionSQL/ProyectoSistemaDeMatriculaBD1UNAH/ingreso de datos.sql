@@ -1,41 +1,101 @@
 ---Insertar Datos Demograficos
 --------------------------------------------------------------------------
-
-INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (1, 'America');
-/*INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (2, 'Europa');
-INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (3, 'Asia');
-INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (4, 'Africa');
-			*/
+/*CREATE TABLE ProyectoSistemaMatricula.unah.Continente (
+														idContinente INT PRIMARY KEY,
+														continente VARCHAR(45)
+														);
+														
 SELECT *
 FROM  ProyectoSistemaMatricula.unah.Continente	
+														
+														*/
+
+INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (1,'America');
+INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente) VALUES (2,'Europa');
+INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (3,'Asia');
+INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (4,'Africa');
+INSERT INTO ProyectoSistemaMatricula.unah.Continente (idContinente, continente)VALUES (5,'Oceania');
 
 
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (idPais, pais, idContinente)VALUES(1, 'Honduras', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (idPais, pais, idContinente)VALUES(2, 'España', 2);
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (idPais, pais, idContinente)VALUES(3, 'Mexico', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (idPais, pais, idContinente)VALUES(4, 'Francia', 2);
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (idPais, pais, idContinente)VALUES(5, 'Argentina', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (idPais, pais, idContinente)VALUES(6, 'Japon', 3);
-		
 
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (1, 'Francisco Morazan', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (2, 'Gracias a Dios', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (3, 'Islas De La Bahia', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (4, 'Santa Barbara', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (5, 'Yoro', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (6, 'Copan', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (7, 'Choluteca', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (8, 'Comayagua', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (9, 'Cortes', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (10, 'El paraiso', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (11, 'Colon', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (12, 'La Paz', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (13, 'Ocotepeque', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (14, 'Lempira', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (15, 'Valle', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (16, 'Olancho', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (17, 'Intibuca', 1);
-INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, idPais) VALUES (18, 'Atlantidad', 1);
+
+/*
+CREATE TABLE ProyectoSistemaMatricula.unah.Pais (
+												  codigoPais VARCHAR(6)  PRIMARY KEY,
+												  pais VARCHAR(45),
+												  idContinente INT,
+												  FOREIGN KEY(idContinente) REFERENCES ProyectoSistemaMatricula.unah.Continente(idContinente)
+												  );
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Pais
+*/
+
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('HN', 'Honduras',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('SV', 'El Salvador',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('GT', 'Guatemala',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('MX', 'Mexico',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('RU', 'Russia',2);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('CN', 'China',3);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('EC', 'Ecuador',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('ID', 'Indonesia',3);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('PY', 'Paraguay',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('SP', 'España',2);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('FR', 'France',2);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('CA', 'Canada',1);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('MD', 'Madagascar',4);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('ML', 'Malasia',4);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('MC', 'Micronesia',5);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) values ('NR', 'Nauru',5);
+
+
+
+/*
+
+CREATE TABLE ProyectoSistemaMatricula.unah.Departamento(
+														  idDepartamento INT PRIMARY KEY,
+														  departamento VARCHAR(45),
+														  codigoPais VARCHAR(6),
+														  FOREIGN KEY(codigoPais) REFERENCES ProyectoSistemaMatricula.unah.Pais(codigoPais)
+														  );
+
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Departamento
+*/
+
+
+
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (1, 'Francisco Morazan', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (2, 'Gracias a Dios','HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (3, 'Islas De La Bahia', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (4, 'Santa Barbara', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (5, 'Yoro', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (6, 'Copan','HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (7, 'Choluteca', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (8, 'Comayagua','HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (9, 'Cortes', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (10, 'El paraiso', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (11, 'Colon', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (12, 'La Paz', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (13, 'Ocotepeque','HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (14, 'Lempira', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (15, 'Valle','HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (16, 'Olancho', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (17, 'Intibuca', 'HN');
+INSERT INTO ProyectoSistemaMatricula.unah.Departamento(idDepartamento,departamento, codigoPais) VALUES (18, 'Atlantidad', 'HN');
+
+
+
+/*
+
+CREATE TABLE ProyectoSistemaMatricula.unah.Municipio(
+													   idMunicipio INT PRIMARY KEY,
+													   municipio VARCHAR(45),
+													   idDepartamento INT,
+													   FOREIGN KEY(idDepartamento) REFERENCES ProyectoSistemaMatricula.unah.Departamento(idDepartamento)
+													   );
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Municipio
+*/
 
 
 INSERT INTO ProyectoSistemaMatricula.unah.Municipio(idMunicipio, municipio, idDepartamento) VALUES (1, 'San Antonio de Oriente', 1);
@@ -61,7 +121,21 @@ INSERT INTO ProyectoSistemaMatricula.unah.Municipio(idMunicipio, municipio, idDe
 INSERT INTO ProyectoSistemaMatricula.unah.Municipio(idMunicipio, municipio, idDepartamento) VALUES (21, 'Distrito Central', 1);
 
 
-INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (1, 1, 1, 'Avenida Benito');
+/*
+
+CREATE TABLE ProyectoSistemaMatricula.unah.Direccion(
+													   idDireccion INT PRIMARY KEY,
+													   idMunicipio INT,
+													   idDepartamento INT,
+													   descripcion VARCHAR(300),
+													   FOREIGN KEY(idMunicipio) REFERENCES ProyectoSistemaMatricula.unah.Municipio(idMunicipio),
+													   FOREIGN KEY(idDepartamento) REFERENCES ProyectoSistemaMatricula.unah.Departamento(idDepartamento)
+													   );
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Direccion
+*/
+
+INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (11, 1, 1, 'Avenida Benito');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (2, 2, 1, 'Calle 9');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (3, 20, 16, 'Avenida 2 ');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (4, 19, 16, 'Avenida Concepcion');
@@ -72,6 +146,11 @@ INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, i
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (9, 8, 2, 'Calle los Profesores');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (10, 9, 2, 'Avenida 12');
 INSERT INTO ProyectoSistemaMatricula.unah.Direccion (idDireccion, idMucicipio, idDepartamento ,descripcion) VALUES (1, 4, 1, 'Boulevar Suyapa');
+
+
+
+
+
 
 SELECT *
 FROM ProyectoSistemaMatricula.unah.CentroUniversitario
