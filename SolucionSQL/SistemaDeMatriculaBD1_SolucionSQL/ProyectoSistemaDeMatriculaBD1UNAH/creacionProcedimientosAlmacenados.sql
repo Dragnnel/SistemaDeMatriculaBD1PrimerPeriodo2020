@@ -1457,14 +1457,14 @@ CREATE PROCEDURE [unah].[InsertarDatosPersonaEstudiante](
 			@primerApellido VARCHAR(35),
 			@segundoApellido VARCHAR(35),
 			@fechaNacimiento VARCHAR(8),
-			@idDireccion INT,
+			--@idDireccion INT,
 			@idNacionalidad INT,
 			@idGrupoEtnico INT,
 			@idSexo INT,
 			@idDiscapacidad INT,
 			@idEstadoCivil INT,
-			@idCorreo INT,
-			@idReferencia INT,
+			--@idCorreo INT,
+			--@idReferencia INT,
 
 			@idEstudiante INT,
 			@perteneceDeportes BIT,
@@ -1475,7 +1475,21 @@ CREATE PROCEDURE [unah].[InsertarDatosPersonaEstudiante](
 			@idCarrera INT,
 			--@idpersona VARCHAR(15),
 			@cursoCursoModalidaDeClasesVirtuales BIT,
-			@cursoCursoIntroduccionVidaUniversitaria BIT
+			@cursoCursoIntroduccionVidaUniversitaria BIT,
+
+			@idDireccion INT,
+			@idMunicipio INT,
+			@idDepartamento INT,
+			@descripcion VARCHAR(300),
+
+			@idCorreo INT,
+			@correoPersonal VARCHAR(45),
+			@correoInstitucional VARCHAR(45),
+
+			@idReferencia INT,
+			@nombreCompleto VARCHAR(100),
+			@numeroTelefono VARCHAR(15),
+			@idParentesco INT
 	)
 AS
 BEGIN TRY
@@ -1532,6 +1546,34 @@ BEGIN TRY
 														 @cursoCursoModalidaDeClasesVirtuales,
 														 @cursoCursoIntroduccionVidaUniversitaria
 														 )
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Direccion(idDireccion,
+														idMucicipio,
+														idDepartamento,
+														descripcion
+														)
+												 VALUES(@idDireccion,
+														@idMunicipio,
+														@idDepartamento,
+														@descripcion
+														)
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Correo(idCorreo,
+													 correoPersonal,
+													 correoInstitucional)
+											  VALUES(@idCorreo,
+													 @correoPersonal,
+													 @correoInstitucional
+													 )
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Referencia(idReferencia,
+														 nombreCompleto,
+														 numeroTelefono,
+														 idParentesco)
+												  VALUES(@idReferencia,
+														 @nombreCompleto,
+														 @numeroTelefono,
+														 @idParentesco)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
@@ -1551,14 +1593,14 @@ CREATE PROCEDURE [unah].[InsertarDatosPersonaEmpleado](
 			@primerApellido VARCHAR(35),
 			@segundoApellido VARCHAR(35),
 			@fechaNacimiento VARCHAR(8),
-			@idDireccion INT,
+			--@idDireccion INT,
 			@idNacionalidad INT,
 			@idGrupoEtnico INT,
 			@idSexo INT,
 			@idDiscapacidad INT,
 			@idEstadoCivil INT,
-			@idCorreo INT,
-			@idReferencia INT,
+			--@idCorreo INT,
+			--@idReferencia INT,
 
 			@idEmpleado INT,
 			@fechaInicioEmpleado VARCHAR(8),
@@ -1567,7 +1609,21 @@ CREATE PROCEDURE [unah].[InsertarDatosPersonaEmpleado](
 			@idtipoEmpleado INT,
 			@idCarrera INT,
 			@idcargo INT,
-			@idContrato INT
+			@idContrato INT,
+
+			@idDireccion INT,
+			@idMunicipio INT,
+			@idDepartamento INT,
+			@descripcion VARCHAR(300),
+
+			@idCorreo INT,
+			@correoPersonal VARCHAR(45),
+			@correoInstitucional VARCHAR(45),
+
+			@idReferencia INT,
+			@nombreCompleto VARCHAR(100),
+			@numeroTelefono VARCHAR(15),
+			@idParentesco INT
 	)
 AS
 BEGIN TRY
@@ -1617,16 +1673,42 @@ BEGIN TRY
 													   @idtipoEmpleado,
 													   @idCarrera,
 													   @idcargo,
-													   @idContrato)
+													   @idContrato
+													   )
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Direccion(idDireccion,
+														idMucicipio,
+														idDepartamento,
+														descripcion
+														)
+												 VALUES(@idDireccion,
+														@idMunicipio,
+														@idDepartamento,
+														@descripcion
+														)
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Correo(idCorreo,
+													 correoPersonal,
+													 correoInstitucional)
+											  VALUES(@idCorreo,
+													 @correoPersonal,
+													 @correoInstitucional
+													 )
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Referencia(idReferencia,
+														 nombreCompleto,
+														 numeroTelefono,
+														 idParentesco)
+												  VALUES(@idReferencia,
+														 @nombreCompleto,
+														 @numeroTelefono,
+														 @idParentesco)
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'
 END CATCH
 
 GO
-
-
-
 
 
 /*------------------------------------------------------------------
