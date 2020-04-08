@@ -114,7 +114,7 @@ CREATE PROCEDURE [unah].[InsertarDatosDireccion](
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Direccion(idDireccion,
-														idMucicipio,
+														idMunicipio,
 														idDepartamento,
 														descripcion
 														)
@@ -579,7 +579,7 @@ GO
 */
 CREATE PROCEDURE [unah].[InsertarDatosContrato](
 			@idContrato INT,
-			@descripcion VARCHAR(50)
+			@descripcion VARCHAR(45)
 	)
 AS
 BEGIN TRY
@@ -800,7 +800,7 @@ CREATE PROCEDURE [unah].[InsertarDatosGradoAcademico](
 			@fechaAdquisicion VARCHAR(8),
 			@idEmpleado INT,
 			@fechaInicioEmpleado VARCHAR(8),
-			@codigoPais INT
+			@codigoPais VARCHAR(6)
 	)
 AS
 BEGIN TRY
@@ -1548,7 +1548,7 @@ BEGIN TRY
 														 )
 
 	INSERT INTO ProyectoSistemaMatricula.unah.Direccion(idDireccion,
-														idMucicipio,
+														idMunicipio,
 														idDepartamento,
 														descripcion
 														)
@@ -1677,7 +1677,7 @@ BEGIN TRY
 													   )
 
 	INSERT INTO ProyectoSistemaMatricula.unah.Direccion(idDireccion,
-														idMucicipio,
+														idMunicipio,
 														idDepartamento,
 														descripcion
 														)
