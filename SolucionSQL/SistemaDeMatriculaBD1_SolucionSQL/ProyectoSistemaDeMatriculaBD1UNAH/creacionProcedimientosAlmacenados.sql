@@ -5,9 +5,9 @@
 		*Tendremos que editar si los campos de ID o CODIGO sera autoincrementables en
 		  algunas tablas
 */
---------------------------------------
+---------------------------------------
 --DATOS DEMOGRAFICOS
---------------------------------------
+---------------------------------------
 /*------------------------------------------------------------------
 	TABLA: Continente
 */
