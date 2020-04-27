@@ -399,7 +399,26 @@ CREATE TABLE ProyectoSistemaMatricula.unah.HistorialAcademico(
 																idEstudiante INT,
 																FOREIGN KEY(idEstudiante) REFERENCES ProyectoSistemaMatricula.unah.Estudiante(idEstudiante),
 																);
+/*
+CREATE TABLE ProyectoSistemaMatricula.unah.HistorialAcademico(
+																idHistorial INT,
+																--indicePeriodo INT,
+																--indiceGlobal INT,
+																--idEstudiante INT,
 
+																idAsignatura VARCHAR(15),
+																nombreAsignatura VARCHAR(45),
+																unidadesValorativas INT,
+																idseccion INT,
+																anio INT,
+																periodo CHAR(3),
+																calificaion decimal(2,2),
+																obs CHAR(3)
+																PRIMARY KEY(idHistorial,idAsignatura, anio, periodo, obs)
+																--FOREIGN KEY(idEstudiante) REFERENCES ProyectoSistemaMatricula.unah.Estudiante(idEstudiante),
+																FOREIGN KEY(idseccion,idAsignatura) REFERENCES ProyectoSistemaMatricula.unah.Seccion(idSeccion, idAsignatura)
+																);
+*/
 CREATE TABLE ProyectoSistemaMatricula.unah.Matricula(
 													   idMatricula INT PRIMARY KEY NOT NULL,
 													   confirmacionPago BIT,
@@ -416,7 +435,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Matricula(
 													   );
 
 CREATE TABLE ProyectoSistemaMatricula.unah.ObservacionNotaFinal(
-																   idObservacionNotaFinal INT PRIMARY KEY NOT NULL,
+																   idObservacionNotaFinal CHAR(3) PRIMARY KEY NOT NULL,
 																   descripcion VARCHAR(20)
 																   );
 					    
@@ -434,8 +453,8 @@ CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatricula(
 					    
 CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera(
 															  idMatricula INT,
-															  idAsignatura  VARCHAR(15),
 															  idSeccion INT,
+															  idAsignatura  VARCHAR(15),
 															  fechaLimite DATE,
 															  PRIMARY KEY (idMatricula ,idSeccion, idAsignatura),
 															  FOREIGN KEY(idMatricula) REFERENCES ProyectoSistemaMatricula.unah.Matricula(idMatricula),
