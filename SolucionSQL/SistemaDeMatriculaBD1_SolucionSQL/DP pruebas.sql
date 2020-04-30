@@ -204,3 +204,15 @@ USE ProyectoSistemaMatricula
 SELECT * FROM sys.triggers
 GO
 */
+SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+
+EXECUTE [unah].[spInsertarDatosSeccionMatricula] 3,1100,3,NULL,NULL 
+
+UPDATE ProyectoSistemaMatricula.unah.SeccionMatricula
+   SET idObservacionNota = 'APR'
+   WHERE idMatricula = 3
+     AND idSeccion = 1100
+	 AND idAsignatura = 3
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Asignatura
