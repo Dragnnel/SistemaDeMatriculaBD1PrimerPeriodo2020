@@ -187,3 +187,10 @@ INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad, idEdif
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad, idEdificio, idCentroUniversitario) VALUES (2, 'Facultad De Sociologia', 1, 1);
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad, idEdificio, idCentroUniversitario) VALUES (3, 'Facultad De Biologia', 6, 1);
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad, idEdificio, idCentroUniversitario) VALUES (4, 'Facultad De Matematicas', 7, 1);					  
+
+/*
+	Llenado  de la tabla ObservacionNotaFinal
+*/
+INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('APR', 'APROBADA')
+INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('RPR', 'REPROBADA')
+INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('NSP', 'NO SE PRESENTO')
