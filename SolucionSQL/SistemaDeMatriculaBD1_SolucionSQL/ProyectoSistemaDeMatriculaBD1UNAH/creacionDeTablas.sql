@@ -67,12 +67,12 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Edificio(
 													  );
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Aula(
-												  idAula INT PRIMARY KEY,
-												  codigoAula VARCHAR(10),
+												  idCodigoAula VARCHAR(15),
+												  idCodigoEdificio VARCHAR(15),
 												  cantidadMaximaDeEstudiante INT,
 												  observacion VARCHAR(45),
-												  idEdificio VARCHAR(15),
-												  FOREIGN KEY(idEdificio) REFERENCES ProyectoSistemaMatricula.unah.Edificio(idCodigoEdificio)
+												  PRIMARY KEY(idCodigoAula,idCodigoEdificio),												  
+												  FOREIGN KEY(idCodigoEdificio) REFERENCES ProyectoSistemaMatricula.unah.Edificio(idCodigoEdificio)
 												  );
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Facultad(
@@ -348,28 +348,33 @@ CREATE TABLE ProyectoSistemaMatricula.unah.tipoSeccion (
 														idTipoSeccion INT PRIMARY KEY,
 														tipo VARCHAR (25)
 														);
+CREATE TABLE ProyectoSistemaMatricula.unah.Dias (
+													idDias INT PRIMARY KEY ,
+													descripcionDias VARCHAR(25)
+													);
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Seccion(
 													 idSeccion INT NOT NULL,
 													 horaInicial INT,
 													 horaFinal INT,
+													 idDias INT,
 													 observaciones VARCHAR(45),
 													 cuposDisponibles INT,
 													 idTipoSeccion INT,
 													 idDocente INT,
 													 fechaInicioCargo DATE,
 													 idAsignatura  VARCHAR(15),
-													 idAula INT,
-													 idEdificio VARCHAR(15),
+													 idCodigoAula VARCHAR(15),
+													 idCodigoEdificio VARCHAR(15),
 													 idPeriodo CHAR(3),
 													 fechaInicioPeriodo DATE,
 													 idTipoPeriodo INT,
 													 PRIMARY KEY(idSeccion, idAsignatura),
 													 FOREIGN KEY(idDocente,fechaInicioCargo) REFERENCES ProyectoSistemaMatricula.unah.Docente(idDocente,fechaInicioCargo),
+													 FOREIGN KEY(idDias) REFERENCES ProyectoSistemaMatricula.unah.Dias(idDias),
 													 FOREIGN KEY(idAsignatura) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura),
 													 FOREIGN KEY(idTipoSeccion) REFERENCES ProyectoSistemaMatricula.unah.tipoSeccion(idTipoSeccion),
-													 FOREIGN KEY(idAula) REFERENCES ProyectoSistemaMatricula.unah.Aula(idAula),
-													 FOREIGN KEY(idEdificio) REFERENCES ProyectoSistemaMatricula.unah.Edificio(idCodigoEdificio),
+													 FOREIGN KEY(idCodigoAula,idCodigoEdificio) REFERENCES ProyectoSistemaMatricula.unah.Aula(idCodigoAula,idCodigoEdificio),
 													 FOREIGN KEY(idPeriodo,fechaInicioPeriodo,idTipoPeriodo) REFERENCES ProyectoSistemaMatricula.unah.Periodo(idPeriodo,fechaInicio,idTipoPeriodo)
 													 ); 
 
