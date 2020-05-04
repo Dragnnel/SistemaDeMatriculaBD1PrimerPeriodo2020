@@ -48,9 +48,9 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 -- =============================================
--- Author:		<Author,,Name>
--- Create date: <Create Date,,>
--- Description:	<Description,,>
+-- Author:		David Palacios
+-- Create date: 2020 - 04 - 11
+-- Description:	Insertar un registro en la tabla SeccionMatricula
 -- =============================================
 CREATE PROCEDURE [unah].[spInsertarDatosSeccionMatricula](
 			@idMatricula INT,
