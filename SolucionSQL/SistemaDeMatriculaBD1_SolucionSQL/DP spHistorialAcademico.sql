@@ -144,8 +144,8 @@ BEGIN
 			   CONCAT(P.primerNombre,' ', P.segundoNombre,' ', P.primerApellido,' ', P.segundoApellido) AS Nombre,
 			   C.nombreCarrera AS Carrera,
 			   CU.centroUniversitario AS Centro,
-			   HA.indiceGlobal,
-			   HA.indicePeriodo
+			   HA.indiceGlobal AS IndiceGlobal,
+			   HA.indicePeriodo As IndicePeriodo
 				  FROM ProyectoSistemaMatricula.unah.Persona P
 			INNER JOIN ProyectoSistemaMatricula.unah.Estudiante E
 					ON E.idpersona = P.idPersona
