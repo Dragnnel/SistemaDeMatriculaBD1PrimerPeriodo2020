@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ProyectoSistemaDeMatriculaBD1UNAH">
   <Items>
-    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+    <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="DESKTOP-D62KKT0:">
           <Created>2020-04-04T14:43:07.5010344-06:00</Created>
@@ -63,61 +63,103 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName />
         </ConnectionNode>
+        <ConnectionNode Name="LUIS_ESTRADA-PC:is">
+          <Created>2020-05-06T15:42:58.3579415-06:00</Created>
+          <Type>SQL</Type>
+          <Server>LUIS_ESTRADA-PC</Server>
+          <UserName>is</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="LUIS_ESTRADA-PC:Luis_Estrada-PC\Luis_Estrada">
+          <Created>2020-05-05T13:01:04.2048856-06:00</Created>
+          <Type>SQL</Type>
+          <Server>LUIS_ESTRADA-PC</Server>
+          <UserName />
+          <Authentication>Autenticación de Windows</Authentication>
+          <InitialDB />
+          <LoginTimeout>15</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
+        </ConnectionNode>
       </Items>
     </LogicalFolder>
-    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+    <LogicalFolder Name="Consultas" Type="0" Sorted="true">
       <Items>
         <FileNode Name="creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>creacionDeTablas.sql</FullPath>
         </FileNode>
         <FileNode Name="creacionProcedimientosAlmacenados.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>creacionProcedimientosAlmacenados.sql</FullPath>
         </FileNode>
+        <FileNode Name="IngredoDeDatosProcedimientosAlmacenadosSeccionMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>IngredoDeDatosProcedimientosAlmacenadosSeccionMatricula.sql</FullPath>
+        </FileNode>
         <FileNode Name="ingreso de datos.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>ingreso de datos.sql</FullPath>
         </FileNode>
         <FileNode Name="Observaciones.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>Observaciones.sql</FullPath>
         </FileNode>
+        <FileNode Name="procedimientoInsertarDatosDemograficos.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>procedimientoInsertarDatosDemograficos.sql</FullPath>
+        </FileNode>
         <FileNode Name="PROCEDIMIENTOSALMACENADOS.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>PROCEDIMIENTOSALMACENADOS.sql</FullPath>
         </FileNode>
         <FileNode Name="ProcedimientosAlmacenadosSeccionMatricula.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>ProcedimientosAlmacenadosSeccionMatricula.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_AumentoHorasDeSeccionMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SP_AumentoHorasDeSeccionMatricula.sql</FullPath>
+        </FileNode>
         <FileNode Name="Transaccion1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>Transaccion1.sql</FullPath>
         </FileNode>
         <FileNode Name="TransaccionesTarea.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>TransaccionesTarea.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>
-    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+    <LogicalFolder Name="Varios" Type="3" Sorted="true">
       <Items />
     </LogicalFolder>
   </Items>

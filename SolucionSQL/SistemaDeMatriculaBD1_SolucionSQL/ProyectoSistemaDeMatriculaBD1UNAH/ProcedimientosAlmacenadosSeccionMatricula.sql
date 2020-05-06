@@ -97,7 +97,3 @@ CREATE TABLE ManejoDeSeccion.unah.Seccion(
 													 FOREIGN KEY(idCodigoAula,idCodigoEdificio) REFERENCES ManejoDeSeccion.unah.Aula(idCodigoAula,idCodigoEdificio),
 													 FOREIGN KEY(idPeriodo,fechaInicioPeriodo,idTipoPeriodo) REFERENCES ManejoDeSeccion.unah.Periodo(idPeriodo,fechaInicio,idTipoPeriodo)
 													 ); 
-
-
-
-
