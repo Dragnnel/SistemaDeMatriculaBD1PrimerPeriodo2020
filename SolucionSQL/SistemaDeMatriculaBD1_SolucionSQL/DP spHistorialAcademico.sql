@@ -112,7 +112,7 @@ SELECT SM.idAsignatura,
 	ON S.idPeriodo = P.idPeriodo
 	WHERE M.idEstudiante = @idEstudiante
 	  AND M.idHistorial = @idHistorial
-	  AND SM.idObservacionNota IN ('APR','NSP','RPR')
+	  AND SM.idObservacionNota IN ('APR','NSP','RPB')
 */
 
 ---------------------------------------------------------------------------------------------------------------
@@ -133,11 +133,30 @@ BEGIN
 	SET NOCOUNT ON;
 	BEGIN TRY
 		DECLARE @idHistorial INT
+		DECLARE @indiceGlobal FLOAT
+		DECLARE @indicePeriodo FLOAT
 
 		SET @idHistorial = (SELECT HA.idHistorial
 								FROM ProyectoSistemaMatricula.unah.HistorialAcademico HA
 								WHERE HA.idEstudiante = @idEstudiante
 							)
+		
+		/*Llamado de las funciones para la obtencion de los respectivos indices*/
+		SET @indiceGlobal = [unah].[fnObtenerIndiceGlobal](@idEstudiante,@idHistorial)
+
+		SET @indicePeriodo = [unah].[fnObtenerIndicePeriodo](@idEstudiante,@idHistorial)
+
+		/*Actualizacion de manera dinamica*/
+		UPDATE ProyectoSistemaMatricula.unah.HistorialAcademico
+		   SET indiceGlobal = @indiceGlobal
+		 WHERE idEstudiante = @idEstudiante
+		   AND idHistorial = idHistorial
+
+		UPDATE ProyectoSistemaMatricula.unah.HistorialAcademico
+		   SET indicePeriodo = @indicePeriodo
+		 WHERE idEstudiante = @idEstudiante
+		   AND idHistorial = @idHistorial
+
 
 		/*Aqui se obtienen los datos personales, indice global y de periodo, etc*/
 		SELECT E.idEstudiante AS Cuenta,
@@ -178,7 +197,7 @@ BEGIN
 				    ON S.idPeriodo = P.idPeriodo
 				 WHERE M.idEstudiante = @idEstudiante
 				   AND M.idHistorial = @idHistorial
-				   AND SM.idObservacionNota IN ('APR','NSP','RPR')
+				   AND SM.idObservacionNota IN ('APR','NSP','RPB','ABD')
 	END TRY
 	BEGIN CATCH
 		PRINT 'Verifique que el numero de cuenta que esta ingresando este correcto'

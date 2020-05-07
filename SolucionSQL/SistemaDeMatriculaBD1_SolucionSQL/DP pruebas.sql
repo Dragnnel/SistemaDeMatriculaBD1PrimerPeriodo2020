@@ -198,7 +198,7 @@ EXECUTE [unah].[spInsertarDatosSeccionMatricula] 1,1100,3,NULL,NULL   --No matri
 EXECUTE [unah].[spInsertarDatosSeccionMatricula] 1,1300,5,NULL,NULL   --No matricula porque (Faltan Requisitos: Precalculo  Trigonometria)
 
 EXECUTE [unah].[spInsertarDatosSeccionMatricula] 2,1001,5,NULL,NULL   --No matricula porque (No tiene la asignatura en su Plan de estudio)
-
+EXECUTE [unah].[spInsertarDatosSeccionMatricula] 2,1000,2,NULL,NULL
 /*
 USE ProyectoSistemaMatricula
 SELECT * FROM sys.triggers
@@ -207,6 +207,7 @@ GO
 SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
 
 EXECUTE [unah].[spInsertarDatosSeccionMatricula] 3,1100,3,NULL,NULL 
+EXECUTE [unah].[spInsertarDatosSeccionMatricula] 3,1000,2,NULL,NULL
 
 UPDATE ProyectoSistemaMatricula.unah.SeccionMatricula
    SET idObservacionNota = 'APR'

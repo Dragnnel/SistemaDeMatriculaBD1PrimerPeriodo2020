@@ -447,7 +447,7 @@ ALTER TABLE ProyectoSistemaMatricula.unah.SeccionMatricula (
 															  idMatricula INT,
 															  idAsignatura  VARCHAR(15),
 															  idSeccion INT,
-															  notaFinal DECIMAL (2,2),
+															  notaFinal FLOAT, --DECIMAL (2,2),
 															  idObservacionNota VARCHAR(3),
 															  PRIMARY KEY (idMatricula ,idSeccion, idAsignatura),
 															  FOREIGN KEY(idMatricula) REFERENCES ProyectoSistemaMatricula.unah.Matricula(idMatricula),
