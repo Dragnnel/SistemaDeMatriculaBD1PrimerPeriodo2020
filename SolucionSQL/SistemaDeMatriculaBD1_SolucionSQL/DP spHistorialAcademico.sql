@@ -207,3 +207,5 @@ GO
 
 /*Prueba*/
 EXECUTE [unah].[spObtenerHistorialAcademico] 1
+
+EXECUTE [unah].[spObtenerHistorialAcademico] 2
