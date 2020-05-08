@@ -145,6 +145,12 @@
           <AssociatedConnUserName />
           <FullPath>SP_AumentoHorasDeSeccionMatricula.sql</FullPath>
         </FileNode>
+        <FileNode Name="SP_CreadoDeSeccionPresencialMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>SP_CreadoDeSeccionPresencialMatricula.sql</FullPath>
+        </FileNode>
         <FileNode Name="Transaccion1.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:False:is</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>

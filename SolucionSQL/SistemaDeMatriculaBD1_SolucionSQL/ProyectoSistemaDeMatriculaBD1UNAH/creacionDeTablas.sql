@@ -344,7 +344,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Periodo(
 													FOREIGN KEY(idTipoPeriodo) REFERENCES ProyectoSistemaMatricula.unah.TipoPeriodo(idTipoPeriodo)
 													);
 
-CREATE TABLE ProyectoSistemaMatricula.unah.tipoSeccion (
+CREATE TABLE ProyectoSistemaMatricula.unah.TipoSeccion (
 														idTipoSeccion INT PRIMARY KEY,
 														tipo VARCHAR (25)
 														);
