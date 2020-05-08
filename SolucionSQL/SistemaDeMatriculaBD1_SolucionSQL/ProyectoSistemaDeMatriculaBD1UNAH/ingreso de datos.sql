@@ -192,5 +192,6 @@ INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad, idEdif
 	Llenado  de la tabla ObservacionNotaFinal
 */
 INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('APR', 'APROBADA')
-INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('RPR', 'REPROBADA')
+INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('RPB', 'REPROBADA')
 INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('NSP', 'NO SE PRESENTO')
+INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal,descripcion) VALUES('ABD', 'ABANDONO')

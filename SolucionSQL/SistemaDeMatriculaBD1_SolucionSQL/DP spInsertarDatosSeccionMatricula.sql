@@ -56,8 +56,8 @@ CREATE PROCEDURE [unah].[spInsertarDatosSeccionMatricula](
 			@idMatricula INT,
 			@idSeccion INT,
 			@idAsignatura VARCHAR(15),
-			@notaFinal DECIMAL (2,2),
-			@idObservacionNota INT
+			@notaFinal FLOAT,
+			@idObservacionNota CHAR
 	)
 AS
 BEGIN TRY
