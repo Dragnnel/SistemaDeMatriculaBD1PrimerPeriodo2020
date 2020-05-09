@@ -210,7 +210,7 @@ ON SE.idCodigoAula=AULA.idCodigoAula
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
- =============================================
+ --=============================================
 -- Author:		Francis Gonzales
 -- Create date: 07-05-2020
 -- Description:	Vista que me devuelve los nombres,
@@ -300,7 +300,7 @@ WHERE T2.indiceGlobal >=19 AND T4.nombreCarrera= 'Sistemas' --- Lo pruebo con 19
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 
-=============================================
+--=============================================
 -- Author:		Francis Gonzales
 -- Create date: 07-05-2020
 -- Description:	Me devuelve los estudiantes que estudian carreras simultaneas
@@ -346,7 +346,299 @@ WHERE T1.poseeCarreraSimultanea IS NULL     -------------------Lo pruebo con Nul
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 
+--=============================================
+-- Author:		Francis Gonzales
+-- Create date: 07-05-2020
+-- Description:	Me devuelve la cantidad de clases que el estudiante aprobadas
+
+ --_=============================================
+ CREATE VIEW VistaCantidadClasesAPR AS(
+  SELECT   T5.idEstudiante,
+			T6.primerNombre,
+			T6.segundoNombre,
+			T6.primerApellido,
+			T6.segundoApellido,
+		   COUNT( T3.descripcion) AS CantidadClasesAPR
+   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+	ON t1.idObservacionNota =t3.idObservacionNotaFinal
+	INNER JOIN ProyectoSistemaMatricula.unah.Matricula T4
+	ON T1.idMatricula =T4.idMatricula
+	INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T5
+	ON T4.idEstudiante = T5.idEstudiante
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
+	ON T5.idPersona = T6.idPersona
+	WHERE T3.descripcion ='APR'
+	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
+
+)
 
 
+SELECT *
+FROM VistaCantidadClasesAPR
+ 
+   SELECT   T5.idEstudiante,
+			T6.primerNombre,
+			T6.segundoNombre,
+			T6.primerApellido,
+			T6.segundoApellido,
+		   COUNT( T3.descripcion) AS CantidadClasesAPR
+   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+	ON t1.idObservacionNota =t3.idObservacionNotaFinal
+	INNER JOIN ProyectoSistemaMatricula.unah.Matricula T4
+	ON T1.idMatricula =T4.idMatricula
+	INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T5
+	ON T4.idEstudiante = T5.idEstudiante
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
+	ON T5.idPersona = T6.idPersona
+	WHERE T3.descripcion ='APR'
+	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
+
+	--------------------------------------------------------------------------------------------------------------------------
+	--=============================================
+-- Author:		Francis Gonzales
+-- Create date: 07-05-2020
+-- Description:	Me devuelve la cantidad de clases donde el estudiante  no se presento
+
+ --_=============================================
+ CREATE VIEW VistaCantidadClasesNSP AS(
+
+ SELECT   T5.idEstudiante,
+			T6.primerNombre,
+			T6.segundoNombre,
+			T6.primerApellido,
+			T6.segundoApellido,
+		   COUNT( T3.descripcion) AS CantidadClasesAPR
+   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+	ON t1.idObservacionNota =t3.idObservacionNotaFinal
+	INNER JOIN ProyectoSistemaMatricula.unah.Matricula T4
+	ON T1.idMatricula =T4.idMatricula
+	INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T5
+	ON T4.idEstudiante = T5.idEstudiante
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
+	ON T5.idPersona = T6.idPersona
+	WHERE T3.descripcion ='NSP'
+	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
+
+
+)
+
+
+SELECT *
+FROM VistaCantidadClasesNSP
+
+
+  SELECT   T5.idEstudiante,
+			T6.primerNombre,
+			T6.segundoNombre,
+			T6.primerApellido,
+			T6.segundoApellido,
+		   COUNT( T3.descripcion) AS CantidadClasesAPR
+   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+	ON t1.idObservacionNota =t3.idObservacionNotaFinal
+	INNER JOIN ProyectoSistemaMatricula.unah.Matricula T4
+	ON T1.idMatricula =T4.idMatricula
+	INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T5
+	ON T4.idEstudiante = T5.idEstudiante
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
+	ON T5.idPersona = T6.idPersona
+	WHERE T3.descripcion ='NSP'
+	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
+
+---------------------------------------------------------------------------------------------------------------
+	--=============================================
+-- Author:		Francis Gonzales
+-- Create date: 07-05-2020
+-- Description:	Me devuelve la cantidad de clases donde el estudiante Abandono
+
+ --_=============================================
+
+ CREATE VIEW VistaCantidadClasesABN AS(
+  SELECT   T5.idEstudiante,
+			T6.primerNombre,
+			T6.segundoNombre,
+			T6.primerApellido,
+			T6.segundoApellido,
+		   COUNT( T3.descripcion) AS CantidadClasesAPR
+   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+	ON t1.idObservacionNota =t3.idObservacionNotaFinal
+	INNER JOIN ProyectoSistemaMatricula.unah.Matricula T4
+	ON T1.idMatricula =T4.idMatricula
+	INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T5
+	ON T4.idEstudiante = T5.idEstudiante
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
+	ON T5.idPersona = T6.idPersona
+	WHERE T3.descripcion ='ABN'
+	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
+
+
+)
+
+SELECT *
+FROM VistaCantidadClasesABN
+
+
+ SELECT   T5.idEstudiante,
+			T6.primerNombre,
+			T6.segundoNombre,
+			T6.primerApellido,
+			T6.segundoApellido,
+		   COUNT( T3.descripcion) AS CantidadClasesAPR
+   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+	ON t1.idObservacionNota =t3.idObservacionNotaFinal
+	INNER JOIN ProyectoSistemaMatricula.unah.Matricula T4
+	ON T1.idMatricula =T4.idMatricula
+	INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T5
+	ON T4.idEstudiante = T5.idEstudiante
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
+	ON T5.idPersona = T6.idPersona
+	WHERE T3.descripcion ='ABN'
+	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
+
+
+-------------------------------------------------------------------------------------------------------------------------------
+	--=============================================
+-- Author:		Francis Gonzales
+-- Create date: 07-05-2020
+-- Description:	Lista de los Representantes Artisticos y de Deportes en la u
+
+ --_=============================================
+
+ CREATE VIEW VistaListaRepresentantesArtisticos AS(
+
+  SELECT T1.idEstudiante,
+        T3.nombreCarrera,
+		T2.primerNombre,
+		T2.segundoNombre,
+		T2.primerApellido,
+		T2.segundoApellido,
+		T1.esRepresentanteArteoDeporte
+        
+ FROM ProyectoSistemaMatricula.unah.Estudiante T1
+ INNER JOIN ProyectoSistemaMatricula.unah.Persona T2
+ ON T1.idPersona = T2.idPersona
+ INNER JOIN ProyectoSistemaMatricula.unah.Carrera T3
+ ON T1.idCarrera = T3.idCarrera 
+ WHERE T1.esRepresentanteArteoDeporte = 1
+
+)
+
+
+SELECT *
+FROM VistaListaRepresentantesArtisticos
+
+
+ SELECT T1.idEstudiante,
+        T3.nombreCarrera,
+		T2.primerNombre,
+		T2.segundoNombre,
+		T2.primerApellido,
+		T2.segundoApellido,
+		T1.esRepresentanteArteoDeporte
+        
+ FROM ProyectoSistemaMatricula.unah.Estudiante T1
+ INNER JOIN ProyectoSistemaMatricula.unah.Persona T2
+ ON T1.idPersona = T2.idPersona
+ INNER JOIN ProyectoSistemaMatricula.unah.Carrera T3
+ ON T1.idCarrera = T3.idCarrera 
+ WHERE T1.esRepresentanteArteoDeporte = 1
+
+ ---------------------------------------------------------------------------------------------------------------
+ 	--=============================================
+-- Author:		Francis Gonzales
+-- Create date: 07-05-2020
+-- Description:	Lista de Empleados que tienen cargo de Docente que estan Contratados por hora
+
+ --_=============================================
+
+
+ 
+CREATE VIEW VistaDocentesPorHora AS(
+
+SELECT T1.idEmpleado,
+		T4.primerNombre,
+		T4.segundoNombre,
+		T4.primerApellido,
+		T4.segundoApellido
+ FROM ProyectoSistemaMatricula.unah.Empleado T1
+ INNER JOIN ProyectoSistemaMatricula.unah.Cargo T2
+ ON T1.idcargo = T2.idCargo
+ INNER JOIN ProyectoSistemaMatricula.unah.Contrato T3
+ ON T1.idContrato = T3.idContrato
+ INNER JOIN ProyectoSistemaMatricula.unah.Persona T4
+ ON T1.idPersona = T4.idPersona
+ WHERE T3.descripcion= 'Por Hora' AND T2.tipoCargo = 'Docente'
+
+)
+
+
+SELECT *
+FROM VistaDocentesPorHora
+
+
+ SELECT T1.idEmpleado,
+		T4.primerNombre,
+		T4.segundoNombre,
+		T4.primerApellido,
+		T4.segundoApellido
+ FROM ProyectoSistemaMatricula.unah.Empleado T1
+ INNER JOIN ProyectoSistemaMatricula.unah.Cargo T2
+ ON T1.idcargo = T2.idCargo
+ INNER JOIN ProyectoSistemaMatricula.unah.Contrato T3
+ ON T1.idContrato = T3.idContrato
+ INNER JOIN ProyectoSistemaMatricula.unah.Persona T4
+ ON T1.idPersona = T4.idPersona
+ WHERE T3.descripcion= 'Por Hora' AND T2.tipoCargo = 'Docente'
+
+ -------------------------------------------------------------------------------------------------------------------
+  	--=============================================
+-- Author:		Francis Gonzales
+-- Create date: 07-05-2020
+-- Description:	Lista de Empleados que tienen cargo de Docente que estan Contratados Permanente
+
+ --_=============================================
+ CREATE VIEW VistaDocentesPermanente AS(
+ SELECT T1.idEmpleado,
+		T4.primerNombre,
+		T4.segundoNombre,
+		T4.primerApellido,
+		T4.segundoApellido
+ FROM ProyectoSistemaMatricula.unah.Empleado T1
+ INNER JOIN ProyectoSistemaMatricula.unah.Cargo T2
+ ON T1.idcargo = T2.idCargo
+ INNER JOIN ProyectoSistemaMatricula.unah.Contrato T3
+ ON T1.idContrato = T3.idContrato
+ INNER JOIN ProyectoSistemaMatricula.unah.Persona T4
+ ON T1.idPersona = T4.idPersona
+ WHERE T3.descripcion= 'Permanente' AND T2.tipoCargo = 'Docente'
+
+
+)
+
+SELECT *
+FROM VistaDocentesPermanente
+
+
+ SELECT T1.idEmpleado,
+		T4.primerNombre,
+		T4.segundoNombre,
+		T4.primerApellido,
+		T4.segundoApellido
+ FROM ProyectoSistemaMatricula.unah.Empleado T1
+ INNER JOIN ProyectoSistemaMatricula.unah.Cargo T2
+ ON T1.idcargo = T2.idCargo
+ INNER JOIN ProyectoSistemaMatricula.unah.Contrato T3
+ ON T1.idContrato = T3.idContrato
+ INNER JOIN ProyectoSistemaMatricula.unah.Persona T4
+ ON T1.idPersona = T4.idPersona
+ WHERE T3.descripcion= 'Permanente' AND T2.tipoCargo = 'Docente'
+
+
+ --------------------------------------------------------------------------------------------------
 CREATE VIEW HabitacionDatos AS(
 )
