@@ -4,9 +4,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 
 -- =============================================
--- Author:		Ruby Gonzales
---				Luis Estrada
---				David Palacios
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
 -- Create date: 03/04/2020 9:10:50
 -- Description:	Insertar una persona por medio de una transaccion en un procedimiento almacenado
 -- =============================================
