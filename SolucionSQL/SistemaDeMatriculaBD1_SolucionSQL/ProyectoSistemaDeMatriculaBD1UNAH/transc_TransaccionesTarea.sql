@@ -11,7 +11,7 @@ GO
 -- Description:	Insertar una persona por medio de una transaccion en un procedimiento almacenado
 -- =============================================
 
-ALTER PROCEDURE [dbo].[SP_InsertPersona](
+CREATE PROCEDURE [dbo].[SP_InsertPersona](
 					 @idPersona VARCHAR(15),
 					 @primerNombre VARCHAR(35),
 					 @segundoNombre VARCHAR(35),

@@ -134,8 +134,8 @@
           <FullPath>fn_FUNCIONESDIAMATRICULA.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_uvEstudiante, fnuvAsignatura, fncuposSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_uvEstudiante, fnuvAsignatura, fncuposSeccion.sql</FullPath>
         </FileNode>
@@ -144,6 +144,18 @@
           <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificaantesMatricula.sql</FullPath>
+        </FileNode>
+        <FileNode Name="fn_VerificarDocente.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>fn_VerificarDocente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="fn_VerificarPeriodoAcademico_.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+          <AssociatedConnUserName />
+          <FullPath>fn_VerificarPeriodoAcademico_.sql</FullPath>
         </FileNode>
         <FileNode Name="index_IndicesSistemaDeMatricula.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
@@ -157,17 +169,17 @@
           <AssociatedConnUserName />
           <FullPath>pruebas.sql</FullPath>
         </FileNode>
-        <FileNode Name="sp_AumentoHorasDeSeccionMatricula.sql">
+        <FileNode Name="sp_AumentoHorasDeSeccionCreada.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>sp_AumentoHorasDeSeccionMatricula.sql</FullPath>
+          <FullPath>sp_AumentoHorasDeSeccionCreada.sql</FullPath>
         </FileNode>
-        <FileNode Name="sp_CreadoDeSeccionPresencialMatricula.sql">
+        <FileNode Name="sp_CreadoDeSeccionCreada.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName />
-          <FullPath>sp_CreadoDeSeccionPresencialMatricula.sql</FullPath>
+          <FullPath>sp_CreadoDeSeccionCreada.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_HistorialAcademico.sql">
           <AssociatedConnectionMoniker />
@@ -188,8 +200,8 @@
           <FullPath>sp_InsertarDatosContinente.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_InsertarDatosSeccionMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_InsertarDatosSeccionMatricula.sql</FullPath>
         </FileNode>
