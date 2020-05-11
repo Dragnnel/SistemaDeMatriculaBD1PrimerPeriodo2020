@@ -1,3 +1,12 @@
+-- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 12/04/2020 
+-- Description:	Procedimiento que me llama la funcion DiaMatricula y funcion UVEstudiante,uvAsignatura
+--y cumpleRequisitos y si todas esas funciones se cumplen el estudiante puede matricular
+-- =============================================
+
 CREATE PROCEDURE MatriculaEstudiante(@idMatricula INT,
 									 @confirmacionPago BIT,
 									 @fechaInicio DATE,
@@ -11,7 +20,7 @@ CREATE PROCEDURE MatriculaEstudiante(@idMatricula INT,
 									                   
 As
 BEGIN
-    DECLARE @resp INT = (SELECT [dbo].[DiaMatriculaEstudiantes](@idEstudiante));
+    DECLARE @resp INT =(SELECT [dbo].[VerificarDiaMatricula](@idEstudiante));
 	DECLARE @respuestaFN INT;
 	
 

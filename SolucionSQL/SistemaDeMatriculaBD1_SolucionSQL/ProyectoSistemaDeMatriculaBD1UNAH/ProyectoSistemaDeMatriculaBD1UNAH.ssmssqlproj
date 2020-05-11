@@ -87,7 +87,7 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
         </ConnectionNode>
-        <ConnectionNode Name="LUIS_ESTRADA-PC:Luis_Estrada-PC\Luis_Estrada">
+        <ConnectionNode Name="LUIS_ESTRADA-PC:DESKTOP-D62KKT0\Francis Gonzales">
           <Created>2020-05-09T17:51:20.9657226-06:00</Created>
           <Type>SQL</Type>
           <Server>LUIS_ESTRADA-PC</Server>
@@ -104,15 +104,15 @@
     <LogicalFolder Name="Consultas" Type="0" Sorted="true">
       <Items>
         <FileNode Name="1_crear_creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>1_crear_creacionDeTablas.sql</FullPath>
         </FileNode>
         <FileNode Name="2_insertar_DatosPrueba.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>2_insertar_DatosPrueba.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_CalculoIndiceGlobal y periodo.sql">
@@ -127,11 +127,11 @@
           <AssociatedConnUserName />
           <FullPath>fn_CumpleRequisitos.sql</FullPath>
         </FileNode>
-        <FileNode Name="fn_FUNCIONESDIAMATRICULA.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>fn_FUNCIONESDIAMATRICULA.sql</FullPath>
+        <FileNode Name="fn_DiaMatriculaVerificar.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>fn_DiaMatriculaVerificar.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_uvEstudiante, fnuvAsignatura, fncuposSeccion.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
@@ -140,9 +140,9 @@
           <FullPath>fn_uvEstudiante, fnuvAsignatura, fncuposSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificaantesMatricula.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_VerificaantesMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarDocente.sql">
@@ -206,9 +206,9 @@
           <FullPath>sp_InsertarDatosSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_MatriculaEstudiante.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_MatriculaEstudiante.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_ProcedimientosAlmacenadosDeInsercion.sql">
@@ -218,28 +218,94 @@
           <FullPath>sp_ProcedimientosAlmacenadosDeInsercion.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_Transaccion1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_Transaccion1.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_TransaccionesTarea.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_TransaccionesTarea.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_triggerInsertarSeccionMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>trg_triggerInsertarSeccionMatricula.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_TODASVistasSistemaDeMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>view_TODASVistasSistemaDeMatricula.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaCantidadClasesABN.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>trg_triggerInsertarSeccionMatricula.sql</FullPath>
+          <FullPath>view_VistaCantidadClasesABN.sql</FullPath>
         </FileNode>
-        <FileNode Name="view_VistasSistemaDeMatricula.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LUIS_ESTRADA-PC:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>LUIS_ESTRADA-PC</AssociatedConnSrvName>
+        <FileNode Name="view_VistaCantidadClasesAPR.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>view_VistasSistemaDeMatricula.sql</FullPath>
+          <FullPath>view_VistaCantidadClasesAPR.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaCantidadClasesNSP.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaCantidadClasesNSP.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaCarreraSimultanea.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaCarreraSimultanea.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaDocentesPermanente.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaDocentesPermanente.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaDocentesPorHora.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaDocentesPorHora.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaEstudiantesconriesgosancion.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaEstudiantesconriesgosancion.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaExcelenciaAcademica.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaExcelenciaAcademica.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaForma003.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaForma003.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaHisorialAcademico.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaHisorialAcademico.sql</FullPath>
+        </FileNode>
+        <FileNode Name="view_VistaListaRepresentantesArtisticos.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>view_VistaListaRepresentantesArtisticos.sql</FullPath>
         </FileNode>
       </Items>
     </LogicalFolder>

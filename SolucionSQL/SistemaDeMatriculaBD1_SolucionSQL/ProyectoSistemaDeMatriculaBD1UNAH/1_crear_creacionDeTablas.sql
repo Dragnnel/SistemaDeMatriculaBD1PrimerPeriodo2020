@@ -188,8 +188,12 @@ CREATE TABLE ProyectoSistemaMatricula.unah.PlanEstudio(
 														 nombre VARCHAR(80),
 														 duracionCarrera VARCHAR(25),
 														 totalUV INT,
-														 fechaRevision DATE
+														 fechaRevision DATE,
+														 cantidadClasesCarrera INT
 														 );
+
+
+
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Carrera(
@@ -220,6 +224,10 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Empleado(
 													  FOREIGN KEY(idCargo) REFERENCES ProyectoSistemaMatricula.unah.Cargo(idCargo),
 													  FOREIGN KEY(idContrato) REFERENCES ProyectoSistemaMatricula.unah.Contrato(idContrato)
 													  );
+
+/*
+UPDATE ProyectoSistemaMatricula.unah.PlanEstudio 
+SET cantidadClasesCarrera =60*/
 
 CREATE TABLE ProyectoSistemaMatricula.unah.JefeDepartamento(
 															  idJefeDepartamento INT, ---- es el id empleado
@@ -391,6 +399,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Estudiante(
 														cursoCursoModalidaDeClasesVirtuales BIT,
 														cursoCursoIntroduccionVidaUniversitaria BIT,
 														idCarrera INT,
+														poseeCarreraSimultanea BIT,
 														FOREIGN KEY(idCarrera) REFERENCES ProyectoSistemaMatricula.unah.Carrera(idCarrera),
 														FOREIGN KEY(idCentro) REFERENCES ProyectoSistemaMatricula.unah.CentroUniversitario(idCentro),
 														FOREIGN KEY(idNotaAptitud) REFERENCES ProyectoSistemaMatricula.unah.NotaExamenAPtitud(idNotaAptitud),
