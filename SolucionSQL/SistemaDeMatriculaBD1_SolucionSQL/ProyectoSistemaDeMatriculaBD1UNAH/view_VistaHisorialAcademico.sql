@@ -48,7 +48,8 @@ INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal Nota
 ON SEMA.idObservacionNota = Nota.idObservacionNotaFinal
 
 )
-
+/*
 SELECT *
 FROM VistaHisorialAcademico
+*/
 

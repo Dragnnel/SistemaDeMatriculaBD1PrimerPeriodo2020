@@ -26,6 +26,8 @@ WHERE T2.indiceGlobal <= 50
 
 )
 
+/*
 SELECT *
 FROM VistaEstudiantesconriesgosancion
+*/
 

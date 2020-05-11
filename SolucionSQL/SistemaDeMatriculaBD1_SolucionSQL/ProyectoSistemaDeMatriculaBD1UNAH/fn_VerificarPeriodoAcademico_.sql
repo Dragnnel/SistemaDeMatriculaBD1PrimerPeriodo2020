@@ -16,11 +16,11 @@ RETURNS INT
 
 AS 
 
-BEGIN
+BEGIN try return
 	DECLARE @respuesta INT
 	
 	IF EXISTS (SELECT * FROM ProyectoSistemaMatricula.unah.Periodo as P
-					WHERE		P.idPeriodo =@pidPeriodo
+					WHERE		P.idPeriodo = CAST (@pidPeriodo AS CHAR)
 							AND P.fechaInicio = @pfechaInicio 
 							AND P.idTipoPeriodo = @pidTipoPeriodo
 							)
@@ -34,8 +34,13 @@ BEGIN
 			SET @respuesta = 0;
 		END 			
 			RETURN @respuesta;
-END 
+END try
 
+begin catch
+	print 'error'
+	SET @respuesta = 0;
+	RETURN @respuesta;
+end catch
 /*
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo

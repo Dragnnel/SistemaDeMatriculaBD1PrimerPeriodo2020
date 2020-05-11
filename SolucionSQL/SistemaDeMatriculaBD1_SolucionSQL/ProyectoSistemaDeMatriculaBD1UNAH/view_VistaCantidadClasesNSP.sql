@@ -31,7 +31,8 @@
 
 )
 
-
+/*
 SELECT *
 FROM VistaCantidadClasesNSP
+*/
 

@@ -26,5 +26,7 @@ WHERE T2.indiceGlobal >=80
 
 )
 
+/*
 SELECT *
 FROM VistaExcelenciaAcademica
+*/

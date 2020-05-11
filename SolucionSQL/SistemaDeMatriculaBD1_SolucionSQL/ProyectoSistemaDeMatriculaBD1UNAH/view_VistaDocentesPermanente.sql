@@ -26,6 +26,8 @@
 
 )
 
+/*
 SELECT *
 FROM VistaDocentesPermanente
+*/
 

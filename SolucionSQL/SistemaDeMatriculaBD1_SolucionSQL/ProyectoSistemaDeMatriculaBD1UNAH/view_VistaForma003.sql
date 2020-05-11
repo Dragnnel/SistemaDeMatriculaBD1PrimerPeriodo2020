@@ -55,5 +55,7 @@ INNER JOIN ProyectoSistemaMatricula.unah.Aula AULA
 ON SE.idCodigoAula=AULA.idCodigoAula
 )
 
+/*
 SELECT *
 FROM VistaForma003
+*/

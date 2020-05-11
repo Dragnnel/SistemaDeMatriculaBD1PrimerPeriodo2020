@@ -27,5 +27,7 @@ WHERE T1.poseeCarreraSimultanea = 1
 
 )
 
+/*
 SELECT *
 FROM VistaCarreraSimultanea
+*/

@@ -28,6 +28,7 @@
 
 )
 
-
+/*
 SELECT *
 FROM VistaCantidadClasesAPR
+*/

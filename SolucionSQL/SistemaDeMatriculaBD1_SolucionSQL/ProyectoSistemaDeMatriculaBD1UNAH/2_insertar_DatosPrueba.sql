@@ -677,5 +677,3 @@ INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPa
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (8, 0, '2020-06-01', '2019-11-11','I','2020-01-01', 2, '741646051', 3);
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (9, 1, '2020-06-17', '2019-12-15','II', '2020-05-01', 1,'279306733' , 4);--
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-*/

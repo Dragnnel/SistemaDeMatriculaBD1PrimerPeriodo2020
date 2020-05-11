@@ -34,6 +34,6 @@ END
 /*
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Docente
-SELECT [unah].[fn_VerificaEmpleado] (1,'2019-01-01')
-
+SELECT [unah].[fn_VerificaEmpleado] (1,'2019-01-01') 
+SELECT [unah].[fn_VerificaEmpleado] (1,'2019-11-01')
 */
