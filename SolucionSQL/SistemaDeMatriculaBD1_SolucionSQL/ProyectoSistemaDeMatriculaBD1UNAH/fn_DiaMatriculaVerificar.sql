@@ -51,14 +51,14 @@ CREATE FUNCTION VerificarDiaMatricula(@idEstudiante INT
 						ON T1.idNotaAptitud=T2.idNotaAptitud
 						WHERE idEstudiante=@idEstudiante 
 
-				/*SELECT @clasesCarrera= T1.cantidadClasesCarrera
-                      FROM ProyectoSistemaMatricula.unah.PlanEstudio T1
+				/*SELECT @clasesCarrera= cantidadClasesCarrera
+                      FROM ProyectoSistemaMatricula.unah.PlanEstudio
 					  WHERE idEstudiante=@idEstudiante */
 
 
 						SELECT @condicionDeporte=esRepresentanteArteoDeporte 
 						FROM ProyectoSistemaMatricula.unah.Estudiante
-						WHERE idEstudiante=@idEstudiante  
+						WHERE idEstudiante=@idEstudiante 
 
 				SELECT @condicion=indiceGlobal 
 				FROM ProyectoSistemaMatricula.unah.HistorialAcademico 
@@ -85,7 +85,7 @@ CREATE FUNCTION VerificarDiaMatricula(@idEstudiante INT
 					  END
 				ELSE
 				    BEGIN
-						IF(60-@conteoclasespasadas)<=10 AND (@prueba='2020-05-10')
+						IF(60 - @conteoclasespasadas)<=10 AND (@prueba='2020-05-10')
 							SET @respuesta =1
 						ELSE
 							BEGIN

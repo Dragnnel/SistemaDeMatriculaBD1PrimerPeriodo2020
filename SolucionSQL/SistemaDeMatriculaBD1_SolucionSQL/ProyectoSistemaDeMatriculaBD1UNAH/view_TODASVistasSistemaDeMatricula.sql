@@ -14,11 +14,14 @@ Estudiantes con carreras simultaneas---
 */
 
 -- =============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
--- Description:	Vista que me genera el historial Academico, al momento de querer el historial solo tendria que hacer el where
- --con el idEstudiante
- --_=============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 10/04/2020 
+-- Description:Vista que me genera el historial Academico, al momento de querer el historial solo tendria que hacer el where
+ --con el idEstudiante	
+-- =============================================
+
 CREATE VIEW VistaHisorialAcademico AS(
 SELECT CU.centroUniversitario,
        C.nombreCarrera,
@@ -109,14 +112,15 @@ ON SEMA.idObservacionNota = Nota.idObservacionNotaFinal
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------
-
-
 -- =============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 10/04/2020 
 -- Description:	Vista que me gerera la forma 003, al momento de querer el historial solo tendria que hacer el where
  --con el idEstudiante
- --_=============================================
+-- =============================================
+
 
  CREATE VIEW VistaForma003 AS(
 
@@ -210,12 +214,14 @@ ON SE.idCodigoAula=AULA.idCodigoAula
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
- --=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 10/04/2020 
 -- Description:	Vista que me devuelve los nombres,
 -- num cuenta de los estudiantes que tienen el indice global bajo  y son suspendidos por tenerlo menor que 50
- --_=============================================
+-- =============================================
 
 
  CREATE VIEW VistaEstudiantesconriesgosancion AS(
@@ -254,13 +260,14 @@ WHERE T2.indiceGlobal <= 50
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------
-
-=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
 -- Description:	Me devuelve los estudiantes con excelencia academica
+-- =============================================
 
- --_=============================================
 CREATE VIEW VistaExcelenciaAcademica AS(
 
 SELECT T3.primerNombre,
@@ -299,13 +306,15 @@ ON T1.idCarrera = T4.idCarrera
 WHERE T2.indiceGlobal >=19 AND T4.nombreCarrera= 'Sistemas' --- Lo pruebo con 19 por los datos que tengo ingresados
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
+-- Description:Me devuelve los estudiantes que estudian carreras simultaneas
+-- =============================================
 
---=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
--- Description:	Me devuelve los estudiantes que estudian carreras simultaneas
 
- --_=============================================
 CREATE VIEW  VistaCarrerasSimultaneas AS(
 
 SELECT T3.primerNombre,
@@ -345,13 +354,14 @@ ON T1.idCarrera = T4.idCarrera
 WHERE T1.poseeCarreraSimultanea IS NULL     -------------------Lo pruebo con Null porque no tengo datos ingresados pero tendria que ser igual a 1
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
+-- Description:	Me devuelve la cantidad de clases que el estudiante ah aprobado
+-- =============================================
 
---=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
--- Description:	Me devuelve la cantidad de clases que el estudiante aprobadas
-
- --_=============================================
  CREATE VIEW VistaCantidadClasesAPR AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
@@ -392,16 +402,20 @@ FROM VistaCantidadClasesAPR
 	ON T4.idEstudiante = T5.idEstudiante
 	INNER JOIN ProyectoSistemaMatricula.unah.Persona T6
 	ON T5.idPersona = T6.idPersona
-	WHERE T3.descripcion ='APR'
+	WHERE T3.descripcion ='APR' 
 	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
 
 	--------------------------------------------------------------------------------------------------------------------------
-	--=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
 -- Description:	Me devuelve la cantidad de clases donde el estudiante  no se presento
+-- =============================================
 
- --_=============================================
+	
+
  CREATE VIEW VistaCantidadClasesNSP AS(
 
  SELECT   T5.idEstudiante,
@@ -449,12 +463,14 @@ FROM VistaCantidadClasesNSP
 	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
 
 ---------------------------------------------------------------------------------------------------------------
-	--=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
 -- Description:	Me devuelve la cantidad de clases donde el estudiante Abandono
+-- =============================================
 
- --_=============================================
 
  CREATE VIEW VistaCantidadClasesABN AS(
   SELECT   T5.idEstudiante,
@@ -502,12 +518,15 @@ FROM VistaCantidadClasesABN
 
 
 -------------------------------------------------------------------------------------------------------------------------------
-	--=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
--- Description:	Lista de los Representantes Artisticos y de Deportes en la u
-
- --_=============================================
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
+-- Description:		Lista de los Representantes Artisticos y de Deportes en la u
+-- =============================================
+	
+	
 
  CREATE VIEW VistaListaRepresentantesArtisticos AS(
 
@@ -549,13 +568,14 @@ FROM VistaListaRepresentantesArtisticos
  WHERE T1.esRepresentanteArteoDeporte = 1
 
  ---------------------------------------------------------------------------------------------------------------
- 	--=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
--- Description:	Lista de Empleados que tienen cargo de Docente que estan Contratados por hora
-
- --_=============================================
-
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
+-- Description:		Lista de Empleados que tienen cargo de Docente que estan Contratados por hora
+-- =============================================
+	 	
 
  
 CREATE VIEW VistaDocentesPorHora AS(
@@ -596,12 +616,15 @@ FROM VistaDocentesPorHora
  WHERE T3.descripcion= 'Por Hora' AND T2.tipoCargo = 'Docente'
 
  -------------------------------------------------------------------------------------------------------------------
-  	--=============================================
--- Author:		Francis Gonzales
--- Create date: 07-05-2020
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 07/05/2020 
 -- Description:	Lista de Empleados que tienen cargo de Docente que estan Contratados Permanente
+-- =============================================
+ 
 
- --_=============================================
  CREATE VIEW VistaDocentesPermanente AS(
  SELECT T1.idEmpleado,
 		T4.primerNombre,
