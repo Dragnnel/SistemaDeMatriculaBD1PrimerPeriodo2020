@@ -8,7 +8,8 @@
 
 CREATE FUNCTION [unah].[fnObtenerIndicePeriodo](
 		@idEstudiante INT,
-		@idHistorial INT
+		@idHistorial INT,
+		@EstudiandoActualmente INT
 	)
 RETURNS DECIMAL
 AS
@@ -16,8 +17,9 @@ BEGIN
 	DECLARE @uv INT
 	DECLARE @sumanotas FLOAT
 	DECLARE @indicePeriodo FLOAT
-	DECLARE @idMatricula INT
+	DECLARE @idMatricula INT = 0
 
+	/*
 	/*
 		Tomando en cuenta de que los IDMatricula de cada estudiante, en cada periodo se ira incrementando.
 		De esta manera estaria obteniendo, el id de el ultimo periodo cursado
@@ -47,6 +49,36 @@ BEGIN
 			  AND M.idMatricula < (SELECT max(M2.idMatricula) FROM ProyectoSistemaMatricula.unah.Matricula M2)
 	     ORDER BY idMatricula DESC
 		)
+	*/
+
+	IF @EstudiandoActualmente = 1
+		BEGIN
+			SET @idMatricula = (
+								SELECT TOP(1) M.idMatricula
+										FROM ProyectoSistemaMatricula.unah.Matricula M
+									   WHERE M.idEstudiante = @idEstudiante
+										 AND M.idHistorial = @idHistorial
+										 AND M.idMatricula < (SELECT max(M2.idMatricula) FROM ProyectoSistemaMatricula.unah.Matricula M2)
+									ORDER BY idMatricula DESC
+								)
+		END
+	ELSE
+		BEGIN
+			IF @EstudiandoActualmente = 0
+				BEGIN
+					SET @idMatricula = (
+										SELECT TOP(1) M.idMatricula
+											 FROM ProyectoSistemaMatricula.unah.Matricula M
+											WHERE M.idEstudiante = @idEstudiante
+											  AND M.idHistorial = @idHistorial
+										 ORDER BY idMatricula DESC
+										)
+				END
+			ELSE
+				BEGIN
+					SET @idMatricula = 0
+				END
+		END
 
 	SET @uv = (
 		SELECT SUM(A.unidadesValorativas) AS UV

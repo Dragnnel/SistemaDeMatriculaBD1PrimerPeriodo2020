@@ -127,10 +127,14 @@ GO
 --				David Alexander Palacios
 -- Create date: 01/05/2020 
 -- Description:	Procedimiento almacenado para obtener todos los datos del historial academico
+--				Se le tiene que pasar 2 parametros: * El idEstudiante en este caso el numero de cuenta
+--													* Un 1 si esta en un periodo activo estudiando respectivamente (aqui se necesitara calcular un penultimo idMatricula)
+--													* Un 0 si no se encuentra activo estudiando en un respectivo periodo academico (aqui se necesitara calcular un ultimo idMatricula)
 -- =============================================
 
 CREATE PROCEDURE [unah].[spObtenerHistorialAcademico] (
-		@idEstudiante INT
+		@idEstudiante INT,
+		@EstudiandoActualmente INT
 	)
 AS
 BEGIN
@@ -148,7 +152,7 @@ BEGIN
 		/*Llamado de las funciones para la obtencion de los respectivos indices*/
 		SET @indiceGlobal = [unah].[fnObtenerIndiceGlobal](@idEstudiante,@idHistorial)
 
-		SET @indicePeriodo = [unah].[fnObtenerIndicePeriodo](@idEstudiante,@idHistorial)
+		SET @indicePeriodo = [unah].[fnObtenerIndicePeriodo](@idEstudiante,@idHistorial,@EstudiandoActualmente)
 
 		/*Actualizacion de manera dinamica*/
 		UPDATE ProyectoSistemaMatricula.unah.HistorialAcademico
