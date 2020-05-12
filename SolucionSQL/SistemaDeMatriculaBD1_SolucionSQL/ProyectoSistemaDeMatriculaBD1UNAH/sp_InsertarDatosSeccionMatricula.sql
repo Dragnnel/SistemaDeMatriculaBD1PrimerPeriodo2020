@@ -47,70 +47,87 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
 -- =============================================
--- Author:		David Palacios
--- Create date: 2020 - 04 - 11
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 10/04/2020 
 -- Description:	Insertar un registro en la tabla SeccionMatricula
 -- =============================================
+
 CREATE PROCEDURE [unah].[spInsertarDatosSeccionMatricula](
 			@idMatricula INT,
-			@idSeccion INT,
+			@idSeccion VARCHAR(15),
 			@idAsignatura VARCHAR(15),
 			@notaFinal FLOAT,
-			@idObservacionNota CHAR
+			@idObservacionNota CHAR(3)
 	)
 AS
 BEGIN TRY
 	SET NOCOUNT ON
 	DECLARE @horaAsignatura INT
+
 	SET @horaAsignatura = (SELECT S.horaInicial
 									  FROM ProyectoSistemaMatricula.unah.Seccion S
 									 WHERE S.idSeccion = @idSeccion
 									   AND S.idAsignatura = @idAsignatura
 							)
-
-	IF NOT EXISTS(SELECT TOP(1) *
-						FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
-					   WHERE SM.idMatricula = @idMatricula
-						 AND SM.idSeccion = @idSeccion
-				  )
+	--Filtrado de la asignatura en la tabla de SeccionMatricula
+	IF [unah].[fnExisteSeccionMatriculada](@idMatricula,@idSeccion) = 0
 		BEGIN
-			IF NOT EXISTS(SELECT TOP(1) *
-								FROM ProyectoSistemaMatricula.unah.SeccionMatricula	SM
-								WHERE SM.idMatricula = @idMatricula
-								  AND SM.idAsignatura = @idAsignatura
-						  )
+			IF [unah].[fnExisteAsignaturaMatriculada](@idMatricula, @idAsignatura) = 0
 				BEGIN
-					IF @horaAsignatura NOT IN(SELECT S.horaInicial
-													  FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
-												INNER JOIN ProyectoSistemaMatricula.unah.Seccion S
-														ON (	S.idSeccion = SM.idSeccion
-															AND S.idAsignatura = SM.idAsignatura)
-													 WHERE SM.idMatricula = @idMatricula 
-											   )
+					IF [unah].[fnChoqueDeHoraMatriculada](@horaAsignatura, @idMatricula) = 0
 						BEGIN
-							DECLARE @cumpleRequisitos VARCHAR(50)
-							SET @cumpleRequisitos = [unah].[fnCumpleRequisitos](@idMatricula,@idAsignatura)
-
-							IF @cumpleRequisitos = 'Faltan Requisitos:   '
+							--Filtrado de la asignatura en la tabla de SeccionMatriculaEnEspera
+							IF [unah].[fnExisteSeccionMatriculadaEnEspera](@idMatricula, @idSeccion) = 0
 								BEGIN
-									INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,
-																							   idSeccion,
-																							   idAsignatura,
-																							   notaFinal,
-																							   idObservacionNota)
-																						VALUES(@idMatricula,
-																							   @idSeccion,
-																							   @idAsignatura,
-																							   @notaFinal,
-																							   @idObservacionNota
-																								)
-									PRINT 'Asignatura Matriculada con exito'
+									IF [unah].[fnExisteAsignaturaMatriculadaEnEspera](@idMatricula, @idAsignatura) = 0
+										BEGIN
+											IF [unah].[fnChoqueDeHoraMatriculadaEnEspera](@horaAsignatura, @idMatricula) = 0
+												BEGIN
+													DECLARE @cumpleRequisitos VARCHAR(280)
+													SET @cumpleRequisitos = [unah].[fnCumpleRequisitos](@idMatricula,@idAsignatura)
+
+													IF @cumpleRequisitos = 'Faltan Requisitos:     '
+														BEGIN
+															INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,
+																													   idSeccion,
+																													   idAsignatura,
+																													   notaFinal,
+																													   idObservacionNota)
+																												VALUES(@idMatricula,
+																													   @idSeccion,
+																													   @idAsignatura,
+																													   @notaFinal,
+																													   @idObservacionNota
+																														)
+															PRINT 'Asignatura Matriculada con exito'
+														END
+													ELSE
+														BEGIN
+															PRINT @cumpleRequisitos
+														END
+												END
+											ELSE
+												BEGIN
+													SELECT 0 AS RESULTADO
+													PRINT 'Ya tiene una asignatura matriculada a esa hora en lista de espera'
+												END
+										END
+									ELSE
+										BEGIN
+											SELECT 0 AS RESULTADO
+											PRINT 'Ya existe la asignatura matriculada en lista de espera'
+										END
 								END
 							ELSE
 								BEGIN
-									PRINT @cumpleRequisitos
+									SELECT 0 AS RESULTADO
+									PRINT 'Ya existe una misma sección matriculada en lista de espera'
 								END
+							
 						END
 					ELSE
 						BEGIN
@@ -136,3 +153,5 @@ BEGIN CATCH
 END CATCH
 
 GO
+
+										

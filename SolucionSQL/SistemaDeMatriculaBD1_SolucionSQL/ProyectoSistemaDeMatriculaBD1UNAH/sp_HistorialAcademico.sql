@@ -120,11 +120,15 @@ SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
+
 -- =============================================
--- Author:		David Palacios
--- Create date: 2020 - 05 - 01
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 01/05/2020 
 -- Description:	Procedimiento almacenado para obtener todos los datos del historial academico
 -- =============================================
+
 CREATE PROCEDURE [unah].[spObtenerHistorialAcademico] (
 		@idEstudiante INT
 	)
@@ -205,7 +209,8 @@ BEGIN
 END
 GO
 
-/*Prueba*/
+/*Prueba*//*
 EXECUTE [unah].[spObtenerHistorialAcademico] 1
 
 EXECUTE [unah].[spObtenerHistorialAcademico] 2
+*/
