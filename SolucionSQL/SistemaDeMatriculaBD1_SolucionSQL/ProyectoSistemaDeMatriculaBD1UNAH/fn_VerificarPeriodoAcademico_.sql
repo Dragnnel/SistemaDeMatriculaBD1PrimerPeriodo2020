@@ -5,7 +5,6 @@
 -- Create date: 05/04/2020 
 -- Description:	Verificar si el periodo academico existe
 -- =============================================
---SELECT [unah].[fn_VerificaEmpleado] ('II','2020-05-01',1)
 
 ALTER FUNCTION [unah].[fn_VerificaPeriodoAcademico](
 										@pidPeriodo CHAR(3),
@@ -15,38 +14,30 @@ ALTER FUNCTION [unah].[fn_VerificaPeriodoAcademico](
 RETURNS INT
 
 AS 
+BEGIN  
+	DECLARE @respuesta INT = 0 ;
 
-BEGIN try return
-	DECLARE @respuesta INT
-	
 	IF EXISTS (SELECT * FROM ProyectoSistemaMatricula.unah.Periodo as P
-					WHERE		P.idPeriodo = CAST (@pidPeriodo AS CHAR)
+					WHERE		P.idPeriodo = @pidPeriodo --CAST (@pidPeriodo AS CHAR)
 							AND P.fechaInicio = @pfechaInicio 
 							AND P.idTipoPeriodo = @pidTipoPeriodo
 							)
-			BEGIN
-			-- 'Si existe el periodo';
-			SET @respuesta = 1;	
-			END
+				SET @respuesta = 1;	--si existe periodo se mostrara 1 
 	ELSE
-		BEGIN
-		  --  'No existe el periodo, con ese registro';
-			SET @respuesta = 0;
-		END 			
-			RETURN @respuesta;
-END try
-
-begin catch
-	print 'error'
-	SET @respuesta = 0;
+				SET @respuesta = 0; -- si no existe se mostrara 2 		
+	
 	RETURN @respuesta;
-end catch
+END 
+
+
 /*
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo
-SELECT [unah].[fn_VerificaEmpleado] ('II','2020-05-01',1)
+SELECT [unah].[fn_VerificaPeriodoAcademico] ('I','2020-11-01',1) as Respuesta
 
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo as P
-					WHERE P.idPeriodo = 'II' AND P.fechaInicio ='2020-05-01'  AND P.idTipoPeriodo = 1
+					WHERE P.idPeriodo = 'II' 
+					AND P.fechaInicio ='2020-05-01' 
+					AND P.idTipoPeriodo = 1
 */
