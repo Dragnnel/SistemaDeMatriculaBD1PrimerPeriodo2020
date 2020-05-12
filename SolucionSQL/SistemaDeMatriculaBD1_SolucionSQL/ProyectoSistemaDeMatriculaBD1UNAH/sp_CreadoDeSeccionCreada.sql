@@ -34,7 +34,8 @@ BEGIN TRY
 							WHERE T1.idAsignatura = @pidAsignatura AND T1.idSeccion = @pidSeccion )
 		BEGIN 
 			--Verificar si la hora inicial y final este acorde a la seccion
-			 IF (SELECT [unah].[fn_VerificarCreacionHoraSeccion] (@pidSeccion,@phoraInicial,@phoraFinal) ) = 1 
+			 IF (SELECT [unah].[fn_VerificarCreacionHoraSeccion] (@pidSeccion,@phoraInicial,@phoraFinal)) = 1 
+					AND (SELECT [unah].[fn_ValidarUbicacionSeccion] (@pidCodigoAula,@pidCodigoEdificio,@pcuposDisponibles)) = 1 
 				BEGIN
 					INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
 													  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES

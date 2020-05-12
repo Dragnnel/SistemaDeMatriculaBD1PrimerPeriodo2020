@@ -26,7 +26,8 @@
 
 )
 
-
+/*
 SELECT *
 FROM VistaListaRepresentantesArtisticos
 
+*/
