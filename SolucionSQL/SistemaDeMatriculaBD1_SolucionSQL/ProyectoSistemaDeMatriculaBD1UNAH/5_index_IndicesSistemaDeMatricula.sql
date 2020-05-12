@@ -1,3 +1,13 @@
+ -- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 03/05/2020 
+-- Description:	 Todos los indices 
+-- =============================================
+
+
+
 use ProyectoSistemaMatricula
 
 SELECT primerApellido
@@ -45,23 +55,9 @@ FROM ProyectoSistemaMatricula.unah.Municipio
 
 CREATE NONCLUSTERED INDEX IDX_Municipio
 ON unah.Municipio (municipio)
----------------------------------------------------------------------------------------------------------------
-SELECT indiceGlobal
-FROM ProyectoSistemaMatricula.unah.HistorialAcademico
 
-
-
-CREATE NONCLUSTERED INDEX IDX_IndiceGlobal
-ON unah.HistorialAcademico (indiceGlobal)
 ------------------------------------------------------------------------------------------------------------------
-SELECT indicePeriodo
-FROM ProyectoSistemaMatricula.unah.HistorialAcademico
 
-
-
-CREATE NONCLUSTERED INDEX IDX_IndicePeriodo
-ON unah.HistorialAcademico (indicePeriodo)
---------------------------------------------------------------------------------------------------------
 SELECT fechaInicioEmpleado
 FROM ProyectoSistemaMatricula.unah.Empleado
 
@@ -69,3 +65,24 @@ FROM ProyectoSistemaMatricula.unah.Empleado
 
 CREATE NONCLUSTERED INDEX IDX_fechaInicioEmpleado
 ON unah.Empleado (fechaInicioEmpleado)
+
+---------------------------------------------------------------------------------------------------------------
+CREATE NONCLUSTERED INDEX IDX_nombreAsignatura
+ON unah.Asignatura (nombreAsignatura)
+
+SELECT *
+FROM ProyectoSistemaMatricula.unah.Asignatura
+---------------------------------------------------------------------------------------------------------
+
+CREATE NONCLUSTERED INDEX IDX_GradoAcademico
+ON unah.GradoAcademico (tituloObtenido)
+
+SELECT *
+FROM ProyectoSistemaMatricula.unah.GradoAcademico
+-------------------------------------------------------------------------------------------------
+
+CREATE NONCLUSTERED INDEX IDX_Pais
+ON ProyectoSistemaMatricula.unah.pais (pais)
+
+SELECT *
+FROM ProyectoSistemaMatricula.unah.Pais
