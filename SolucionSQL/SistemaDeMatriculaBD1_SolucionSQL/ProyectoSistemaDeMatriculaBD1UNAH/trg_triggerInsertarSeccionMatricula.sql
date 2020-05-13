@@ -1,13 +1,18 @@
-﻿/*
-	Trigger que controla los cupos de las secciones, y las unidades valorativas disponibles del estudiante
-*/
+﻿-- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 11/04/2020 
+-- Description:	Trigger que controla los cupos de las secciones, y las unidades valorativas disponibles del estudiante
+-- =============================================
+
 ALTER TRIGGER [unah].[tgInsertarSeccionMatricula] ON ProyectoSistemaMatricula.unah.SeccionMatricula
 AFTER INSERT
 AS
 DECLARE @idEstudiante INT  
 DECLARE @idMatricula INT   
-DECLARE @idSeccion INT
-DECLARE @idAsignatura INT 
+DECLARE @idSeccion VARCHAR(15)
+DECLARE @idAsignatura VARCHAR(15)
 DECLARE @uvAsignatura INT 
 DECLARE @uvEstudiante INT 
 DECLARE @cuposDisponibles INT 
@@ -32,7 +37,7 @@ SET @idSeccion = (SELECT T1.idSeccion
 
 SET @idAsignatura = (SELECT T1.idAsignatura
 						FROM inserted T1
-				  )
+					)
 
 SET @uvAsignatura = [unah].[fnuvAsignatura](@idSeccion,@idAsignatura)
 
