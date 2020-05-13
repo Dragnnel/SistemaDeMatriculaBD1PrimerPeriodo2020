@@ -408,8 +408,8 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Estudiante(
 
 CREATE TABLE ProyectoSistemaMatricula.unah.HistorialAcademico(
 																idHistorial INT PRIMARY KEY NOT NULL,
-																indicePeriodo INT,
-																indiceGlobal INT,
+																indicePeriodo FLOAT,
+																indiceGlobal FLOAT,
 																idEstudiante INT,
 																FOREIGN KEY(idEstudiante) REFERENCES ProyectoSistemaMatricula.unah.Estudiante(idEstudiante),
 																);

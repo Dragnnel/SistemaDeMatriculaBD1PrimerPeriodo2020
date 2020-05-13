@@ -1,6 +1,6 @@
 ------------------------------------------------------------------------------------------------------
 /*
-	FUNCION PARA VERIFICAR SI CUMPLE LAS ASIGNATURAS
+	FUNCION PARA VERIFICAR SI CUMPLE LAS ASIGNATURAS DE REQUISITOS
 */
 ------------------------------------------------------------------------------------------------------
 /*
@@ -38,23 +38,31 @@ SELECT *
 	FROM ProyectoSistemaMatricula.unah.SeccionMatricula
 */
 
+-- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 11/04/2020 
+-- Description: Funcion para verificar si cumple los requisitos de cada una de las asignaturas
+-- =============================================
+
 CREATE FUNCTION [unah].[fnCumpleRequisitos](
 		@idMatricula INT,
 		@idAsignatura VARCHAR(15)
 	)
-RETURNS VARCHAR(50)
+RETURNS VARCHAR(280)
 AS
 BEGIN
 	DECLARE @idHistorial INT
 	DECLARE @idEstudiante INT
 	DECLARE @idCarrera INT
 	DECLARE @idPlaEstudio INT
-	DECLARE @idRequisito1 INT
-	DECLARE @idRequisito2 INT
+	DECLARE @idRequisito1 VARCHAR(15)
+	DECLARE @idRequisito2 VARCHAR(15)
 	--
-	DECLARE @opc1 VARCHAR(20)
-	DECLARE @opc2 VARCHAR(20)
-	DECLARE @retorno VARCHAR(50)
+	DECLARE @opc1 VARCHAR(120)
+	DECLARE @opc2 VARCHAR(120)
+	DECLARE @retorno VARCHAR(280)
 
 	SET @idHistorial = (
 						 SELECT M.idHistorial
@@ -129,7 +137,7 @@ BEGIN
 								END
 							ELSE 
 								BEGIN 
-									SET @opc1 = (SELECT A.nombreAsignatura
+									SET @opc1 = (SELECT CONCAT(A.idAsignatura,'-',A.nombreAsignatura)
 													FROM ProyectoSistemaMatricula.unah.Asignatura A
 												   WHERE A.idAsignatura = @idRequisito1)
 								END
@@ -155,7 +163,7 @@ BEGIN
 								END
 							ELSE 
 								BEGIN 
-									SET @opc2 = (SELECT A.nombreAsignatura
+									SET @opc2 = (SELECT CONCAT(A.idAsignatura,'-',A.nombreAsignatura)
 													 FROM ProyectoSistemaMatricula.unah.Asignatura A
 													WHERE A.idAsignatura = @idRequisito2)
 								END
@@ -166,7 +174,7 @@ BEGIN
 							SET @opc2 = NULL
 						END
 
-					SET @retorno = CONCAT('Faltan Requisitos: ',@opc1, '  ',@opc2)
+					SET @retorno = CONCAT('Faltan Requisitos: ',@opc1,'    ',@opc2)
 				END
 		END
 
@@ -174,3 +182,16 @@ BEGIN
 END
 GO
 
+
+/*
+DECLARE @d VARCHAR(120)
+
+SET @d = (
+SELECT CONCAT(A.idAsignatura,'-', A.nombreAsignatura)
+	FROM ProyectoSistemaMatricula.unah.Asignatura A
+	WHERE A.idAsignatura = 'FS100'
+	 )
+
+SELECT @d
+PRINT @d
+*/
