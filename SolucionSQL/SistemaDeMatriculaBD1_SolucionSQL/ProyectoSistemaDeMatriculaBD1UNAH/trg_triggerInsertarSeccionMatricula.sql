@@ -6,7 +6,7 @@
 -- Description:	Trigger que controla los cupos de las secciones, y las unidades valorativas disponibles del estudiante
 -- =============================================
 
-ALTER TRIGGER [unah].[tgInsertarSeccionMatricula] ON ProyectoSistemaMatricula.unah.SeccionMatricula
+CREATE TRIGGER [unah].[tgInsertarSeccionMatricula] ON ProyectoSistemaMatricula.unah.SeccionMatricula
 AFTER INSERT
 AS
 DECLARE @idEstudiante INT  

@@ -565,6 +565,10 @@ INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal( idObservacionNot
 INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal( idObservacionNotaFinal , descripcion) VALUES ('RPB','REPROBADO');
 INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal( idObservacionNotaFinal , descripcion) VALUES ('ABN','ABANDONO');
 INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal( idObservacionNotaFinal , descripcion) VALUES ('NPS','NO SE PRESENTO');
+--INSERT INTO ProyectoSistemaMatricula.unah.ObservacionNotaFinal( idObservacionNotaFinal , descripcion) VALUES ('CAN','CANCELADA');
+
+DELETE ProyectoSistemaMatricula.unah.ObservacionNotaFinal
+WHERE idObservacionNotaFinal = 'CAN'
 
 
 
