@@ -17,7 +17,7 @@ BEGIN
 	DECLARE @uv INT
 	DECLARE @sumanotas FLOAT
 	DECLARE @indicePeriodo FLOAT
-	DECLARE @idMatricula INT = 0
+	DECLARE @idMatricula INT
 
 	/*
 	/*

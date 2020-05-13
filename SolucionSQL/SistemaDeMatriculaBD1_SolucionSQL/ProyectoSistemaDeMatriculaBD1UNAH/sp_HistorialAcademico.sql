@@ -158,10 +158,10 @@ BEGIN
 		UPDATE ProyectoSistemaMatricula.unah.HistorialAcademico
 		   SET indiceGlobal = @indiceGlobal
 		 WHERE idEstudiante = @idEstudiante
-		   AND idHistorial = idHistorial
+		   AND idHistorial = @idHistorial
 
 		UPDATE ProyectoSistemaMatricula.unah.HistorialAcademico
-		   SET indicePeriodo = @indicePeriodo
+		  SET indicePeriodo = @indicePeriodo
 		 WHERE idEstudiante = @idEstudiante
 		   AND idHistorial = @idHistorial
 
@@ -202,7 +202,9 @@ BEGIN
 			INNER JOIN ProyectoSistemaMatricula.unah.Asignatura A
 					ON A.idAsignatura = S.idAsignatura
 			INNER JOIN ProyectoSistemaMatricula.unah.Periodo P
-				    ON S.idPeriodo = P.idPeriodo
+				    ON (    S.idPeriodo = P.idPeriodo 
+						AND S.fechaInicioPeriodo = P.fechaInicio 
+						AND S.idTipoPeriodo = P.idTipoPeriodo)
 				 WHERE M.idEstudiante = @idEstudiante
 				   AND M.idHistorial = @idHistorial
 				   AND SM.idObservacionNota IN ('APR','NSP','RPB','ABD')
@@ -213,8 +215,40 @@ BEGIN
 END
 GO
 
-/*Prueba*//*
-EXECUTE [unah].[spObtenerHistorialAcademico] 1
+/*Prueba*/
+EXECUTE[unah].[spObtenerHistorialAcademico] 160981426,0
+
+
 
 EXECUTE [unah].[spObtenerHistorialAcademico] 2
-*/
+
+/*
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.CentroUniversitario
+
+
+SELECT M.idMatricula,SM.idAsignatura AS CODIGO,
+			   A.nombreAsignatura AS ASIGNATURA,
+			   A.unidadesValorativas AS UV,
+			   SM.idSeccion AS SECCION,
+			   P.anio AS AÑO,
+			   S.idPeriodo AS PERIODO,
+			   SM.notaFinal AS CALIFICACION,
+			   SM.idObservacionNota AS OBS
+				  FROM ProyectoSistemaMatricula.unah.Matricula M
+			INNER JOIN ProyectoSistemaMatricula.unah.SeccionMatricula SM
+					ON SM.idMatricula = M.idMatricula
+			INNER JOIN ProyectoSistemaMatricula.unah.Seccion S
+					ON (S.idSeccion = SM.idSeccion AND S.idAsignatura = SM.idAsignatura)
+			INNER JOIN ProyectoSistemaMatricula.unah.Asignatura A
+					ON A.idAsignatura = S.idAsignatura
+			INNER JOIN ProyectoSistemaMatricula.unah.Periodo P
+				    ON (    S.idPeriodo = P.idPeriodo 
+						AND S.fechaInicioPeriodo = P.fechaInicio 
+						AND S.idTipoPeriodo = P.idTipoPeriodo)
+				 WHERE M.idEstudiante = 160981426--@idEstudiante
+				   AND M.idHistorial = 1--@idHistorial
+				   AND SM.idObservacionNota IN ('APR','NSP','RPB','ABD')
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Periodo
+SELECT * FROM ProyectoSistemaMatricula.unah.Seccion*/

@@ -646,6 +646,9 @@ INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresenta
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('304499755', 0, '45', 1, 10, '10', 0, 1, 10, 1);
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('2020499755', 0, '45', 'ss', 11, '11', 0, 1, 10, 0);
 
+UPDATE ProyectoSistemaMatricula.unah.Estudiante
+   SET idCentro = 1 
+
 SELECT *
 FROM ProyectoSistemaMatricula.unah.Estudiante
 

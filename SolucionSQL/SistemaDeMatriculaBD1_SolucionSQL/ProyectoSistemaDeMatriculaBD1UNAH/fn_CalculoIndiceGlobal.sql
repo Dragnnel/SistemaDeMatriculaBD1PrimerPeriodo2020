@@ -60,3 +60,7 @@ BEGIN
 	RETURN @indiceGlobal
 END
 GO
+
+
+
+
