@@ -468,26 +468,28 @@ SELECT *
 FROM ProyectoSistemaMatricula.unah.PlanEstudio*/
 -----------------------------------------------------------------------------------------------------------
 
-INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (1, 'Ing. sistemas', '1', '1999-12-19', 1, 1);
+INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (1, 'Ing. Sistemas', '1', '1999-12-19', 1, 1);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (2, 'Matematicas', '1', '1992-05-04', 2, 2);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (3, 'Lic. Biologia', '1', '1992-09-18', 3, 3);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (4, 'Ing. Quimica', '1', '1990-06-21', 3, 4);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (5, 'Ing. Electrica', '1', '1992-01-09', 2, 5);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (6, 'Lic. Sociologia', '1', '2000-01-10', 1, 6);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (7, 'Lic. Informatica', '1', '1993-01-21', 2, 7);
-INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (8, 'Lic. Industrial', '1', '1996-05-16', 3, 8);
+INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (8, 'Ing. Industrial', '1', '1996-05-16', 3, 8);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (9, 'Medicina', '1', '1995-02-10', 2, 9);
-INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (10, 'Lic.Pdagogia', '1', '1997-03-01', 1, 10);
+INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (10, 'Lic.Pedagogia', '1', '1997-03-01', 1, 10);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (11, 'Lic. Historia', '1', '1999-12-19', 1, 1);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (12, 'Abogado', '1', '1992-05-04', 2, 2);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (13, 'Lenguas Extranjeras', '1', '1992-09-18', 3, 3);
-INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (14, 'Lic. letras', '1', '1990-06-21', 5, 4);
+INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (14, 'Lic. Letras', '1', '1990-06-21', 5, 4);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (15, 'Lic. Periodismo', '1', '1992-01-09', 6, 5);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (16, 'Lic Fisica', '1', '2000-01-10', 1, 6);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (17, 'Lic. Educacion Fisica', '1', '1993-01-21', 2, 7);
 INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (18, 'Lic.Aduanas', '1', '1996-05-16', 3, 8);
-INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (19, 'Lic. en Mecadotecnia', '1', '1995-02-10', 2, 9);
-INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (20, 'Lic. Aministracion de empresas', '1', '1997-03-01', 1, 10);
+INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (19, 'Lic. en Mercadotecnia', '1', '1995-02-10', 2, 9);
+INSERT INTO ProyectoSistemaMatricula.unah.Carrera (idCarrera, nombreCarrera, requisitoIngreso, fechaCreacion, idFacultad, idPlanEstudio) VALUES (20, 'Lic. Aministracion de Empresas', '1', '1997-03-01', 1, 10);
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Carrera
 ---------------------------------------------------------------------------------------------------------------------------------------------------------
 SELECT *
 FROM ProyectoSistemaMatricula.unah.Edificio

@@ -116,8 +116,8 @@
     <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="1_crear_creacionDeTablas.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>1_crear_creacionDeTablas.sql</FullPath>
         </FileNode>
@@ -349,6 +349,12 @@
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_MatriculaEstudiante.sql</FullPath>
         </FileNode>
+        <FileNode Name="sp_ObtenerForma003.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>sp_ObtenerForma003.sql</FullPath>
+        </FileNode>
         <FileNode Name="SQLQuery2.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
@@ -452,8 +458,8 @@
           <FullPath>view_VistaExcelenciaAcademica.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaForma003.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaForma003.sql</FullPath>
         </FileNode>
