@@ -475,3 +475,12 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Requisitos(
 														FOREIGN KEY(idRequisito1) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura),
 														FOREIGN KEY(idRequisito2) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura)
 														);
+
+CREATE TABLE ProyectoSistemaMatricula.unah.log_SeccionEliminada(
+														idSeccionLog  VARCHAR(15),
+														idAsignatura  VARCHAR(15), 
+														observacion VARCHAR(300),
+														fecha DATETIME ,
+														PRIMATRU KEY (idSeccionLog,idAsignatura,fecha)
+														);
+
