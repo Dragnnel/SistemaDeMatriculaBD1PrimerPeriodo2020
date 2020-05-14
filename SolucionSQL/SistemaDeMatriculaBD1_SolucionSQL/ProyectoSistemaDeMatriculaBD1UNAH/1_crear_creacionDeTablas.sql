@@ -309,7 +309,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Docente(
 
 CREATE TABLE ProyectoSistemaMatricula.unah.TipoPeriodo(
 														 idTipoPeriodo INT PRIMARY KEY,
-														 descripcion VARCHAR(15)
+														 descripcion VARCHAR(25)
 														 );
 
 CREATE  TABLE ProyectoSistemaMatricula.unah.Asignatura(
@@ -389,7 +389,7 @@ CREATE  TABLE ProyectoSistemaMatricula.unah.Seccion(
 
 
 CREATE TABLE ProyectoSistemaMatricula.unah.Estudiante(
-														idEstudiante INT PRIMARY KEY NOT NULL,
+														idEstudiante VARCHAR(11) PRIMARY KEY NOT NULL,
 														esRepresentanteArteoDeporte BIT,
 														uvDisponibles INT,
 														contrasenia VARCHAR(45),
@@ -410,7 +410,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.HistorialAcademico(
 																idHistorial INT PRIMARY KEY NOT NULL,
 																indicePeriodo FLOAT,
 																indiceGlobal FLOAT,
-																idEstudiante INT,
+																idEstudiante VARCHAR(11),
 																FOREIGN KEY(idEstudiante) REFERENCES ProyectoSistemaMatricula.unah.Estudiante(idEstudiante),
 																);
 
@@ -422,7 +422,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Matricula(
 													   idPeriodo CHAR (3),
 													   fechaInicioPeriodo DATE,
 													   idTipoPeriodo INT,
-													   idEstudiante INT,
+													   idEstudiante VARCHAR(11),
 													   idHistorial INT,
 													   FOREIGN KEY(idPeriodo,fechaInicioPeriodo,idTipoPeriodo) REFERENCES ProyectoSistemaMatricula.unah.Periodo(idPeriodo,fechaInicio,idTipoPeriodo),
 													   FOREIGN KEY(idEstudiante) REFERENCES ProyectoSistemaMatricula.unah.Estudiante(idEstudiante),
@@ -481,6 +481,6 @@ CREATE TABLE ProyectoSistemaMatricula.unah.log_SeccionEliminada(
 														idAsignatura  VARCHAR(15), 
 														observacion VARCHAR(300),
 														fecha DATETIME ,
-														PRIMATRU KEY (idSeccionLog,idAsignatura,fecha)
+														PRIMARY KEY (idSeccionLog,idAsignatura,fecha)
 														);
 

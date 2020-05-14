@@ -29,6 +29,8 @@ SET NOCOUNT ON;
 					SET idDocente = @pidDocente, fechaInicioCargo = @pfechaInicioCargo
 					WHERE idAsignatura = @pidAsignatura AND idSeccion = @pidSeccion
 					AND	idPeriodo=	@pidPeriodo AND fechaInicioPeriodo=@pfechaInicioPeriodo AND idTipoPeriodo=@pidTipoPeriodo
+
+			PRINT 'Se efecturo la modificacion , correctamente. '
 		END
 	ELSE
 			PRINT 'No se pudo registrar el cambio. Puede que no existe la seccion ,docente o el periodo, verifique los datos que ingreso.'

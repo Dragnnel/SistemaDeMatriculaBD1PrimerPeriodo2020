@@ -3,7 +3,7 @@
 --				Luis Fernando Estrada
 --				David Alexander Palacios
 -- Create date: 05/04/2020 
--- Description:	Verificar la horas que se ingresen para la seccion sean coherentes y que no se salgan del rango 
+-- Description:	Verificar la horas que se ingresen para la seccion sean coherentes y que no se salgan del rango de 6 am a 8 pm
 -- =============================================
 
 CREATE FUNCTION [unah].[fn_VerificarCreacionHoraSeccion](
@@ -32,7 +32,7 @@ IF (@Seccion = @horaInicial) --Se comprueba que la hora de inicio sea igual que 
 			BEGIN
 				IF(@horaInicial < @horaFinal) --la hora final siempre debe ser mayor a la inicial 
 					BEGIN
-					--PRINT 'Correcto';
+					--PRINT 'Correcto'
 					SET @Respuesta = 1 ;
 					END
 			END
@@ -45,5 +45,10 @@ ELSE
 END 
 
 /*
-SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0801',0800,0900)
+SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
+SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0801',0800,0900) as Respuesta
+
+SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0901',0800,0900) as Respuesta
+
+SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0901',0900,0700) as Respuesta
 */

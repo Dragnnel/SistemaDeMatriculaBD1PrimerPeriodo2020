@@ -11,7 +11,7 @@
 
 
 PRINT @prueba
-CREATE FUNCTION VerificarDiaMatricula(@idEstudiante INT
+CREATE FUNCTION VerificarDiaMatricula(@idEstudiante VARCHAR(11)
 								
 										)
 
