@@ -88,7 +88,6 @@ BEGIN
 							 FROM ProyectoSistemaMatricula.unah.Carrera C
 							WHERE C.idCarrera = @idCarrera
 						 )
-
 	SET @idRequisito1 = (
 						 SELECT R.idRequisito1
 							 FROM ProyectoSistemaMatricula.unah.Requisitos R
@@ -194,4 +193,12 @@ SELECT CONCAT(A.idAsignatura,'-', A.nombreAsignatura)
 
 SELECT @d
 PRINT @d
+*//*
+SELECT * FROM ProyectoSistemaMatricula.unah.Carrera
+SELECT * FROM ProyectoSistemaMatricula.unah.Estudiante
+SELECT * FROM ProyectoSistemaMatricula.unah.Matricula
+SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+SELECT * FROM ProyectoSistemaMatricula.unah.PensumAcademico
+
+PRINT [unah].[fnCumpleRequisitos] (2, 'FS100')
 */

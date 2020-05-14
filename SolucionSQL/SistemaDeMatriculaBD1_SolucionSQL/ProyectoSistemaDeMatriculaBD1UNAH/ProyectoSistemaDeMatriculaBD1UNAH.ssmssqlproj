@@ -140,8 +140,8 @@
           <FullPath>4.1_sp_InsersionDeDatosPROCEDIMIENTOSALMACENADOS.sql</FullPath>
         </FileNode>
         <FileNode Name="4_sp_ProcedimientosAlmacenadosDeInsercion.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>4_sp_ProcedimientosAlmacenadosDeInsercion.sql</FullPath>
         </FileNode>
@@ -368,8 +368,8 @@
           <FullPath>SQLQuery3.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_Transaccion1.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_Transaccion1.sql</FullPath>
         </FileNode>
