@@ -7,7 +7,7 @@
 -- =============================================
 
 
-CREATE FUNCTION VerificarEstudiante(@idEstudiante INT
+CREATE FUNCTION unah.VerificarEstudiante(@idEstudiante VARCHAR(11)
 								
 										)
 
@@ -42,6 +42,6 @@ GO
 
 
 /*
-SELECT [dbo].[VerificarEstudiante](705864082) estudiante que existe
-SELECT [dbo].[VerificarEstudiante](7058640)   Estudiante que no esta registrado
+SELECT [unah].[VerificarEstudiante](20191018932) estudiante que existe
+SELECT [unah].[VerificarEstudiante](7058640)   Estudiante que no esta registrado
 */
