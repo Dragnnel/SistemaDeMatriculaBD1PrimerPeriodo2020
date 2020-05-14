@@ -309,7 +309,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Docente(
 
 CREATE TABLE ProyectoSistemaMatricula.unah.TipoPeriodo(
 														 idTipoPeriodo INT PRIMARY KEY,
-														 descripcion VARCHAR(15)
+														 descripcion VARCHAR(25)
 														 );
 
 CREATE  TABLE ProyectoSistemaMatricula.unah.Asignatura(

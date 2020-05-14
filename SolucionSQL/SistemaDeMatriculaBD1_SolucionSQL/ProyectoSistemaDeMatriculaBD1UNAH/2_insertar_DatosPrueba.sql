@@ -163,12 +163,14 @@ INSERT INTO ProyectoSistemaMatricula.unah.CentroUniversitario(idCentro, centroUn
 
 CREATE TABLE ProyectoSistemaMatricula.unah.TipoPeriodo(
 														 idTipoPeriodo INT PRIMARY KEY,
-														 descripcion VARCHAR(15)
+														 descripcion VARCHAR(25)
 														 );
+SELECT * FROM ProyectoSistemaMatricula.unah.TipoPeriodo
 */
 
 INSERT INTO ProyectoSistemaMatricula.unah.TipoPeriodo (idTipoPeriodo,descripcion) VALUES (001,'TRIMESTRAL');
 INSERT INTO ProyectoSistemaMatricula.unah.TipoPeriodo (idTipoPeriodo,descripcion) VALUES (002,'SEMESTRAL');
+INSERT INTO ProyectoSistemaMatricula.unah.TipoPeriodo (idTipoPeriodo,descripcion) VALUES (003,'TRIMESTRAL INTENSIVO');
 
 
 /*
