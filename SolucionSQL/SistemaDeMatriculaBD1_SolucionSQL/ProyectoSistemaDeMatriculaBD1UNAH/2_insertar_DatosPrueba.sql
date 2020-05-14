@@ -181,6 +181,9 @@ CREATE  TABLE ProyectoSistemaMatricula.unah.Asignatura(
 														idTipoPeriodo INT,
 														FOREIGN KEY(idTipoPeriodo) REFERENCES ProyectoSistemaMatricula.unah.TipoPeriodo(idTipoPeriodo)
 														);
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Asignatura
 */
 
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
@@ -212,6 +215,22 @@ INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatu
 											('EN011','Enf. Pres. y Futuro I',3,1,1,2);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
 											('BI043','	Ecología y Salud I',4,0,0,2);
+
+----------------------------------------------
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IS110','INTRODUCCION A LA ING EN SISTEMAS',3,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('MM211','VECTORES Y MATRICES',3,1,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IN101','INGLES I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('MM201','CALCULO I',5,1,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IN102','INGLES II',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('MM314','PROGRAMACION I',3,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('EG011','ESPAÑOL GENERAL 1',4,0,0,1);
 
 
 /*

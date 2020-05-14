@@ -117,6 +117,9 @@ SELECT *
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.Periodo
 
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.TipoPeriodo
+
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.Aula
 
@@ -124,4 +127,6 @@ SELECT *
 /*
 	PRUEBA
 */
+
+
 EXECUTE [unah].[spObtenerForma003] 160981426
