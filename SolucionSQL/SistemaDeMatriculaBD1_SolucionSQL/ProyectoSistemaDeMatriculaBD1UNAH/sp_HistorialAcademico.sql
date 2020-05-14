@@ -216,12 +216,12 @@ END
 GO
 
 /*Prueba*/
+/*
 EXECUTE[unah].[spObtenerHistorialAcademico] 160981426,0
 
 
-
 EXECUTE [unah].[spObtenerHistorialAcademico] 2
-
+*/
 /*
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.CentroUniversitario

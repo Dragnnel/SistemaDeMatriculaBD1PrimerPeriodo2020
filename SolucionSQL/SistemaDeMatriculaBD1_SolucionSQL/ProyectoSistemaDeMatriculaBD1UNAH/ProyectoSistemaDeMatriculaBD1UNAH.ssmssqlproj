@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="ProyectoSistemaDeMatriculaBD1UNAH">
   <Items>
-    <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
       <Items>
         <ConnectionNode Name="DESKTOP-D62KKT0:">
           <Created>2020-04-04T14:43:07.5010344-06:00</Created>
@@ -125,7 +125,7 @@
         </ConnectionNode>
       </Items>
     </LogicalFolder>
-    <LogicalFolder Name="Consultas" Type="0" Sorted="true">
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
       <Items>
         <FileNode Name="1_crear_creacionDeTablas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
@@ -385,21 +385,33 @@
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_Transaccion1.sql</FullPath>
         </FileNode>
+        <FileNode Name="transc_TransaccionCancelarSeccionMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>transc_TransaccionCancelarSeccionMatricula.sql</FullPath>
+        </FileNode>
         <FileNode Name="transc_TransaccionEliminarSeccion.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_TransaccionEliminarSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_TransaccionesTarea.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_TransaccionesTarea.sql</FullPath>
         </FileNode>
+        <FileNode Name="trg_CancelarSeccionMatricula.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>trg_CancelarSeccionMatricula.sql</FullPath>
+        </FileNode>
         <FileNode Name="trg_EliminarSeccion.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trg_EliminarSeccion.sql</FullPath>
         </FileNode>
@@ -458,8 +470,8 @@
           <FullPath>view_VistaExcelenciaAcademica.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaForma003.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaForma003.sql</FullPath>
         </FileNode>
@@ -477,7 +489,7 @@
         </FileNode>
       </Items>
     </LogicalFolder>
-    <LogicalFolder Name="Varios" Type="3" Sorted="true">
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
       <Items />
     </LogicalFolder>
   </Items>
