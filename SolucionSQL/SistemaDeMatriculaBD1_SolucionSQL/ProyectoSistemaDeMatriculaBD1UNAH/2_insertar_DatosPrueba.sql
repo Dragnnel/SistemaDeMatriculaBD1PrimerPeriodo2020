@@ -310,6 +310,89 @@ INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatu
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
 											('FS321','ELECTRICIDAD Y MAGNETISMO I (L)',5,1,0,1);
 
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('EE101','Español General',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS102','TEORIA SOCIOLOGICA',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS200','ORIGEN Y DESARROLLO DEL CAPITALISMO',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS212','INTRODUCCION A LA SOCIOLOGIA DEL DESARROLLO',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS213','INTRODUCCION A LA INVESTIGACION SOCIAL',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS214','LOGICA APLICADA A LAS CIENCIAS SOCIALES',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS103','TEORIA SOCIOLOGICA II',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS103','SOCIOLOGIA DEL DESARROLLO I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('HH806','INTRODUCCION A LA COMPUTACION',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('AN101','ANTROPOLOGIA GENERAL',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS104','TEORIA SOCIOLOGICA III',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('LS204','SOCIOLOGIA DEL DESARROLLO II',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('SS102','ESTADISTICA SOCIAL',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('AN201','ANTROPOLOGIA SOCIAL',4,0,0,1);
+
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('DET175','METODOS CUANTITATIVOS I',5,1,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IA012','INTRODUCCION A LA INFORMATICA',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('DET280','METODOS CUANTITATIVOS II',5,1,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('CF014','CONTABILIDAD I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('CE020','PRINCIPIOS DE ECONOMIA',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IA023','TALLER DE HARDWARE I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IA033','METODOLOGIA DE LA PROGRAMACION',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('DET385','METODOS CUANTITATIVOS III',5,1,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IA044','LENGUAJE DE PROGRAMACION I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('CF030','METODOS CUANTITATIVOS EN FINANZAS',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('DAE300','ADMINISTRACION I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IA054','TALLER DE HARDWARE II',4,0,0,1);
+
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('QQ206','QUIMICA I',5,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('II111','INTRODUCCION A LA ING. INDUSTRIAL',2,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('II211','ESTADISTICA I',3,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('IM224','MECANICA PARA INGENIEROS I',4,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('II221','PROGRAMACION Y COMPUTACION',3,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('II222','ESTADISTICA APLICADA',3,0,0,1);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('DQ105','DIBUJO TECNICO INDUSTRIAL',2,0,0,1)
+
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('FS111','FISICA MEDICA',4,0,0,2);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('QQ111','QUIMICA MEDICA',5,0,0,2);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('BI123','BIOLOGIA MEDICA',5,0,0,2);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('QQ112','QUIMICA MEDICA II',5,0,0,2);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('FF206','ETICA',3,0,0,2);
+INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
+											('FS210','BIOFISICA',4,0,0,2);
+
+
 
 /*
 CREATE TABLE ProyectoSistemaMatricula.unah.PensumAcademico(
@@ -437,6 +520,83 @@ INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEst
 INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM401',5);
 INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FS321',5);
 
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('SC101',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FF101',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('HH101',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('EE101',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS102',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS200',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS212',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS213',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS214',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS103',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS203',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('HH806',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('AN101',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS104',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('LS204',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('SS102',6);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('AN201',6);
+
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('EG011',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FF101',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('SC101',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('HH101',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IN101',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('DET175',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IA012',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('DET280',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('CF014',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('CE020',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IA023',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IA033',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('DET385',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IA044',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('CF030',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('DAE300',7);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IA054',7);
+
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('EG011',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FF101',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('SC101',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('HH101',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM110',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM111',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM201',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM211',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('QQ206',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('II111',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM202',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IN101',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FS100',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM411',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('II211',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('DQ101',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IN102',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FS200',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IM224',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('II221',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('II222',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('DQ105',8);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IN103',8);
+
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('EG011',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FF101',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('SC101',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('HH101',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FS111',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('QQ111',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('MM112',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IN101',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('BI123',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('QQ112',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FF206',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('IN102',9);
+INSERT INTO ProyectoSistemaMatricula.unah.PensumAcademico(idAsignatura,idPlanEstudio) VALUES('FS210',9);
+
+
+
+
 
 
 /*
@@ -523,8 +683,54 @@ INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,
 INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IE221',5,'IE210','MM411');
 INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('FS321',5,'FS200','MM411');
 
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS102',6,'SC101','FF101');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS200',6,'SC101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS212',6,'SC101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS213',6,'SC101','FF101');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS214',6,'SC101','FF101');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS103',6,'LS102','LS200');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS203',6,'LS200','LS212');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('HH806',6,'LS214',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS104',6,'LS103',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('LS204',6,'LS203',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('SS102',6,'LS214',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('AN201',6,'AN101',NULL);
 
 
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IA012',7,'DET175',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('DET280',7,'DET175',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('CF014',7,'DET175',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('CE020',7,'DET175',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IA023',7,'IA012',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IA033',7,'IA012','DET175');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('DET385',7,'DET280',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IA044',7,'IA033',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('CF030',7,'DET280',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('DAE300',7,'SC101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IA054',7,'IA054',NULL);
+
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('MM201',8,'MM110','MM111');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('MM211',8,'MM110','MM111');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('QQ206',8,'MM110','MM111');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('MM202',8,'MM201',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('FS100',8,'MM201','MM211');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('MM411',8,'MM202',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('II211',8,'MM202','II111');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('DQ101',8,'MM111',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IN102',8,'IN101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('FS200',8,'FS100','MM202');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IM224',8,'FS100','MM202');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('II221',8,'MM202',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('II222',8,'II211',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('DQ105',8,'DQ101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IN103',8,'IN102',NULL);
+
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('QQ112',9,'QQ111','MM112');
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('FF206',9,'FF101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('IN102',9,'IN101',NULL);
+INSERT INTO ProyectoSistemaMatricula.unah.Requisitos(idAsignatura,idPlanEstudio,idRequisito1, idRequisito2) VALUES('FS210',9,'FS111','BI123');
+
+--
 /*
 CREATE TABLE ProyectoSistemaMatricula.unah.Edificio(
 													  idCodigoEdificio VARCHAR(25) PRIMARY KEY,
