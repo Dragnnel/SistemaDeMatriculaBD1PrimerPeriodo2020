@@ -427,6 +427,12 @@
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_TransaccionesTarea.sql</FullPath>
         </FileNode>
+        <FileNode Name="trg_AsignacionIdHistorial.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>trg_AsignacionIdHistorial.sql</FullPath>
+        </FileNode>
         <FileNode Name="trg_CancelarSeccionMatricula.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
