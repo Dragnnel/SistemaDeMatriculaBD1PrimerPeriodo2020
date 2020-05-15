@@ -407,7 +407,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Estudiante(
 														);
 
 CREATE TABLE ProyectoSistemaMatricula.unah.HistorialAcademico(
-																idHistorial INT PRIMARY KEY NOT NULL,
+																idHistorial VARCHAR(11) PRIMARY KEY NOT NULL, -- Sera el mismo idEstudiante
 																indicePeriodo FLOAT,
 																indiceGlobal FLOAT,
 																idEstudiante VARCHAR(11),
@@ -429,11 +429,13 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Matricula(
 													   FOREIGN KEY(idHistorial) REFERENCES ProyectoSistemaMatricula.unah.HistorialAcademico(idHistorial)
 													   );
 
+
 CREATE TABLE ProyectoSistemaMatricula.unah.ObservacionNotaFinal(
 																   idObservacionNotaFinal CHAR(3) PRIMARY KEY NOT NULL,
 																   descripcion VARCHAR(25)
 																   );
 					    
+
 CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatricula (
 															  idMatricula INT,
 															  idAsignatura  VARCHAR(15),
@@ -446,6 +448,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatricula (
 															  FOREIGN KEY(idObservacionNota) REFERENCES ProyectoSistemaMatricula.unah.ObservacionNotaFinal(idObservacionNotaFinal)
 															  );
 					    
+
 CREATE TABLE ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera(
 															  idMatricula INT,
 															  idAsignatura  VARCHAR(15),
@@ -465,6 +468,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.PensumAcademico(
 															 FOREIGN KEY(idPlanEstudio) REFERENCES ProyectoSistemaMatricula.unah.PlanEstudio(idPlanEstudio)
 															 );
 
+
 CREATE TABLE ProyectoSistemaMatricula.unah.Requisitos(
 														idAsignatura  VARCHAR(15),
 														idPlanEstudio INT,  
@@ -476,6 +480,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Requisitos(
 														FOREIGN KEY(idRequisito2) REFERENCES ProyectoSistemaMatricula.unah.Asignatura(idAsignatura)
 														);
 
+
 CREATE TABLE ProyectoSistemaMatricula.unah.log_SeccionEliminada(
 														idSeccionLog  VARCHAR(15),
 														idAsignatura  VARCHAR(15), 
@@ -483,4 +488,9 @@ CREATE TABLE ProyectoSistemaMatricula.unah.log_SeccionEliminada(
 														fecha DATETIME ,
 														PRIMARY KEY (idSeccionLog,idAsignatura,fecha)
 														);
+
+
+
+
+
 

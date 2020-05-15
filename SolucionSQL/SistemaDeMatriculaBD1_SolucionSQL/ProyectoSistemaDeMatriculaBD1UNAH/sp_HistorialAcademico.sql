@@ -125,7 +125,7 @@ GO
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
--- Create date: 01/05/2020 
+-- Create date: 01/05/2020  
 -- Description:	Procedimiento almacenado para obtener todos los datos del historial academico
 --				Se le tiene que pasar 2 parametros: * El idEstudiante en este caso el numero de cuenta
 --													* Un 1 si esta en un periodo activo estudiando respectivamente (aqui se necesitara calcular un penultimo idMatricula)
@@ -133,14 +133,14 @@ GO
 -- =============================================
 
 CREATE PROCEDURE [unah].[spObtenerHistorialAcademico] (
-		@idEstudiante INT,
+		@idEstudiante VARCHAR(11),
 		@EstudiandoActualmente INT
 	)
 AS
 BEGIN
 	SET NOCOUNT ON;
 	BEGIN TRY
-		DECLARE @idHistorial INT
+		DECLARE @idHistorial VARCHAR(11)
 		DECLARE @indiceGlobal FLOAT
 		DECLARE @indicePeriodo FLOAT
 
@@ -216,12 +216,14 @@ END
 GO
 
 /*Prueba*/
-/*
+/* 
+
 EXECUTE[unah].[spObtenerHistorialAcademico] 160981426,0
 
 
 EXECUTE [unah].[spObtenerHistorialAcademico] 2
 */
+
 /*
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.CentroUniversitario
@@ -251,4 +253,5 @@ SELECT M.idMatricula,SM.idAsignatura AS CODIGO,
 				   AND SM.idObservacionNota IN ('APR','NSP','RPB','ABD')
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo
-SELECT * FROM ProyectoSistemaMatricula.unah.Seccion*/
+SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
+*/

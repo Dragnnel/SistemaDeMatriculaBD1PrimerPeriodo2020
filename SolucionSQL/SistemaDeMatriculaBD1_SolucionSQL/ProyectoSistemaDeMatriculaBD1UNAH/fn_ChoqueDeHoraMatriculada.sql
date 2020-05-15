@@ -2,7 +2,7 @@
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
--- Create date: 10/04/2020 
+-- Create date: 10/04/2020  
 -- Description:	Esta funcion verifica si ya tiene una asignatura matriculada a la hora que se esta intentando matricular otra.
 --		        Aqui dará 2 valores:	0: Si No Existe matriculada una clase a esa misma hora
 --										1: Si Existe matriculada una clase a esa misma hora
@@ -35,3 +35,6 @@ BEGIN
 	RETURN @ChocaHora
 END
 GO
+
+
+--

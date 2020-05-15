@@ -24,3 +24,6 @@ BEGIN
 	RETURN @cuposDisponibles
 END
 GO
+
+
+---

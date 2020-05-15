@@ -13,13 +13,13 @@ GO
 -- =============================================
 
 CREATE PROCEDURE [unah].[spObtenerForma003] (
-		@idEstudiante INT
+		@idEstudiante VARCHAR(11)
 	)
 AS
 BEGIN
 	SET NOCOUNT ON;
 	BEGIN TRY
-		DECLARE @idHistorial INT
+		DECLARE @idHistorial VARCHAR(11)
 		DECLARE @idMaricula INT
 
 		SET @idHistorial = (SELECT HA.idHistorial
@@ -124,6 +124,7 @@ SELECT *
 	FROM ProyectoSistemaMatricula.unah.Aula
 
 */
+
 /*
 	PRUEBA
 */

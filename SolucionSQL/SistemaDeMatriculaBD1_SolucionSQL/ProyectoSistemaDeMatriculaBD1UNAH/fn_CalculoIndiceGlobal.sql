@@ -7,8 +7,8 @@
 -- =============================================
 
 CREATE FUNCTION [unah].[fnObtenerIndiceGlobal](
-		@idEstudiante INT,
-		@idHistorial INT
+		@idEstudiante VARCHAR(11),
+		@idHistorial VARCHAR(11)
 	)
 RETURNS DECIMAL
 AS

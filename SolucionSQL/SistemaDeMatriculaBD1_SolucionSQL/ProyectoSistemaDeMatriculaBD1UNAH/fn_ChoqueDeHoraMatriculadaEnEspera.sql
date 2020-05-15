@@ -2,7 +2,7 @@
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
--- Create date: 10/04/2020 
+-- Create date: 10/04/2020  
 -- Description:	Esta funcion verifica si ya tiene una asignatura matriculada a la hora que se esta intentando matricular otro registro, ya
 --				sea en lista de espera o en la seccion con cupos.
 --		        Aqui dará 2 valores:	0: Si No Existe matriculada una clase a esa misma hora en la lista de espera
@@ -36,3 +36,7 @@ BEGIN
 	RETURN @ChocaHoraEnEspera
 END
 GO
+
+
+
+--

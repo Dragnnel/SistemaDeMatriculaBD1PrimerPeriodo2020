@@ -2,7 +2,7 @@
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
--- Create date: 11/04/2020 
+-- Create date: 11/04/2020  
 -- Description:	Trigger que controla los cupos de las secciones, y las unidades valorativas disponibles del estudiante
 -- =============================================
 
@@ -10,7 +10,7 @@
 CREATE TRIGGER [unah].[tgInsertarSeccionMatricula] ON ProyectoSistemaMatricula.unah.SeccionMatricula
 AFTER INSERT
 AS
-DECLARE @idEstudiante INT  
+DECLARE @idEstudiante VARCHAR(11)  
 DECLARE @idMatricula INT   
 DECLARE @idSeccion VARCHAR(15)
 DECLARE @idAsignatura VARCHAR(15)
@@ -95,3 +95,7 @@ ELSE
 		PRINT 'No tiene UV Disponibles'
 	END
 
+GO
+
+
+--

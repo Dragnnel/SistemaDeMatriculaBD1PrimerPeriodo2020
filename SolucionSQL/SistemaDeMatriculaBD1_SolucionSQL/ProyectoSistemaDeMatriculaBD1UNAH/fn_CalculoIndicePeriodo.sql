@@ -7,8 +7,8 @@
 -- =============================================
 
 CREATE FUNCTION [unah].[fnObtenerIndicePeriodo](
-		@idEstudiante INT,
-		@idHistorial INT,
+		@idEstudiante VARCHAR(11),
+		@idHistorial VARCHAR(11),
 		@EstudiandoActualmente INT
 	)
 RETURNS DECIMAL

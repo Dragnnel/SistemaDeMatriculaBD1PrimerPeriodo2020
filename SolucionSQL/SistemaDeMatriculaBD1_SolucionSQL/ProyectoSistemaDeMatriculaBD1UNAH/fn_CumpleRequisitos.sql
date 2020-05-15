@@ -53,8 +53,8 @@ CREATE FUNCTION [unah].[fnCumpleRequisitos](
 RETURNS VARCHAR(280)
 AS
 BEGIN
-	DECLARE @idHistorial INT
-	DECLARE @idEstudiante INT
+	DECLARE @idHistorial VARCHAR(11)
+	DECLARE @idEstudiante VARCHAR(11)
 	DECLARE @idCarrera INT
 	DECLARE @idPlaEstudio INT
 	DECLARE @idRequisito1 VARCHAR(15)
@@ -83,23 +83,27 @@ BEGIN
 								ON E.idEstudiante = M.idEstudiante
 							 WHERE M.idMatricula = @idMatricula
 					  )
+
 	SET @idPlaEstudio = (
 						 SELECT C.idPlanEstudio
 							 FROM ProyectoSistemaMatricula.unah.Carrera C
 							WHERE C.idCarrera = @idCarrera
 						 )
+
 	SET @idRequisito1 = (
 						 SELECT R.idRequisito1
 							 FROM ProyectoSistemaMatricula.unah.Requisitos R
 						    WHERE idAsignatura = @idAsignatura
 							  AND idPlanEstudio  = @idPlaEstudio
 						 )
+
 	SET @idRequisito2 = (
 						 SELECT R.idRequisito2
 							 FROM ProyectoSistemaMatricula.unah.Requisitos R
 							WHERE idAsignatura = @idAsignatura
 							  AND idPlanEstudio  = @idPlaEstudio
 						 )
+
 	---------------------------------------------------------------------------------
 	IF NOT EXISTS(SELECT *
 					  FROM ProyectoSistemaMatricula.unah.PensumAcademico PA
@@ -182,6 +186,7 @@ END
 GO
 
 
+
 /*
 DECLARE @d VARCHAR(120)
 
@@ -199,6 +204,8 @@ SELECT * FROM ProyectoSistemaMatricula.unah.Estudiante
 SELECT * FROM ProyectoSistemaMatricula.unah.Matricula
 SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
 SELECT * FROM ProyectoSistemaMatricula.unah.PensumAcademico
+
+
 
 PRINT [unah].[fnCumpleRequisitos] (2, 'FS100')
 */
