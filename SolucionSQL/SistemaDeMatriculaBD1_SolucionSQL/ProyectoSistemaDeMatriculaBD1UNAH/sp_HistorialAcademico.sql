@@ -190,6 +190,7 @@ BEGIN
 			   A.nombreAsignatura AS ASIGNATURA,
 			   A.unidadesValorativas AS UV,
 			   SM.idSeccion AS SECCION,
+			   CONCAT(Pe.primerNombre,' ', Pe.segundoNombre,' ', Pe.primerApellido,' ', Pe.segundoApellido) AS DOCENTE,
 			   P.anio AS AÑO,
 			   S.idPeriodo AS PERIODO,
 			   SM.notaFinal AS CALIFICACION,
@@ -201,6 +202,10 @@ BEGIN
 					ON (S.idSeccion = SM.idSeccion AND S.idAsignatura = SM.idAsignatura)
 			INNER JOIN ProyectoSistemaMatricula.unah.Asignatura A
 					ON A.idAsignatura = S.idAsignatura
+			INNER JOIN ProyectoSistemaMatricula.unah.Docente D
+					ON D.idDocente = S.idDocente
+			INNER JOIN ProyectoSistemaMatricula.unah.Persona Pe
+					ON Pe.idPersona = D.idDocente
 			INNER JOIN ProyectoSistemaMatricula.unah.Periodo P
 				    ON (    S.idPeriodo = P.idPeriodo 
 						AND S.fechaInicioPeriodo = P.fechaInicio 
@@ -218,7 +223,7 @@ GO
 /*Prueba*/
 /* 
 
-EXECUTE[unah].[spObtenerHistorialAcademico] 160981426,0
+EXECUTE[unah].[spObtenerHistorialAcademico] 556095073,0
 
 
 EXECUTE [unah].[spObtenerHistorialAcademico] 2
@@ -254,4 +259,12 @@ SELECT M.idMatricula,SM.idAsignatura AS CODIGO,
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo
 SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
+
+
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.Persona P
+	INNER JOIN ProyectoSistemaMatricula.unah.Docente D
+	ON D.idDocente = P.idPersona
+	INNER JOIN ProyectoSistemaMatricula.unah.Seccion S
+	ON S.idDocente = D.idDocente
 */
