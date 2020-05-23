@@ -1,14 +1,11 @@
-
- -- =============================================
+-- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
 -- Create date: 07/05/2020 
 -- Description:	Me devuelve la cantidad de clases donde el estudiante Abandono
 -- =============================================
-
-
- CREATE VIEW [unah].[vw_VistaCantidadClasesABN] AS(
+ CREATE VIEW [unah].[vwVistaCantidadClasesABN] AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
 			T6.segundoNombre,

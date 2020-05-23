@@ -5,10 +5,7 @@
 -- Create date: 07/05/2020 
 -- Description:	Me devuelve la cantidad de clases donde el estudiante  no se presento
 -- =============================================
-
-	
-
- CREATE VIEW [unah].[vw_VistaCantidadClasesNSP] AS(
+ CREATE VIEW [unah].[vwVistaCantidadClasesNSP] AS(
 
  SELECT   T5.idEstudiante,
 			T6.primerNombre,

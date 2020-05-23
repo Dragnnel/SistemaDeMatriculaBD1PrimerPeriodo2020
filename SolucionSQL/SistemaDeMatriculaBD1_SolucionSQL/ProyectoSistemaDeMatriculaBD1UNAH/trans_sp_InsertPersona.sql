@@ -5,7 +5,7 @@
 -- Create date: 03/04/2020 9:10:50
 -- Description:	Insertar una persona por medio de una transaccion en un procedimiento almacenado
 -- =============================================
-CREATE PROCEDURE [unah].[trans_sp_InsertPersona](
+CREATE PROCEDURE [unah].[spTransactionInsertPersona](
 					 @idPersona VARCHAR(15),
 					 @primerNombre VARCHAR(35),
 					 @segundoNombre VARCHAR(35),

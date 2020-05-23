@@ -7,7 +7,7 @@
 --				*Aqui se inserta un registro en la tabla "SeccionMatricula", y al realizarce correctamente
 --				 reduce en uno los cupos disponibles en la seccion de la asignatura correspondiente
 -- =============================================
-CREATE PROCEDURE [unah].[trans_sp_InsertSeccionMatricula](
+CREATE PROCEDURE [unah].[spTransactionInsertSeccionMatricula](
 			@idMatricula INT,
 			@idSeccion INT,
 			@idAsignatura INT,

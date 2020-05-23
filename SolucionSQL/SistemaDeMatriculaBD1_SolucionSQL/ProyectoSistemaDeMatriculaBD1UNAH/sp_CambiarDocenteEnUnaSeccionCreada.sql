@@ -5,7 +5,7 @@
 -- Create date: 08/05/2020
 -- Description:	Cambiar el docente de una seccion creada 
 -- =============================================
-CREATE PROCEDURE [unah].[sp_CambiarDocenteEnUnaSeccionCreada] (
+CREATE PROCEDURE [unah].[spCambiarDocenteEnUnaSeccionCreada] (
 															 @pidAsignatura  VARCHAR(15),
 															 @pidSeccion VARCHAR(15),
 															 @pidDocente INT,
@@ -21,8 +21,8 @@ SET NOCOUNT ON;
 
 	IF  EXISTS (SELECT * FROM  ProyectoSistemaMatricula.unah.Seccion AS T1
 					WHERE T1.idAsignatura = @pidAsignatura AND T1.idSeccion = @pidSeccion ) --Verifica si la seccion,existe
-		AND    (SELECT [unah].[fn_VerificaEmpleado] (@pidDocente,@pfechaInicioCargo))=1 -- verifica si el docente existe
-		AND		(SELECT [unah].[fn_VerificaPeriodoAcademico] (@pidPeriodo,@pfechaInicioPeriodo,@pidTipoPeriodo) )=1 --verifica si existe el periodo en la BD 
+		AND    (SELECT [unah].[fnVerificaEmpleado] (@pidDocente,@pfechaInicioCargo))=1 -- verifica si el docente existe
+		AND		(SELECT [unah].[fnVerificaPeriodoAcademico] (@pidPeriodo,@pfechaInicioPeriodo,@pidTipoPeriodo) )=1 --verifica si existe el periodo en la BD 
 
 		BEGIN
 			UPDATE ProyectoSistemaMatricula.unah.Seccion
@@ -46,7 +46,7 @@ SELECT * FROM ProyectoSistemaMatricula.unah.Seccion AS S
 WHERE S.idAsignatura = 'EN011' AND S.idSeccion ='0800'
 AND	idPeriodo='I' AND fechaInicioPeriodo='2020-01-01' AND idTipoPeriodo=2
 
-EXECUTE [dbo].[sp_CambiarDocenteEnUnaSeccionCreada] 'MM401','1101',006,'2016-01-01','I','2020-01-01',001
+EXECUTE [dbo].[spCambiarDocenteEnUnaSeccionCreada] 'MM401','1101',006,'2016-01-01','I','2020-01-01',001
 */
 
 

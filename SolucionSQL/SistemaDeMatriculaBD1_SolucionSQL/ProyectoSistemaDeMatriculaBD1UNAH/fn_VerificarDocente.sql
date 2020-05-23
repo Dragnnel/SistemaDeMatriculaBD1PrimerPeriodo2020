@@ -6,7 +6,7 @@
 -- Description:	Verificar si existe docente 
 -- =============================================
 
-CREATE FUNCTION [unah].[fn_VerificaEmpleado](
+CREATE FUNCTION [unah].[fnVerificaEmpleado](
 										@pidEmpleado INT,
                                         @pfechaInicioCargo VARCHAR(15)
 										)

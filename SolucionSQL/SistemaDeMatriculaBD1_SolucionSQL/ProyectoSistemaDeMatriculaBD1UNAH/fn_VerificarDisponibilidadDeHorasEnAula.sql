@@ -5,7 +5,7 @@
 -- Create date: 11/04/2020 9:10:50
 -- Description:	Validar la disponibilidad de aula de una seccion en una determinada horas posteriores
 -- =============================================
-CREATE FUNCTION [unah].[fn_VerificarDisponibilidadDeHorasEnAula] (
+CREATE FUNCTION [unah].[fnVerificarDisponibilidadDeHorasEnAula] (
 																@pidAsignacion VARCHAR(15),
 																@pidSeccion VARCHAR(15),
 																@pidCodigoAula VARCHAR(25),

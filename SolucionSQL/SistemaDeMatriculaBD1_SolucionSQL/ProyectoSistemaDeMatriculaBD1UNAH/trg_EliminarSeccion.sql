@@ -1,4 +1,12 @@
-CREATE TRIGGER [unah].[tgr_EliminarSeccion] ON ProyectoSistemaMatricula.unah.Seccion
+-- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 11/04/2020 
+-- Description:	
+-- =============================================
+
+CREATE TRIGGER [unah].[tgEliminarSeccion] ON ProyectoSistemaMatricula.unah.Seccion
 FOR DELETE
 
 AS

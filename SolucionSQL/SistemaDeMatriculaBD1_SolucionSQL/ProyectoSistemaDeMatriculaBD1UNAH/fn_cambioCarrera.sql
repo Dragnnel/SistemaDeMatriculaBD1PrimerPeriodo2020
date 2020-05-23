@@ -6,7 +6,7 @@
 -- Description:	Verificar si cumple los requisitos para cambio de carrera
 -- =============================================
 
-CREATE FUNCTION unah.RequisitosCambioCarrera(@idEstudiante VARCHAR(11),
+CREATE FUNCTION [unah].[fnRequisitosCambioCarrera](@idEstudiante VARCHAR(11),
                                       @idCarrera INT
 								
 										)

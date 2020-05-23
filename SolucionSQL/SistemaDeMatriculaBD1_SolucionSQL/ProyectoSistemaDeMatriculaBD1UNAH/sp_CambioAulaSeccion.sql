@@ -5,7 +5,7 @@
 -- Create date: 11/05/2020
 -- Description:	Cambio de aula y edificio de una seccion creada, verificando que la nueva aula, pueda contener los cupos que esta definida la seccion de alumnos.
 -- =============================================
-CREATE PROCEDURE [unah].[sp_cambiarAulaSeccion](
+CREATE PROCEDURE [unah].[spCambiarAulaSeccion](
 										@pidAsignatura  VARCHAR(15),
 										@pidSeccion VARCHAR(15),
 										@pidCodigoAula VARCHAR(25),
@@ -32,7 +32,7 @@ SET NOCOUNT ON;
 							 AND T1.fechaInicioPeriodo= @pfechaInicioPeriodo 
 							 AND T1.idTipoPeriodo = @pidTipoPeriodo;
 
-				IF (SELECT [unah].[fn_ValidarUbicacionSeccion] (@pidCodigoAula,@pidCodigoEdificio,@cupoSeccion))=1 --Verifica si el aula que va cambiarse cumple con los requisitos donde averquen los cupos de la seccion para los alumnos
+				IF (SELECT [unah].[fnValidarUbicacionSeccion] (@pidCodigoAula,@pidCodigoEdificio,@cupoSeccion))=1 --Verifica si el aula que va cambiarse cumple con los requisitos donde averquen los cupos de la seccion para los alumnos
 					BEGIN
 						UPDATE ProyectoSistemaMatricula.unah.Seccion --Actualiza el edificio y el aula
 						SET idCodigoAula =@pidCodigoAula , idCodigoEdificio = @pidCodigoEdificio

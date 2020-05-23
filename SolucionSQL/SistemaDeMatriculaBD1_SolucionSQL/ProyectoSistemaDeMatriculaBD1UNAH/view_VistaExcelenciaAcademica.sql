@@ -1,4 +1,3 @@
-
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -6,8 +5,7 @@
 -- Create date: 07/05/2020 
 -- Description:	Me devuelve los estudiantes con excelencia academica
 -- =============================================
-
-CREATE VIEW [unah].[vw_VistaExcelenciaAcademica] AS(
+CREATE VIEW [unah].[vwVistaExcelenciaAcademica] AS(
 
 SELECT T3.primerNombre,
        T3.segundoNombre,

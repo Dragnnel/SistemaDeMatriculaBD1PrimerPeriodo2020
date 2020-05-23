@@ -1,10 +1,3 @@
-USE [ProyectoSistemaMatricula]
-GO
-/****** Object:  UserDefinedFunction [dbo].[VerificarDiaMatricula]    Script Date: 23/5/2020 16:04:08 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
 -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -13,13 +6,19 @@ GO
 -- Description:	Funcion que verifica el dia que le toca matricula a cada estudiante ya sea de primer ingreso, 
 --reingreso, por egresar y representantes artisticos o Deportes UNAH
 -- =============================================
+
+
 /*
 PRINT @prueba
+
+SELECT * FROM ProyectoSistemaMatricula.unah.ObservacionNotaFinal
+
 */
-CREATE FUNCTION [unah].[fn_VerificarDiaMatricula](
-										@idEstudiante VARCHAR(11)
-								
-										)
+
+
+CREATE FUNCTION [unah].[fnVerificarDiaMatricula](
+	@idEstudiante VARCHAR(11)
+)
 
 
 	RETURNS INT
@@ -39,10 +38,10 @@ CREATE FUNCTION [unah].[fn_VerificarDiaMatricula](
 	set @respuesta = 0;
 	
 	
-	             SELECT @conteoclasesrepro=T3.descripcion
+	            SELECT @conteoclasesrepro=T3.descripcion
 						FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
 						INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
-						ON t1.idObservacionNota =t3.idObservacionNotaFinal
+						ON t1.idObservacionNota = t3.idObservacionNotaFinal
 						WHERE T3.descripcion IS NULL 
 
                 SELECT @conteoclasespasadas =T3.descripcion
@@ -131,3 +130,26 @@ CREATE FUNCTION [unah].[fn_VerificarDiaMatricula](
 			
     RETURN @respuesta;
     END
+    GO
+
+/*SELECT [dbo].[VerificarDiaMatricula](2020499755) ---Primer Ingreso Regresa 1
+SELECT [dbo].[VerificarDiaMatricula](304499755)---- Reingreso regresa 0
+
+SELECT [dbo].[VerificarDiaMatricula](705864082)---Indice periodo 87 por su indice regresa 1
+SELECT [dbo].[VerificarDiaMatricula](881059432)----- indice periodo 65
+
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal NF
+	ON NF.idObservacionNotaFinal = SM.idObservacionNota
+
+DECLARE @conteoclasesrepro INT
+
+SELECT @conteoclasesrepro= SUM(T3.descripcion)
+					FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+					INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+					ON t1.idObservacionNota = t3.idObservacionNotaFinal
+					WHERE T3.idObservacionNotaFinal = 'RPB' 
+
+PRINT @conteoclasesrepro
+*/

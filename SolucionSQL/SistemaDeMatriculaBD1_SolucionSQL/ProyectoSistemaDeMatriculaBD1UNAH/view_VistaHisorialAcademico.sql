@@ -1,4 +1,3 @@
-
 -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -7,8 +6,7 @@
 -- Description:Vista que me genera el historial Academico, al momento de querer el historial solo tendria que hacer el where
  --con el idEstudiante	
 -- =============================================
-
-CREATE VIEW [unah].[vw_VistaHisorialAcademico] AS(
+CREATE VIEW [unah].[vwVistaHisorialAcademico] AS(
 SELECT CU.centroUniversitario,
        C.nombreCarrera,
        P.primerNombre,

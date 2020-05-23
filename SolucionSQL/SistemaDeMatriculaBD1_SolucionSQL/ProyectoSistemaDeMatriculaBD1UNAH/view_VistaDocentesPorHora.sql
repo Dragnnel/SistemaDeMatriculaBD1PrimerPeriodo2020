@@ -1,4 +1,3 @@
-
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -6,10 +5,7 @@
 -- Create date: 07/05/2020 
 -- Description:		Lista de Empleados que tienen cargo de Docente que estan Contratados por hora
 -- =============================================
-	 	
-
- 
-CREATE VIEW [unah].[vw_VistaDocentesPorHora] AS(
+CREATE VIEW [unah].[vwVistaDocentesPorHora] AS(
 
 SELECT T1.idEmpleado,
 		T4.primerNombre,

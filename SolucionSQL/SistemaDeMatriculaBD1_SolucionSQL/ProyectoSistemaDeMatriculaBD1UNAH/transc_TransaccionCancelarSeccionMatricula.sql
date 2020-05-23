@@ -9,7 +9,7 @@ GO
 -- Create date: 10/04/2020 
 -- Description:	Procedimiento con una transaccion para eliminar una SeccionMatriculada 
 -- =============================================
-CREATE PROCEDURE [unah].[trans_sp_CancelarSeccionMatricula](
+CREATE PROCEDURE [unah].[spTransactionCancelarSeccionMatricula](
 	@idEstudiante INT,
 	@idAsignatura VARCHAR(15),
 	@idSeccion VARCHAR(15)

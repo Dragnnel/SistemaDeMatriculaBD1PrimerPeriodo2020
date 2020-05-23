@@ -1,4 +1,3 @@
-
 -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -6,8 +5,7 @@
 -- Create date: 07/05/2020 
 -- Description:	Me devuelve la cantidad de clases que el estudiante ah aprobado
 -- =============================================
-
- CREATE VIEW [unah].[vw_VistaCantidadClasesAPR] AS(
+ CREATE VIEW [unah].[vwVistaCantidadClasesAPR] AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
 			T6.segundoNombre,

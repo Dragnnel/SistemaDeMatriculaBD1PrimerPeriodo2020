@@ -1,4 +1,3 @@
-
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -7,9 +6,7 @@
 -- Description:	Vista que me devuelve los nombres,
 -- num cuenta de los estudiantes que tienen el indice global bajo  y son suspendidos por tenerlo menor que 50
 -- =============================================
-
-
- CREATE VIEW [unah].[vw_VistaEstudiantesconriesgosancion] AS(
+ CREATE VIEW [unah].[vwVistaEstudiantesconriesgosancion] AS(
 
  SELECT T3.primerNombre,
        T3.primerApellido,

@@ -5,7 +5,7 @@
 -- Create date: 03/04/2020 10:20:31
 -- Description:	 Transaccion con la que se actualizara el correo de una determinada persona
 -- =============================================
-CREATE PROCEDURE [unah].[trans_sp_UpdateCorreo](
+CREATE PROCEDURE [unah].[spTransactionUpdateCorreo](
 		@idPersona VARCHAR(15),
 		@idCorreo INT,
 		@TipoCorreo INT, -- 0, 1; 0 = personal, 1 = Institucional

@@ -10,7 +10,7 @@ GO
 -- Description:	Eliminar una seccion por medio de una transaccion 
 -- =============================================
 
-CREATE PROCEDURE [unah].[trans_sp_EliminarSeccion](
+CREATE PROCEDURE [unah].[spTransactionEliminarSeccion](
 											@pidAsignatura  VARCHAR(15),
 											@pidSeccion VARCHAR(15)
 									      )

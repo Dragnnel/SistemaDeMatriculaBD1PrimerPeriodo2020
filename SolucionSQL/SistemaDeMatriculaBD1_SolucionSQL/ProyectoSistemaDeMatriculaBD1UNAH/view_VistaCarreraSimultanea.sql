@@ -1,4 +1,3 @@
-
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -6,9 +5,7 @@
 -- Create date: 07/05/2020 
 -- Description:Me devuelve los estudiantes que estudian carreras simultaneas
 -- =============================================
-
-
-CREATE VIEW  [unah].[vw_VistaCarreraSimultanea] AS(
+CREATE VIEW  [unah].[vwVistaCarreraSimultanea] AS(
 
 SELECT T3.primerNombre,
        T3.segundoNombre,

@@ -9,7 +9,7 @@
 	
 	
 
- CREATE VIEW [unah].[vw_VistaListaRepresentantesArtisticos] AS(
+ CREATE VIEW [unah].[vwVistaListaRepresentantesArtisticos] AS(
 
   SELECT T1.idEstudiante,
         T3.nombreCarrera,

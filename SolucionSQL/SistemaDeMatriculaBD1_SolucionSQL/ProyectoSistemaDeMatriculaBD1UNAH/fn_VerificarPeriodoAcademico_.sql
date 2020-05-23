@@ -6,7 +6,7 @@
 -- Description:	Verificar si el periodo academico existe
 -- =============================================
 
-CREATE FUNCTION [unah].[fn_VerificaPeriodoAcademico](
+CREATE FUNCTION [unah].[fnVerificaPeriodoAcademico](
 										@pidPeriodo CHAR(3),
 										@pfechaInicio DATE ,
 										@pidTipoPeriodo INT

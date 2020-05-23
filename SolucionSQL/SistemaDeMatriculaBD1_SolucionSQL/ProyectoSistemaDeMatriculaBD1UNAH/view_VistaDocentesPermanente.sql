@@ -1,4 +1,3 @@
-
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -6,9 +5,7 @@
 -- Create date: 07/05/2020 
 -- Description:	Lista de Empleados que tienen cargo de Docente que estan Contratados Permanente
 -- =============================================
- 
-
- CREATE VIEW [unah].[vw_VistaDocentesPermanente] AS(
+ CREATE VIEW [unah].[vwVistaDocentesPermanente] AS(
  SELECT T1.idEmpleado,
 		T4.primerNombre,
 		T4.segundoNombre,

@@ -1,5 +1,3 @@
-
-
 -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -8,9 +6,7 @@
 -- Description:	Vista que me gerera la forma 003, al momento de querer el historial solo tendria que hacer el where
  --con el idEstudiante
 -- =============================================
-
-
- CREATE VIEW [unah].[vw_VistaForma003] AS(
+ CREATE VIEW [unah].[vwVistaForma003] AS(
 
  SELECT E.idEstudiante,
        P.primerNombre,

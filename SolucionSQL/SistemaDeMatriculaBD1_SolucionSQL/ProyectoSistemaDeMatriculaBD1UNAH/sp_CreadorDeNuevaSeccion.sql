@@ -9,7 +9,7 @@ GO
 -- Create date: 25/04/2020
 -- Description:	Ingreso de una nueva seccion , verificando docente, periodo y hora de inicio y fin 
 -- =============================================
-CREATE PROCEDURE [unah].[sp_CreadorDeNuevaSeccion](
+CREATE PROCEDURE [unah].[spCreadorDeNuevaSeccion](
 															 @pidAsignatura  VARCHAR(15),
 															 @pidSeccion VARCHAR(15),
 															 @phoraInicial INT,
@@ -35,16 +35,16 @@ BEGIN TRY
 	--DECLARE		@HI INT ;
 
 	--SET @HI = CAST(@pidSeccion AS INT)
-	SELECT @phoraFinal =  [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] (@pidAsignatura ,@pidSeccion,@pidDias,@pidCodigoAula,@pidCodigoEdificio, @pfechaInicioPeriodo,@pidTipoPeriodo);
+	SELECT @phoraFinal =  [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] (@pidAsignatura ,@pidSeccion,@pidDias,@pidCodigoAula,@pidCodigoEdificio, @pfechaInicioPeriodo,@pidTipoPeriodo);
 	SET @CalculoHoraFinal = @phoraInicial + @phoraFinal*100;
 
 	IF NOT EXISTS (SELECT * FROM  ProyectoSistemaMatricula.unah.Seccion AS T1
 							WHERE T1.idAsignatura = @pidAsignatura AND T1.idSeccion = @pidSeccion AND T1.idCodigoAula = @pidCodigoAula AND T1.idCodigoEdificio = @pidCodigoEdificio AND T1.idPeriodo =@pidPeriodo AND T1.fechaInicioPeriodo= @pfechaInicioPeriodo AND T1.idTipoPeriodo = @pidTipoPeriodo)
 		BEGIN 
 
-			 IF (SELECT [unah].[fn_VerificarCreacionHoraSeccion] (@pidSeccion,@phoraInicial,@CalculoHoraFinal)) = 1 --Verificar si la hora inicial y final este acorde a la seccion
-					AND (SELECT [unah].[fn_ValidarUbicacionSeccion] (@pidCodigoAula,@pidCodigoEdificio,@pcuposDisponibles)) = 1 --Verifica si los datos de ubicacion son correctos y si caben en los cupos del aula 
-					AND (SELECT [unah].[fn_VerificaPeriodoAcademico] (@pidPeriodo,@pfechaInicioPeriodo,@pidTipoPeriodo) )=1 --verifica que si se ingreso un periodo correcto 
+			 IF (SELECT [unah].[fnVerificarCreacionHoraSeccion] (@pidSeccion,@phoraInicial,@CalculoHoraFinal)) = 1 --Verificar si la hora inicial y final este acorde a la seccion
+					AND (SELECT [unah].[fnValidarUbicacionSeccion] (@pidCodigoAula,@pidCodigoEdificio,@pcuposDisponibles)) = 1 --Verifica si los datos de ubicacion son correctos y si caben en los cupos del aula 
+					AND (SELECT [unah].[fnVerificaPeriodoAcademico] (@pidPeriodo,@pfechaInicioPeriodo,@pidTipoPeriodo) )=1 --verifica que si se ingreso un periodo correcto 
 				BEGIN
 					INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
 													  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES

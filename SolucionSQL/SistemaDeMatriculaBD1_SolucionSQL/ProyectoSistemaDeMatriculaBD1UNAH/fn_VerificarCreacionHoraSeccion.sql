@@ -6,7 +6,7 @@
 -- Description:	Verificar la horas que se ingresen para la seccion sean coherentes y que no se salgan del rango de 6 am a 8 pm
 -- =============================================
 
-CREATE FUNCTION [unah].[fn_VerificarCreacionHoraSeccion](
+CREATE FUNCTION [unah].[fnVerificarCreacionHoraSeccion](
 										 @pidSeccion VARCHAR(15),
 								         @phoraInicial INT,
 										 @phoraFinal INT

@@ -7,7 +7,8 @@
 -- =============================================
 
 
-CREATE FUNCTION unah.VerificarEstudiante(@idEstudiante VARCHAR(11)
+CREATE FUNCTION [unah].[fnVerificarEstudiante](
+										@idEstudiante VARCHAR(11)
 								
 										)
 

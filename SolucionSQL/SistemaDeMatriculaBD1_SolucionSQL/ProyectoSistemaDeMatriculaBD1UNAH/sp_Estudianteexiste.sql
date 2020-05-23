@@ -7,7 +7,8 @@
 --Verificar estudiante y devuelve un msj si hay o no registro del estudiante
 -- =============================================
 
-CREATE PROCEDURE unah.EstudianteExiste(@idEstudiante VARCHAR(11),
+CREATE PROCEDURE [unah].[spEstudianteExiste](
+										 @idEstudiante VARCHAR(11),
 										  @pmensaje VARCHAR(50) OUT)
 								
 									                   

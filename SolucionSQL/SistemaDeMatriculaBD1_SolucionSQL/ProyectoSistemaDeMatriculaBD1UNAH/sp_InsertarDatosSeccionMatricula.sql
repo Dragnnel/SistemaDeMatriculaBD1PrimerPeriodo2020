@@ -1,48 +1,3 @@
-/*
-	Tablas A tomar en cuenta
-*/
-/*
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.HistorialAcademico
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Estudiante
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Periodo
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Asignatura
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Laboratorio --Esta no existe
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.PensumAcademico
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Requisitos
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Carrera
-
-
-------------------------------------------------------------------
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Matricula
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Seccion
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.SeccionMatricula
-
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera
-
-*/
-
--- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -153,5 +108,50 @@ BEGIN CATCH
 END CATCH
 
 GO
+/*
+	Tablas A tomar en cuenta
+*/
+/*
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.HistorialAcademico
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Estudiante
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Periodo
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Asignatura
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Laboratorio --Esta no existe
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.PensumAcademico
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Requisitos
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Carrera
+
+
+------------------------------------------------------------------
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Matricula
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.Seccion
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera
+
+*/
+
+-- ================================================
 
 										
