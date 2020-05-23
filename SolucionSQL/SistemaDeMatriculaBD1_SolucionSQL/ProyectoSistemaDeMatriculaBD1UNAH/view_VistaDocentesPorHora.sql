@@ -9,7 +9,7 @@
 	 	
 
  
-CREATE VIEW VistaDocentesPorHora AS(
+CREATE VIEW [unah].[vw_VistaDocentesPorHora] AS(
 
 SELECT T1.idEmpleado,
 		T4.primerNombre,

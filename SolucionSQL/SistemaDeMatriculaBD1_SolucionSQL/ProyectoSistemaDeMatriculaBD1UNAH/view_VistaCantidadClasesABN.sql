@@ -8,7 +8,7 @@
 -- =============================================
 
 
- CREATE VIEW VistaCantidadClasesABN AS(
+ CREATE VIEW [unah].[vw_VistaCantidadClasesABN] AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
 			T6.segundoNombre,

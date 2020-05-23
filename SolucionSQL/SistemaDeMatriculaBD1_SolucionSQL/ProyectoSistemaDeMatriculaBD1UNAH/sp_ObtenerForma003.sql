@@ -127,7 +127,7 @@ SELECT *
 
 /*
 	PRUEBA
+	EXECUTE [unah].[spObtenerForma003] 160981426
 */
 
 
-EXECUTE [unah].[spObtenerForma003] 160981426

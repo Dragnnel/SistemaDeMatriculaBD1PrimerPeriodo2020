@@ -1,4 +1,3 @@
--- ================================================
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -10,7 +9,7 @@ GO
 -- Create date: 10/04/2020 
 -- Description:	Procedimiento con una transaccion para eliminar una SeccionMatriculada 
 -- =============================================
-CREATE PROCEDURE [unah].[spCancelarSeccionMatricula](
+CREATE PROCEDURE [unah].[trans_sp_CancelarSeccionMatricula](
 	@idEstudiante INT,
 	@idAsignatura VARCHAR(15),
 	@idSeccion VARCHAR(15)
@@ -20,15 +19,15 @@ BEGIN
 	SET NOCOUNT ON;
 	BEGIN TRY
 		BEGIN TRAN
-			DECLARE @idHistorial INT
-			DECLARE @idMatricula INT
-			DECLARE @nomAsignatura VARCHAR(100)
-			DECLARE @mensajeConfirmacion VARCHAR(160)
+			DECLARE @idHistorial INT;
+			DECLARE @idMatricula INT;
+			DECLARE @nomAsignatura VARCHAR(100);
+			DECLARE @mensajeConfirmacion VARCHAR(160);
 		
-			SET @idHistorial = (SELECT *
+			SET @idHistorial = (SELECT HA.idEstudiante
 									 FROM ProyectoSistemaMatricula.unah.HistorialAcademico HA
 									WHERE HA.idEstudiante = @idEstudiante
-								)
+								);
 
 			SET @idMatricula = (SELECT M.idMatricula
 										  FROM ProyectoSistemaMatricula.unah.Matricula M
@@ -38,16 +37,17 @@ BEGIN
 										   AND M.idHistorial = @idHistorial
 										   AND SM.idAsignatura = @idAsignatura
 										   AND SM.idSeccion = @idSeccion
-								)
+								);
 
 			SET @nomAsignatura = (SELECT A.nombreAsignatura
 										 FROM ProyectoSistemaMatricula.unah.Asignatura A
 										WHERE A.idAsignatura = @idAsignatura 
-								  )
+								  );
 
-			IF EXISTS(SELECT *
+			IF EXISTS(
+					 SELECT *
 							 FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
-							WHERE SM.idMatricula = @idMatricula
+							 WHERE SM.idMatricula = @idMatricula
 							  AND SM.idAsignatura = @idAsignatura
 							  AND SM.idSeccion = @idSeccion
 					  )

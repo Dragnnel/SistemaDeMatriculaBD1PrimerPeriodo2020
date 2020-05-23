@@ -1,7 +1,7 @@
 /* Creacion de procedimientos Con el id Incrementado
 -----------------------------------------------------------------------------------------------------
 */
-CREATE PROCEDURE [unah].[InsertarDatosContinente] (
+CREATE PROCEDURE [unah].[sp_InsertarDatosContinente] (
 	 @pContinente VARCHAR(45),
 	 @pmensaje VARCHAR(40) OUT
 	 )
@@ -17,62 +17,12 @@ BEGIN
 	INSERT INTO Continente (idContinente, Continente) VALUES ((@conteo+1), @pContinente);
 	SET @pmensaje = 'Registro Guardado';
 END
-
+/*
 SELECT *
 FROM unah.Continente
-
-/*
------------------------------------------------------------------------------------------------------
 */
 
-CREATE PROCEDURE [unah].[InsertarDatosPais] (
-	 @ppais VARCHAR(45),
-	 @pidContinente INT,
-	 @pmensaje VARCHAR(40) OUT
-	 )
-	-- Add the parameters for the stored procedure here
-
-AS
-BEGIN
-	DECLARE @conteo INTEGER;
-	SELECT @conteo=MAX(idpais)
-	FROM unah.Pais;
-	
-  
-	INSERT INTO Pais (idPais, Pais, idContinente) VALUES ((@conteo+1), @ppais, @pidContinente );
-	SET @pmensaje = 'Registro Guardado';
-END
-
-
-/*
------------------------------------------------------------------------------------------------------
-*/
-
-
-CREATE PROCEDURE [unah].[InsertarDatosDepartamento] (
-	 @pdepartamento VARCHAR(45),
-	 @pidPais INT,
-	 @pmensaje VARCHAR(40) OUT
-	 )
-	-- Add the parameters for the stored procedure here
-
-AS
-BEGIN
-	DECLARE @conteo INTEGER;
-	SELECT @conteo=MAX(idDepartamento)
-	FROM unah.Departamento;
-
-  
-	INSERT INTO Departamento (idDepartamento, Departamento, idPais) VALUES ((@conteo+1), @pDepartamento, @pidPais);
-	SET @pmensaje = 'Registro Guardado';
-END
-
-
-/*
------------------------------------------------------------------------------------------------------
-*/
-
-CREATE PROCEDURE [unah].[InsertarDatosMunicipio] (
+CREATE PROCEDURE [unah].[sp_InsertarDatosMunicipio] (
 	 @pMunicipio VARCHAR(45),
 	 @pidDepartamento INT,
 	 @pmensaje VARCHAR(40) OUT
@@ -94,7 +44,72 @@ END
 -----------------------------------------------------------------------------------------------------
 */
 
-CREATE PROCEDURE [unah].[InsertarDatosDireccion] (
+CREATE PROCEDURE [unah].[sp_InsertarDatosCentroUniversitario] (
+	 @pcentroUniversitario VARCHAR(70),
+	 @psigla VARCHAR(10),
+	 @pfechaFundacion DATE,
+	 @pidDireccion INT,
+	 @pmensaje VARCHAR(40) OUT
+	 )
+	-- Add the parameters for the stored procedure here
+
+AS
+BEGIN
+	DECLARE @conteo INTEGER;
+	SELECT @conteo=MAX(idCentro)
+	FROM unah.CentroUniversitario;
+
+  
+	INSERT INTO CentroUniversitario(idCentro, centroUniversitario,sigla, fechaFundacion, idDireccion) VALUES ((@conteo+1), @pcentroUniversitario, @psigla, @pfechaFundacion, @pidDireccion);
+	SET @pmensaje = 'Registro Guardado';
+END
+
+
+-------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------------------
+	
+
+CREATE PROCEDURE [unah].[sp_InsertarDatosFacultad](
+			@pfacultad VARCHAR(50),
+			@pidEdificio INT,
+			@pidCentroUniversitario INT,
+			@pmensaje VARCHAR(40) OUT
+	)
+AS
+BEGIN 
+DECLARE @conteo INTEGER;
+	SELECT @conteo=MAX(idFacultad)
+	FROM unah.Facultad;
+
+	INSERT INTO ProyectoSistemaMatricula.unah.Facultad(idFacultad,facultad, idEdificio, idCentroUniversitario) VALUES((@conteo+1), @pfacultad, @pidEdificio,  @pidCentroUniversitario)
+	SET @pmensaje = 'Registro Guardado';											
+
+END 
+
+----------------------------------------
+CREATE PROCEDURE [unah].[sp_InsertarDatosGruposEtnico](
+			@pdescripcion VARCHAR(15),
+			@pmensaje VARCHAR(40) OUT
+	)
+AS
+BEGIN 
+   DECLARE @conteo INTEGER;
+	SELECT @conteo=MAX(idFacultad)
+	FROM unah.Facultad;
+
+	INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico(idGrupoEtnico, descripcion) VALUES ((@conteo+1), @pdescripcion)
+	SET @pmensaje = 'Registro Guardado';	
+
+END
+
+/*
+-----------------------------------------------------------------------------------------------------
+*/
+
+----------------------------Verificar procedimientos 
+
+CREATE PROCEDURE [unah].[sp_InsertarDatosDireccion] (
 	 @pidMucicipio INT,
 	 @pidDepartamento INT,
 	 @pdescripcion VARCHAR(300),
@@ -114,31 +129,8 @@ BEGIN
 END
 
 
-/*
------------------------------------------------------------------------------------------------------
-*/
 
-CREATE PROCEDURE [unah].[InsertarDatosCentroUniversitario] (
-	 @pcentroUniversitario VARCHAR(70),
-	 @psigla VARCHAR(10),
-	 @pfechaFundacion DATE,
-	 @pidDireccion INT,
-	 @pmensaje VARCHAR(40) OUT
-	 )
-	-- Add the parameters for the stored procedure here
-
-AS
-BEGIN
-	DECLARE @conteo INTEGER;
-	SELECT @conteo=MAX(idCentro)
-	FROM unah.CentroUniversitario;
-
-  
-	INSERT INTO CentroUniversitario(idCentro, centroUniversitario,sigla, fechaFundacion, idDireccion) VALUES ((@conteo+1), @pcentroUniversitario, @psigla, @pfechaFundacion, @pidDireccion);
-	SET @pmensaje = 'Registro Guardado';
-END
--------------------------------------------------------------------------------------------------------------
-CREATE PROCEDURE [unah].[InsertarDatosEdificio](
+CREATE PROCEDURE [unah].[sp_InsertarDatosEdificio](
 			@pedificio VARCHAR(45),
 			@pcodigoEdificio VARCHAR(10),
 			@pfechaFundacion DATE,
@@ -156,9 +148,12 @@ DECLARE @conteo INTEGER;
 	SET @pmensaje = 'Registro Guardado';												   
 													  
 END
------------------------------------------------------------------------------------------
 
-CREATE PROCEDURE [unah].[InsertarDatosAula](
+
+
+
+
+CREATE PROCEDURE [unah].[sp_InsertarDatosAula](
 			@pcodigoAula VARCHAR(10),
 			@pcantidadMaximaEstudiante INT,
 			@pobservacion VARCHAR(45),
@@ -175,45 +170,54 @@ DECLARE @conteo INTEGER;
 	SET @pmensaje = 'Registro Guardado';												   
 												   
 END
-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------
+*/
+
+CREATE PROCEDURE [unah].[sp_InsertarDatosPais] (
+	 @ppais VARCHAR(45),
+	 @pidContinente INT,
+	 @pmensaje VARCHAR(40) OUT
+	 )
+	-- Add the parameters for the stored procedure here
+AS
+BEGIN
+	DECLARE @conteo INTEGER;
+	SELECT @conteo=MAX(idpais)
+	FROM unah.Pais;
 	
-
-CREATE PROCEDURE [unah].[InsertarDatosFacultad](
-			@pfacultad VARCHAR(50),
-			@pidEdificio INT,
-			@pidCentroUniversitario INT,
-			@pmensaje VARCHAR(40) OUT
-	)
-AS
-BEGIN 
-DECLARE @conteo INTEGER;
-	SELECT @conteo=MAX(idFacultad)
-	FROM unah.Facultad;
-
-	INSERT INTO ProyectoSistemaMatricula.unah.Facultad(idFacultad,facultad, idEdificio, idCentroUniversitario) VALUES((@conteo+1), @pfacultad, @pidEdificio,  @pidCentroUniversitario)
-	SET @pmensaje = 'Registro Guardado';											
-
-END 
-
-
-
-
-----------------------------------------
-
-
-CREATE PROCEDURE [unah].[InsertarDatosGruposEtnico](
-			@pdescripcion VARCHAR(15),
-			@pmensaje VARCHAR(40) OUT
-	)
-AS
-BEGIN 
-   DECLARE @conteo INTEGER;
-	SELECT @conteo=MAX(idFacultad)
-	FROM unah.Facultad;
-
-	INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico(idGrupoEtnico, descripcion) VALUES ((@conteo+1), @pdescripcion)
-	SET @pmensaje = 'Registro Guardado';	
-
+  
+	INSERT INTO Pais (idPais, Pais, idContinente) VALUES ((@conteo+1), @ppais, @pidContinente );
+	SET @pmensaje = 'Registro Guardado';
 END
 
 
+
+
+
+/*
+-----------------------------------------------------------------------------------------------------
+*/
+
+
+CREATE PROCEDURE [unah].[sp_InsertarDatosDepartamento] (
+	 @pdepartamento VARCHAR(45),
+	 @pidPais INT,
+	 @pmensaje VARCHAR(40) OUT
+	 )
+	-- Add the parameters for the stored procedure here
+
+AS
+BEGIN
+	DECLARE @conteo INTEGER;
+	SELECT @conteo=MAX(idDepartamento)
+	FROM unah.Departamento;
+
+  
+	INSERT INTO Departamento (idDepartamento, Departamento, idPais) VALUES ((@conteo+1), @pDepartamento, @pidPais);
+	SET @pmensaje = 'Registro Guardado';
+END

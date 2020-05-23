@@ -22,7 +22,7 @@ Estudiantes con carreras simultaneas---
  --con el idEstudiante	
 -- =============================================
 
-CREATE VIEW VistaHisorialAcademico AS(
+CREATE VIEW [unah].[vw_VistaHisorialAcademico] AS(
 SELECT CU.centroUniversitario,
        C.nombreCarrera,
        P.primerNombre,
@@ -64,7 +64,7 @@ ON SEMA.idObservacionNota = Nota.idObservacionNotaFinal
 )
 
 
-
+/*
 SELECT *
 FROM VistaHisorialAcademico
 
@@ -107,7 +107,7 @@ INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal Nota
 ON SEMA.idObservacionNota = Nota.idObservacionNotaFinal
 
 
-
+*/
 
 
 
@@ -122,7 +122,7 @@ ON SEMA.idObservacionNota = Nota.idObservacionNotaFinal
 -- =============================================
 
 
- CREATE VIEW VistaForma003 AS(
+ CREATE VIEW [unah].[vw_VistaForma003] AS(
 
  SELECT E.idEstudiante,
        P.primerNombre,
@@ -166,7 +166,7 @@ ON SE.idCodigoEdificio =EDI.idCodigoEdificio
 INNER JOIN ProyectoSistemaMatricula.unah.Aula AULA
 ON SE.idCodigoAula=AULA.idCodigoAula
 )
-
+/*
 SELECT *
 FROM VistaForma003
 
@@ -212,7 +212,7 @@ ON SE.idCodigoEdificio =EDI.idCodigoEdificio
 INNER JOIN ProyectoSistemaMatricula.unah.Aula AULA
 ON SE.idCodigoAula=AULA.idCodigoAula
 
-
+*/
 -------------------------------------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -224,7 +224,7 @@ ON SE.idCodigoAula=AULA.idCodigoAula
 -- =============================================
 
 
- CREATE VIEW VistaEstudiantesconriesgosancion AS(
+ CREATE VIEW [unah].[vw_VistaEstudiantesconriesgosancion] AS(
 
  SELECT T3.primerNombre,
        T3.primerApellido,
@@ -241,6 +241,7 @@ WHERE T2.indiceGlobal <= 50
 
 )
 
+/*
 SELECT *
 FROM VistaEstudiantesconriesgosancion
 
@@ -258,7 +259,7 @@ INNER JOIN ProyectoSistemaMatricula.unah.Persona T3
 ON T1.idPersona = T3.idPersona
 WHERE T2.indiceGlobal <= 50
 
-
+*/
 -----------------------------------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -268,7 +269,7 @@ WHERE T2.indiceGlobal <= 50
 -- Description:	Me devuelve los estudiantes con excelencia academica
 -- =============================================
 
-CREATE VIEW VistaExcelenciaAcademica AS(
+CREATE VIEW [unah].[vw_VistaExcelenciaAcademica] AS(
 
 SELECT T3.primerNombre,
        T3.segundoNombre,
@@ -286,7 +287,7 @@ ON T1.idCarrera = T4.idCarrera
 WHERE T2.indiceGlobal >=80
 
 )
-
+/*
 SELECT *
 FROM VistaExcelenciaAcademica
 
@@ -304,7 +305,7 @@ ON T1.idPersona = T3.idPersona
 INNER JOIN ProyectoSistemaMatricula.unah.Carrera T4
 ON T1.idCarrera = T4.idCarrera
 WHERE T2.indiceGlobal >=19 AND T4.nombreCarrera= 'Sistemas' --- Lo pruebo con 19 por los datos que tengo ingresados
-
+*/
 -------------------------------------------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -315,7 +316,7 @@ WHERE T2.indiceGlobal >=19 AND T4.nombreCarrera= 'Sistemas' --- Lo pruebo con 19
 -- =============================================
 
 
-CREATE VIEW  VistaCarrerasSimultaneas AS(
+CREATE VIEW  [unah].[vw_VistaCarrerasSimultaneas] AS(
 
 SELECT T3.primerNombre,
        T3.segundoNombre,
@@ -334,7 +335,7 @@ WHERE T1.poseeCarreraSimultanea = 1
 
 
 )
-
+/*
 SELECT *
 FROM VistaCarrerasSimultaneas
 
@@ -352,7 +353,7 @@ ON T1.idPersona = T3.idPersona
 INNER JOIN ProyectoSistemaMatricula.unah.Carrera T4
 ON T1.idCarrera = T4.idCarrera
 WHERE T1.poseeCarreraSimultanea IS NULL     -------------------Lo pruebo con Null porque no tengo datos ingresados pero tendria que ser igual a 1
-
+*/
 ----------------------------------------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -362,7 +363,7 @@ WHERE T1.poseeCarreraSimultanea IS NULL     -------------------Lo pruebo con Nul
 -- Description:	Me devuelve la cantidad de clases que el estudiante ah aprobado
 -- =============================================
 
- CREATE VIEW VistaCantidadClasesAPR AS(
+ CREATE VIEW [unah].[vw_VistaCantidadClasesAPR] AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
 			T6.segundoNombre,
@@ -383,7 +384,7 @@ WHERE T1.poseeCarreraSimultanea IS NULL     -------------------Lo pruebo con Nul
 
 )
 
-
+/*
 SELECT *
 FROM VistaCantidadClasesAPR
  
@@ -404,7 +405,7 @@ FROM VistaCantidadClasesAPR
 	ON T5.idPersona = T6.idPersona
 	WHERE T3.descripcion ='APR' 
 	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
-
+*/
 	--------------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -416,7 +417,7 @@ FROM VistaCantidadClasesAPR
 
 	
 
- CREATE VIEW VistaCantidadClasesNSP AS(
+ CREATE VIEW [unah].[vw_VistaCantidadClasesNSP] AS(
 
  SELECT   T5.idEstudiante,
 			T6.primerNombre,
@@ -439,7 +440,7 @@ FROM VistaCantidadClasesAPR
 
 )
 
-
+/*
 SELECT *
 FROM VistaCantidadClasesNSP
 
@@ -461,7 +462,7 @@ FROM VistaCantidadClasesNSP
 	ON T5.idPersona = T6.idPersona
 	WHERE T3.descripcion ='NSP'
 	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
-
+	*/
 ---------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -472,7 +473,7 @@ FROM VistaCantidadClasesNSP
 -- =============================================
 
 
- CREATE VIEW VistaCantidadClasesABN AS(
+ CREATE VIEW [unah].[vw_VistaCantidadClasesABN] AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
 			T6.segundoNombre,
@@ -493,7 +494,7 @@ FROM VistaCantidadClasesNSP
 
 
 )
-
+/*
 SELECT *
 FROM VistaCantidadClasesABN
 
@@ -516,7 +517,7 @@ FROM VistaCantidadClasesABN
 	WHERE T3.descripcion ='ABN'
 	GROUP BY T3.descripcion, T5.idEstudiante, T6.primerNombre, T6.segundoNombre,T6.primerApellido, T6.segundoApellido
 
-
+	*/
 -------------------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -528,7 +529,7 @@ FROM VistaCantidadClasesABN
 	
 	
 
- CREATE VIEW VistaListaRepresentantesArtisticos AS(
+ CREATE VIEW [unah].[vw_VistaListaRepresentantesArtisticos] AS(
 
   SELECT T1.idEstudiante,
         T3.nombreCarrera,
@@ -547,7 +548,7 @@ FROM VistaCantidadClasesABN
 
 )
 
-
+/*
 SELECT *
 FROM VistaListaRepresentantesArtisticos
 
@@ -566,7 +567,7 @@ FROM VistaListaRepresentantesArtisticos
  INNER JOIN ProyectoSistemaMatricula.unah.Carrera T3
  ON T1.idCarrera = T3.idCarrera 
  WHERE T1.esRepresentanteArteoDeporte = 1
-
+ */
  ---------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -578,7 +579,7 @@ FROM VistaListaRepresentantesArtisticos
 	 	
 
  
-CREATE VIEW VistaDocentesPorHora AS(
+CREATE VIEW [unah].[vw_VistaDocentesPorHora] AS(
 
 SELECT T1.idEmpleado,
 		T4.primerNombre,
@@ -596,7 +597,7 @@ SELECT T1.idEmpleado,
 
 )
 
-
+/*
 SELECT *
 FROM VistaDocentesPorHora
 
@@ -614,7 +615,7 @@ FROM VistaDocentesPorHora
  INNER JOIN ProyectoSistemaMatricula.unah.Persona T4
  ON T1.idPersona = T4.idPersona
  WHERE T3.descripcion= 'Por Hora' AND T2.tipoCargo = 'Docente'
-
+ */
  -------------------------------------------------------------------------------------------------------------------
  -- =============================================
 -- Author:		Francis Ruby Gonzales					
@@ -625,7 +626,7 @@ FROM VistaDocentesPorHora
 -- =============================================
  
 
- CREATE VIEW VistaDocentesPermanente AS(
+ CREATE VIEW [unah].[vw_VistaDocentesPermanente] AS(
  SELECT T1.idEmpleado,
 		T4.primerNombre,
 		T4.segundoNombre,
@@ -642,7 +643,7 @@ FROM VistaDocentesPorHora
 
 
 )
-
+/*
 SELECT *
 FROM VistaDocentesPermanente
 
@@ -660,8 +661,6 @@ FROM VistaDocentesPermanente
  INNER JOIN ProyectoSistemaMatricula.unah.Persona T4
  ON T1.idPersona = T4.idPersona
  WHERE T3.descripcion= 'Permanente' AND T2.tipoCargo = 'Docente'
-
+ */
 
  --------------------------------------------------------------------------------------------------
-CREATE VIEW HabitacionDatos AS(
-)

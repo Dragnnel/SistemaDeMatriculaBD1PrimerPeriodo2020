@@ -7,7 +7,7 @@
 -- Description:	Me devuelve los estudiantes con excelencia academica
 -- =============================================
 
-CREATE VIEW VistaExcelenciaAcademica AS(
+CREATE VIEW [unah].[vw_VistaExcelenciaAcademica] AS(
 
 SELECT T3.primerNombre,
        T3.segundoNombre,

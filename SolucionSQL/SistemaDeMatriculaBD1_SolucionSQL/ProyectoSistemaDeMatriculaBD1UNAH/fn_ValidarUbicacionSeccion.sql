@@ -5,7 +5,7 @@
 -- Create date: 11/05/2020
 -- Description:	Verifica si existe el aula y el edificio , y comprueba los cupos que no sobresalgan del maximo del aula ,ni  que le asigne negativos al campo cupos
 -- =============================================
-ALTER FUNCTION [unah].[fn_ValidarUbicacionSeccion] (
+CREATE FUNCTION [unah].[fn_ValidarUbicacionSeccion] (
 														@pidCodigoAula VARCHAR(25),
 														@pidCodigoEdificio VARCHAR (25),
 														@pcuposDisponibles INT

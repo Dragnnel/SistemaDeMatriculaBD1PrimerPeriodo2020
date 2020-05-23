@@ -8,7 +8,7 @@
 -- =============================================
  
 
- CREATE VIEW VistaDocentesPermanente AS(
+ CREATE VIEW [unah].[vw_VistaDocentesPermanente] AS(
  SELECT T1.idEmpleado,
 		T4.primerNombre,
 		T4.segundoNombre,

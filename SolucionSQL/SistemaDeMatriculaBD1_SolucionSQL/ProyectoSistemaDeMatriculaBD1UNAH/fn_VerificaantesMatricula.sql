@@ -2,17 +2,14 @@
 -----LA QUE SE SUPONE QUE ESTOy tratando de hacer para llamar en el procedimiento matricula 
 -------y enesta se supone que solo llamaria las funciones de que si hay uv dispnibles, requisitos etc
 
-CREATE FUNCTION VerificarantesMatricula(@idEstudiante INT,
+CREATE FUNCTION [unah].[VerificarantesMatricula](
+										@idEstudiante INT,
                                         @idAsignatura VARCHAR(15),
 										@idMatricula INT,
 										@idSeccion INT
-								
 										)
-
-
 	RETURNS INT
 	AS
-	
 	BEGIN
 	DECLARE @RespUV = (SELECT [dbo].[FnUVdisponibles] (@idMatricula));
 	DECLARE @RespUVasignatura = (SELECT [unah].[fnuvAsignatura](@idSeccion, @idAsignatura));
@@ -27,14 +24,8 @@ CREATE FUNCTION VerificarantesMatricula(@idEstudiante INT,
 	   BEGIN
 	     SET @respuesta = 0; 
         END
-	     
 	ELSE 
 	   SET @respuesta= 0; 
-
-	
-
-
-   
 				
     RETURN @respuesta;
     END

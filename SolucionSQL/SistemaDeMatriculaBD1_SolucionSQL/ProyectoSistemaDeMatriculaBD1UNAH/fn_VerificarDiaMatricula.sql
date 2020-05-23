@@ -1,3 +1,10 @@
+USE [ProyectoSistemaMatricula]
+GO
+/****** Object:  UserDefinedFunction [dbo].[VerificarDiaMatricula]    Script Date: 23/5/2020 16:04:08 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
@@ -9,7 +16,7 @@
 /*
 PRINT @prueba
 */
-CREATE FUNCTION VerificarDiaMatricula(
+CREATE FUNCTION [unah].[fn_VerificarDiaMatricula](
 										@idEstudiante VARCHAR(11)
 								
 										)
@@ -124,13 +131,3 @@ CREATE FUNCTION VerificarDiaMatricula(
 			
     RETURN @respuesta;
     END
-    GO
-
-/*SELECT [dbo].[VerificarDiaMatricula](2020499755) ---Primer Ingreso Regresa 1
-SELECT [dbo].[VerificarDiaMatricula](304499755)---- Reingreso regresa 0
-
-SELECT [dbo].[VerificarDiaMatricula](705864082)---Indice periodo 87 por su indice regresa 1
-SELECT [dbo].[VerificarDiaMatricula](881059432)----- indice periodo 65
-*/
-
-

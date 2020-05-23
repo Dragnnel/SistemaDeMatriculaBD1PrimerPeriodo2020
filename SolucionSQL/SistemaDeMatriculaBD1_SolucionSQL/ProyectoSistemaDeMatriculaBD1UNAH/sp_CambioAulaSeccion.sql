@@ -5,7 +5,7 @@
 -- Create date: 11/05/2020
 -- Description:	Cambio de aula y edificio de una seccion creada, verificando que la nueva aula, pueda contener los cupos que esta definida la seccion de alumnos.
 -- =============================================
-alter PROCEDURE sp_cambiarAulaSeccion(
+CREATE PROCEDURE [unah].[sp_cambiarAulaSeccion](
 										@pidAsignatura  VARCHAR(15),
 										@pidSeccion VARCHAR(15),
 										@pidCodigoAula VARCHAR(25),

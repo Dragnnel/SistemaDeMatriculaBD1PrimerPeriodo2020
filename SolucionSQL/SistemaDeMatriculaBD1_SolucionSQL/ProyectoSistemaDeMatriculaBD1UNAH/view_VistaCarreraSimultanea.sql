@@ -8,7 +8,7 @@
 -- =============================================
 
 
-CREATE VIEW  VistaCarreraSimultanea AS(
+CREATE VIEW  [unah].[vw_VistaCarreraSimultanea] AS(
 
 SELECT T3.primerNombre,
        T3.segundoNombre,

@@ -9,7 +9,7 @@ GO
 -- Create date: 25/04/2020
 -- Description:	Ingreso de una nueva seccion , verificando docente, periodo y hora de inicio y fin 
 -- =============================================
-ALTER PROCEDURE [unah].[sp_CreadorDeNuevaSeccion](
+CREATE PROCEDURE [unah].[sp_CreadorDeNuevaSeccion](
 															 @pidAsignatura  VARCHAR(15),
 															 @pidSeccion VARCHAR(15),
 															 @phoraInicial INT,
