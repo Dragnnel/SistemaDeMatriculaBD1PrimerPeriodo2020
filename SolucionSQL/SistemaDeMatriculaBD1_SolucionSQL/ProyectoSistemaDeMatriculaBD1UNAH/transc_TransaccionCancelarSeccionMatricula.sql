@@ -25,7 +25,7 @@ BEGIN
 			DECLARE @nomAsignatura VARCHAR(100)
 			DECLARE @mensajeConfirmacion VARCHAR(160)
 		
-			SET @idHistorial = (SELECT *
+			SET @idHistorial = (SELECT HA.idHistorial
 									 FROM ProyectoSistemaMatricula.unah.HistorialAcademico HA
 									WHERE HA.idEstudiante = @idEstudiante
 								)
