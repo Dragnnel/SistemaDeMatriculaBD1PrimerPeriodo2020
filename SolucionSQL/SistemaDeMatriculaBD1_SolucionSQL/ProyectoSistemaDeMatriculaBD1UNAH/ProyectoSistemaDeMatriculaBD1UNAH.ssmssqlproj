@@ -223,12 +223,6 @@
           <AssociatedConnUserName />
           <FullPath>fn_cuposSeccion.sql</FullPath>
         </FileNode>
-        <FileNode Name="fn_DiaMatriculaVerificar.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
-          <FullPath>fn_DiaMatriculaVerificar.sql</FullPath>
-        </FileNode>
         <FileNode Name="fn_ExisteAsignaturaMatriculada.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
@@ -270,12 +264,6 @@
           <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_ValidarUbicacionSeccion.sql</FullPath>
-        </FileNode>
-        <FileNode Name="fn_VerificaantesMatricula.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
-          <AssociatedConnUserName />
-          <FullPath>fn_VerificaantesMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarCreacionHoraSeccion.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
@@ -368,9 +356,9 @@
           <FullPath>indice_TablaPersona(primerApellido).sql</FullPath>
         </FileNode>
         <FileNode Name="job_VaciarTablaMatriculaEspera.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
-          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName />
           <FullPath>job_VaciarTablaMatriculaEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="pruebas.sql">
