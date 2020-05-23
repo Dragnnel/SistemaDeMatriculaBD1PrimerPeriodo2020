@@ -8,12 +8,17 @@
 -- =============================================
 
 
-
-
+/*
 PRINT @prueba
-CREATE FUNCTION VerificarDiaMatricula(@idEstudiante VARCHAR(11)
-								
-										)
+
+SELECT * FROM ProyectoSistemaMatricula.unah.ObservacionNotaFinal
+
+*/
+
+
+CREATE FUNCTION VerificarDiaMatricula(
+	@idEstudiante VARCHAR(11)
+)
 
 
 	RETURNS INT
@@ -33,10 +38,10 @@ CREATE FUNCTION VerificarDiaMatricula(@idEstudiante VARCHAR(11)
 	set @respuesta = 0;
 	
 	
-	             SELECT @conteoclasesrepro=T3.descripcion
+	            SELECT @conteoclasesrepro=T3.descripcion
 						FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
 						INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
-						ON t1.idObservacionNota =t3.idObservacionNotaFinal
+						ON t1.idObservacionNota = t3.idObservacionNotaFinal
 						WHERE T3.descripcion IS NULL 
 
                 SELECT @conteoclasespasadas =T3.descripcion
@@ -134,4 +139,17 @@ SELECT [dbo].[VerificarDiaMatricula](705864082)---Indice periodo 87 por su indic
 SELECT [dbo].[VerificarDiaMatricula](881059432)----- indice periodo 65
 */
 
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
+	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal NF
+	ON NF.idObservacionNotaFinal = SM.idObservacionNota
 
+DECLARE @conteoclasesrepro INT
+
+SELECT @conteoclasesrepro= SUM(T3.descripcion)
+					FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+					INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
+					ON t1.idObservacionNota = t3.idObservacionNotaFinal
+					WHERE T3.idObservacionNotaFinal = 'RPB' 
+
+PRINT @conteoclasesrepro
