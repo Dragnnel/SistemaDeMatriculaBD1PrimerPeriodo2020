@@ -367,6 +367,12 @@
           <AssociatedConnUserName />
           <FullPath>indice_TablaPersona(primerApellido).sql</FullPath>
         </FileNode>
+        <FileNode Name="job_VaciarTablaMatriculaEspera.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-HMLAOH1:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-HMLAOH1</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>job_VaciarTablaMatriculaEspera.sql</FullPath>
+        </FileNode>
         <FileNode Name="pruebas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
           <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
