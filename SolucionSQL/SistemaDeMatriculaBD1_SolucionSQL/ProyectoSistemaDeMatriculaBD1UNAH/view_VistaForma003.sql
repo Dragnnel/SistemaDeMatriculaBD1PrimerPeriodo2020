@@ -10,7 +10,7 @@
 -- =============================================
 
 
- CREATE VIEW VistaForma003 AS(
+ CREATE VIEW [unah].[vw_VistaForma003] AS(
 
  SELECT E.idEstudiante,
        P.primerNombre,

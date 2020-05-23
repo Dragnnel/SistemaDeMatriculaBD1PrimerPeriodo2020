@@ -8,7 +8,7 @@
  --con el idEstudiante	
 -- =============================================
 
-CREATE VIEW VistaHisorialAcademico AS(
+CREATE VIEW [unah].[vw_VistaHisorialAcademico] AS(
 SELECT CU.centroUniversitario,
        C.nombreCarrera,
        P.primerNombre,

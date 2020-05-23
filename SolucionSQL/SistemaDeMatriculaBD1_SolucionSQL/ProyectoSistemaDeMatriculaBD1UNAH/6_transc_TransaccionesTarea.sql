@@ -1,12 +1,17 @@
-/*
-	TRANSACCION # 1: Insertar una persona por medio de una transaccion en un procedimiento almacenado
-*/
-/*
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Persona
-*/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
 
-ALTER PROCEDURE SP_InsertPersona(
+-- =============================================
+-- Author:		Francis Ruby Gonzales					
+--				Luis Fernando Estrada
+--				David Alexander Palacios
+-- Create date: 03/04/2020 9:10:50
+-- Description:	Insertar una persona por medio de una transaccion en un procedimiento almacenado
+-- =============================================
+
+CREATE PROCEDURE [unah].[trans_sp_InsertPersona](
 					 @idPersona VARCHAR(15),
 					 @primerNombre VARCHAR(35),
 					 @segundoNombre VARCHAR(35),
@@ -75,31 +80,28 @@ BEGIN CATCH
 END CATCH
 
 
---------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------
 /*
-	TRANSACCION #2 : Transaccion para reducir el numero de cupos en una seccion.
-					 *Aqui se inserta un registro en la tabla "SeccionMatricula", y al realizarce correctamente
-					  reduce en uno los cupos disponibles en la seccion de la asignatura correspondiente
 */
---------------------------------------------------------------------------------------------------------------------
-/*
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Estudiante
+------------------------------------------------------------------------------------------------------------------
 
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Asignatura
+SET ANSI_NULLS ON
+GO
 
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Seccion
+SET QUOTED_IDENTIFIER ON
+GO
 
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+-- =============================================
+-- Author:		Ruby Gonzales
+--				Luis Estrada
+--				David Palacios
+-- Create date: 03/04/2020 9:40:15
+-- Description:	Transaccion para reducir el numero de cupos en una seccion.
+--				*Aqui se inserta un registro en la tabla "SeccionMatricula", y al realizarce correctamente
+--				 reduce en uno los cupos disponibles en la seccion de la asignatura correspondiente
+-- =============================================
 
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Matricula
-*/
-
-ALTER PROCEDURE SP_InsertSeccionMatricula(
+ALTER PROCEDURE [unah].[trans_sp_InsertSeccionMatricula](
 			@idMatricula INT,
 			@idSeccion INT,
 			@idAsignatura INT,
@@ -162,23 +164,30 @@ ELSE
 	BEGIN
 		PRINT 'La Asignatura(Sección) ya está Matriculada'
 	END
+GO
 
 
 
---------------------------------------------------------------------------------------------------------
+
+------------------------------------------------------------------------------------------------------------------
 /*
-	TRANSACCION #3: Transaccion con la que se actualizara el correo de una determinada persona
 */
---------------------------------------------------------------------------------------------------------
-/*
-SELECT *
-	FROM ProyectoSistemaMatricula.unah.Correo
+------------------------------------------------------------------------------------------------------------------
+SET ANSI_NULLS ON
+GO
 
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.Persona
-*/
+SET QUOTED_IDENTIFIER ON
+GO
 
-ALTER PROCEDURE SP_UpdateCorreo(
+-- =============================================
+-- Author:		Ruby Gonzales
+--				Luis Estrada
+--				David Palacios
+-- Create date: 03/04/2020 10:20:31
+-- Description:	 Transaccion con la que se actualizara el correo de una determinada persona
+-- =============================================
+
+ALTER PROCEDURE [unah].[trans_sp_UpdateCorreo](
 		@idPersona VARCHAR(15),
 		@idCorreo INT,
 		@TipoCorreo INT, -- 0, 1; 0 = personal, 1 = Institucional
@@ -230,3 +239,6 @@ ELSE
 	BEGIN
 		PRINT 'La persona o correo no estan registrados, Verifique los datos ingresados'
 	END
+GO
+
+

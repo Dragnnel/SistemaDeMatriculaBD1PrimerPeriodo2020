@@ -9,7 +9,7 @@
 -- =============================================
 
 
- CREATE VIEW VistaEstudiantesconriesgosancion AS(
+ CREATE VIEW [unah].[vw_VistaEstudiantesconriesgosancion] AS(
 
  SELECT T3.primerNombre,
        T3.primerApellido,

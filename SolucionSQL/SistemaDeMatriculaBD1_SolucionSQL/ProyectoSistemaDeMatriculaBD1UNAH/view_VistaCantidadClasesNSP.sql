@@ -8,7 +8,7 @@
 
 	
 
- CREATE VIEW VistaCantidadClasesNSP AS(
+ CREATE VIEW [unah].[vw_VistaCantidadClasesNSP] AS(
 
  SELECT   T5.idEstudiante,
 			T6.primerNombre,

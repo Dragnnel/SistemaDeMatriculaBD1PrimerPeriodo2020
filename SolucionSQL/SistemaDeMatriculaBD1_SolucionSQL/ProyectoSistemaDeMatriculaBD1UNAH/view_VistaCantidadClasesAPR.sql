@@ -7,7 +7,7 @@
 -- Description:	Me devuelve la cantidad de clases que el estudiante ah aprobado
 -- =============================================
 
- CREATE VIEW VistaCantidadClasesAPR AS(
+ CREATE VIEW [unah].[vw_VistaCantidadClasesAPR] AS(
   SELECT   T5.idEstudiante,
 			T6.primerNombre,
 			T6.segundoNombre,

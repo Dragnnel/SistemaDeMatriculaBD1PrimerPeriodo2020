@@ -423,7 +423,7 @@ CREATE TABLE ProyectoSistemaMatricula.unah.Matricula(
 													   fechaInicioPeriodo DATE,
 													   idTipoPeriodo INT,
 													   idEstudiante VARCHAR(11),
-													   idHistorial INT,
+													   idHistorial  VARCHAR(11) ,
 													   FOREIGN KEY(idPeriodo,fechaInicioPeriodo,idTipoPeriodo) REFERENCES ProyectoSistemaMatricula.unah.Periodo(idPeriodo,fechaInicio,idTipoPeriodo),
 													   FOREIGN KEY(idEstudiante) REFERENCES ProyectoSistemaMatricula.unah.Estudiante(idEstudiante),
 													   FOREIGN KEY(idHistorial) REFERENCES ProyectoSistemaMatricula.unah.HistorialAcademico(idHistorial)
