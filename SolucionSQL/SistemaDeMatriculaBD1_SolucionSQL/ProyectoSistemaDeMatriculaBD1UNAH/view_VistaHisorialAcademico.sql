@@ -48,6 +48,6 @@ ON SEMA.idObservacionNota = Nota.idObservacionNotaFinal
 )
 /*
 SELECT *
-FROM VistaHisorialAcademico
+FROM [unah].[vwVistaHisorialAcademico]
 */
 

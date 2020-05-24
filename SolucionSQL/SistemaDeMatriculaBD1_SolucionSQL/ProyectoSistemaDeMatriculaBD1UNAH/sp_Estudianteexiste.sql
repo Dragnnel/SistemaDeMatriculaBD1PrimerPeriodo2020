@@ -34,3 +34,5 @@ BEGIN
 
 END
 GO
+
+EXECUTE [unah].[spEstudianteExiste] '20173452710' , '  '

@@ -25,5 +25,5 @@ SELECT T1.idEmpleado,
 
 /*
 SELECT *
-FROM VistaDocentesPorHora
+FROM [unah].[vwVistaDocentesPorHora]
 */

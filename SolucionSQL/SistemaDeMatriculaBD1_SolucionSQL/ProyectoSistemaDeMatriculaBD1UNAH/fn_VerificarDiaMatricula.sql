@@ -38,11 +38,15 @@ CREATE FUNCTION [unah].[fnVerificarDiaMatricula](
 	set @respuesta = 0;
 	
 	
-	            SELECT @conteoclasesrepro=T3.descripcion
+	            SELECT @conteoclasesrepro=T3.descripcionXque se duerme
+
 						FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
 						INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
 						ON t1.idObservacionNota = t3.idObservacionNotaFinal
-						WHERE T3.descripcion IS NULL 
+						INNER JOIN ProyectoSistemaMatricula.unah.HistorialAcademico T4
+						ON T4.
+						
+						WHERE T3.descripcion IS NULL AND 
 
                 SELECT @conteoclasespasadas =T3.descripcion
 						FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
