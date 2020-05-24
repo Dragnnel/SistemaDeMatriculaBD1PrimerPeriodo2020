@@ -11,7 +11,7 @@ CREATE TRIGGER [unah].[tgCancelarSeccionMatriculaEnEspera] ON ProyectoSistemaMat
 AFTER DELETE
 AS
 BEGIN TRY
-	DECLARE @idEstudiante INT  
+	DECLARE @idEstudiante VARCHAR(11)  
 	DECLARE @idMatricula INT   
 	DECLARE @idSeccion VARCHAR(15)
 	DECLARE @idAsignatura VARCHAR(15)

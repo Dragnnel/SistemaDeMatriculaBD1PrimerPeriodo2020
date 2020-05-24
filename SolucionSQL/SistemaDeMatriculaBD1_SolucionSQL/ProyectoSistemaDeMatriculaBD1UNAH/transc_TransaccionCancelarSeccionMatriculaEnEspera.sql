@@ -7,9 +7,9 @@ GO
 --				Luis Fernando Estrada
 --				David Alexander Palacios
 -- Create date: 10/04/2020 
--- Description:	Procedimiento con una transaccion para eliminar una SeccionMatriculada 
+-- Description:	Procedimiento con una transaccion para eliminar una SeccionMatriculadaEnEspera 
 -- =============================================
-CREATE PROCEDURE [unah].[spTransactionCancelarSeccionMatricula](
+CREATE PROCEDURE [unah].[spTransactionCancelarSeccionMatriculaEnEspera](
 	@idMatricula INT,
 	@idAsignatura VARCHAR(15),
 	@idSeccion VARCHAR(15)
@@ -36,17 +36,7 @@ BEGIN
 									 FROM ProyectoSistemaMatricula.unah.HistorialAcademico HA
 									WHERE HA.idEstudiante = @idEstudiante
 								);
-			/*
-			SET @idMatricula = (SELECT M.idMatricula
-										  FROM ProyectoSistemaMatricula.unah.Matricula M
-									INNER JOIN ProyectoSistemaMatricula.unah.SeccionMatricula SM
-											ON SM.idMatricula = M.idMatricula
-										 WHERE M.idEstudiante = @idEstudiante
-										   AND M.idHistorial = @idHistorial
-										   AND SM.idAsignatura = @idAsignatura
-										   AND SM.idSeccion = @idSeccion
-								);
-			*/
+			
 			SET @nomAsignatura = (SELECT A.nombreAsignatura
 										 FROM ProyectoSistemaMatricula.unah.Asignatura A
 										WHERE A.idAsignatura = @idAsignatura 
@@ -54,13 +44,13 @@ BEGIN
 
 			IF EXISTS(
 					 SELECT *
-							 FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
-							 WHERE SM.idMatricula = @idMatricula
-							  AND SM.idAsignatura = @idAsignatura
-							  AND SM.idSeccion = @idSeccion
+							 FROM ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera SME
+							 WHERE SME.idMatricula = @idMatricula
+							  AND SME.idAsignatura = @idAsignatura
+							  AND SME.idSeccion = @idSeccion
 					  )
 				BEGIN
-					DELETE ProyectoSistemaMatricula.unah.SeccionMatricula
+					DELETE ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera
 					 WHERE idMatricula = @idMatricula
 					   AND idAsignatura = @idAsignatura
 					   AND idSeccion = @idSeccion
@@ -88,7 +78,7 @@ BEGIN
 	BEGIN CATCH
 		ROLLBACK TRANSACTION
 		
-		PRINT 'Ocurrio un Error inesperado, al momento de querer cancelar la seccion matriculada'
+		PRINT 'Ocurrio un Error inesperado, al momento de querer cancelar la seccion matriculada en lista de espera'
 	END CATCH
 
     
@@ -96,22 +86,10 @@ END
 GO
 
 /*
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.HistorialAcademico
-
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.SeccionMatricula
-
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.Matricula
-
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.Seccion
-
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.Asignatura
-
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.Estudiante
+	PRUEBA
+	
+SELECT *
+	FROM ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera
 */
---EXECUTE [unah].[spTransactionCancelarSeccionMatricula] 1,'FS100','0700'
+
+--EXECUTE [unah].[spTransactionCancelarSeccionMatriculaEnEspera] 1,'FS100','0700'
