@@ -117,15 +117,15 @@ SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
 SELECT * FROM ProyectoSistemaMatricula.unah.Aula
 SELECT * FROM ProyectoSistemaMatricula.unah.Asignatura
 SELECT * FROM  ProyectoSistemaMatricula.unah.Dias
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] (@pidAsignatura ,@pidSeccion,@pidDias,@pidCodigoAula,@pidCodigoEdificio, @pfechaInicioPeriodo,@pidTipoPeriodo)
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] (@pidAsignatura ,@pidSeccion,@pidDias,@pidCodigoAula,@pidCodigoEdificio, @pfechaInicioPeriodo,@pidTipoPeriodo)
 
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] ('FS200' ,'1100',2,'101','C2', '2020-01-01',1)
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] ('FS200' ,'1100',2,'101','C2', '2020-01-01',1)
 
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] ('BI043' ,'1100',5,'101','F1', '2020-01-01',2)--0
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] ('MM401' ,'0700',4,'101','H1', '2020-01-01',1)  ---1
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] ('MM401' ,'0700',4,'101','H1', '2020-01-01',1)  ---1
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] ('BI043' ,'1100',9,'101','D1', '2020-01-01',2)--4
-SELECT [unah].[fn_VerificarDisponibilidadDeAulaDeUnaSeccion] ('FF101' ,'1100',1,'101','D1', '2020-01-01',1)--2
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] ('BI043' ,'1100',5,'101','F1', '2020-01-01',2)--0
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] ('MM401' ,'0700',4,'101','H1', '2020-01-01',1)  ---1
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] ('MM401' ,'0700',4,'101','H1', '2020-01-01',1)  ---1
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] ('BI043' ,'1100',9,'101','D1', '2020-01-01',2)--4
+SELECT [unah].[fnVerificarDisponibilidadDeAulaDeUnaSeccion] ('FF101' ,'1100',1,'101','D1', '2020-01-01',1)--2
 
 
 

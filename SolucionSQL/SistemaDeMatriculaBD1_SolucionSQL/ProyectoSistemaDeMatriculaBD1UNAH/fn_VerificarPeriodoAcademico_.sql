@@ -33,8 +33,9 @@ END
 /*
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo
-SELECT [unah].[fn_VerificaPeriodoAcademico] ('I','2020-11-01',1) as Respuesta
+SELECT [unah].[fnVerificaPeriodoAcademico] ('I','2020-11-01',1) as Respuesta
 
+SELECT [unah].[fnVerificaPeriodoAcademico] ('I','2020-01-01',1) as Respuesta
 
 SELECT * FROM ProyectoSistemaMatricula.unah.Periodo as P
 					WHERE P.idPeriodo = 'II' 

@@ -28,7 +28,7 @@ SET @horaFinal = @phoraFinal / 100;
 
 IF (@Seccion = @horaInicial) --Se comprueba que la hora de inicio sea igual que la de la seccion 
 	BEGIN 
-		IF (@horaInicial > = 6 AND @horaInicial <=20) AND (@horaFinal >=7 AND @horaFinal <= 21) --se pone un rango de horas donde la clase se puede crear. 
+		IF (@horaInicial > = 5 AND @horaInicial <=20) AND (@horaFinal >=6 AND @horaFinal <= 21) --se pone un rango de horas donde la clase se puede crear. 
 			BEGIN
 				IF(@horaInicial < @horaFinal) --la hora final siempre debe ser mayor a la inicial 
 					BEGIN
