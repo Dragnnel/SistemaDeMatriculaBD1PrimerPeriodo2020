@@ -13,7 +13,7 @@ CREATE PROCEDURE unah.CambioCarrera(@idEstudiante VARCHAR(11),
 As
 BEGIN
    
-	DECLARE @respuestaFN INT =(SELECT [unah].[RequisitosCambioCarrera](@idEstudiante, @idCarrera));;
+	DECLARE @respuestaFN INT =(SELECT [unah].[fnRequisitosCambioCarrera](@idEstudiante, @idCarrera));;
 	
 	 
 		IF (@respuestaFN = 1)
