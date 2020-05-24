@@ -272,14 +272,14 @@
           <FullPath>fn_uvEstudiante.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ValidarUbicacionSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_ValidarUbicacionSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarCreacionHoraSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificarCreacionHoraSeccion.sql</FullPath>
         </FileNode>
@@ -290,32 +290,32 @@
           <FullPath>fn_VerificarDiaMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarDisponibilidadDeAulaDeUnaSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificarDisponibilidadDeAulaDeUnaSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarDisponibilidadDeHorasEnAula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificarDisponibilidadDeHorasEnAula.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarDocente.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificarDocente.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarEstudiante.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificarEstudiante.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarPeriodoAcademico_.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>fn_VerificarPeriodoAcademico_.sql</FullPath>
         </FileNode>
@@ -380,20 +380,20 @@
           <FullPath>pruebas.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_AumentoCuposDeSeccionCreada.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_AumentoCuposDeSeccionCreada.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CambiarDocenteEnUnaSeccionCreada.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_CambiarDocenteEnUnaSeccionCreada.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CambioAulaSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_CambioAulaSeccion.sql</FullPath>
         </FileNode>
@@ -416,8 +416,8 @@
           <FullPath>sp_CancelarSeccionMatriculadaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CreadorDeNuevaSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>sp_CreadorDeNuevaSeccion.sql</FullPath>
         </FileNode>
@@ -470,8 +470,8 @@
           <FullPath>transc_TransaccionCancelarSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_TransaccionEliminarSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>transc_TransaccionEliminarSeccion.sql</FullPath>
         </FileNode>
@@ -494,8 +494,8 @@
           <FullPath>trg_CancelarSeccionMatriculaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_EliminarSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName />
           <FullPath>trg_EliminarSeccion.sql</FullPath>
         </FileNode>
