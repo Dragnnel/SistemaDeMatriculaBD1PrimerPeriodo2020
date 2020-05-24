@@ -3,30 +3,6 @@
   <Items>
     <LogicalFolder Name="Conexiones" Type="2" Sorted="true">
       <Items>
-        <ConnectionNode Name="DESKTOP-D62KKT0:">
-          <Created>2020-04-04T14:43:07.5010344-06:00</Created>
-          <Type>SQL</Type>
-          <Server>DESKTOP-D62KKT0</Server>
-          <UserName />
-          <Authentication>SQL</Authentication>
-          <InitialDB>Datos</InitialDB>
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
-        </ConnectionNode>
-        <ConnectionNode Name="DESKTOP-D62KKT0:">
-          <Created>2020-05-13T14:37:51.6011317-06:00</Created>
-          <Type>SQL</Type>
-          <Server>DESKTOP-D62KKT0</Server>
-          <UserName />
-          <Authentication>SQL</Authentication>
-          <InitialDB />
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
-        </ConnectionNode>
         <ConnectionNode Name="DESKTOP-D62KKT0:is">
           <Created>2020-04-06T02:39:19.7962167-06:00</Created>
           <Type>SQL</Type>
@@ -38,18 +14,6 @@
           <ExecutionTimeout>0</ExecutionTimeout>
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
-        </ConnectionNode>
-        <ConnectionNode Name="DESKTOP-HMLAOH1:">
-          <Created>2020-05-09T20:29:52.7992639-06:00</Created>
-          <Type>SQL</Type>
-          <Server>DESKTOP-HMLAOH1</Server>
-          <UserName />
-          <Authentication>SQL</Authentication>
-          <InitialDB>Investigadores</InitialDB>
-          <LoginTimeout>30</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
         </ConnectionNode>
         <ConnectionNode Name="DESKTOP-HMLAOH1:is">
           <Created>2020-04-05T09:27:21.2930453-06:00</Created>
@@ -111,42 +75,6 @@
           <ConnectionProtocol>NotSpecified</ConnectionProtocol>
           <ApplicationName />
         </ConnectionNode>
-        <ConnectionNode Name="LUIS_ESTRADA-PC:is">
-          <Created>2020-05-06T15:42:58.3579415-06:00</Created>
-          <Type>SQL</Type>
-          <Server>LUIS_ESTRADA-PC</Server>
-          <UserName>is</UserName>
-          <Authentication>SQL</Authentication>
-          <InitialDB />
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
-        </ConnectionNode>
-        <ConnectionNode Name="LUIS_ESTRADA-PC:">
-          <Created>2020-05-05T13:01:04.2048856-06:00</Created>
-          <Type>SQL</Type>
-          <Server>LUIS_ESTRADA-PC</Server>
-          <UserName />
-          <Authentication>SQL</Authentication>
-          <InitialDB />
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
-        </ConnectionNode>
-        <ConnectionNode Name="LUIS_ESTRADA-PC:">
-          <Created>2020-05-09T17:51:20.9657226-06:00</Created>
-          <Type>SQL</Type>
-          <Server>LUIS_ESTRADA-PC</Server>
-          <UserName />
-          <Authentication>SQL</Authentication>
-          <InitialDB>ManejoDeSeccion</InitialDB>
-          <LoginTimeout>15</LoginTimeout>
-          <ExecutionTimeout>0</ExecutionTimeout>
-          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
-          <ApplicationName>Microsoft SQL Server Management Studio - Consulta</ApplicationName>
-        </ConnectionNode>
       </Items>
     </LogicalFolder>
     <LogicalFolder Name="Consultas" Type="0" Sorted="true">
@@ -169,29 +97,23 @@
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>3_view_TODASVistasSistemaDeMatricula.sql</FullPath>
         </FileNode>
-        <FileNode Name="4.1_sp_InsersionDeDatosPROCEDIMIENTOSALMACENADOS.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>4.1_sp_InsersionDeDatosPROCEDIMIENTOSALMACENADOS.sql</FullPath>
-        </FileNode>
         <FileNode Name="4_sp_ProcedimientosAlmacenadosDeInsercion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>4_sp_ProcedimientosAlmacenadosDeInsercion.sql</FullPath>
         </FileNode>
-        <FileNode Name="5_index_IndicesSistemaDeMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
-          <FullPath>5_index_IndicesSistemaDeMatricula.sql</FullPath>
+        <FileNode Name="5_sp_Transacciones.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
+          <FullPath>5_sp_Transacciones.sql</FullPath>
         </FileNode>
-        <FileNode Name="6_transc_TransaccionesTarea.sql">
+        <FileNode Name="6_index_IndicesSistemaDeMatricula.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
           <AssociatedConnUserName />
-          <FullPath>6_transc_TransaccionesTarea.sql</FullPath>
+          <FullPath>6_index_IndicesSistemaDeMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="7_Consultas.sql">
           <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
@@ -296,8 +218,8 @@
           <FullPath>fn_cuposSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ExisteAsignaturaMatriculada.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:True</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
           <AssociatedConnUserName />
           <FullPath>fn_ExisteAsignaturaMatriculada.sql</FullPath>
         </FileNode>
@@ -529,6 +451,12 @@
           <AssociatedConnUserName />
           <FullPath>transc_TransaccionCancelarSeccionMatricula.sql</FullPath>
         </FileNode>
+        <FileNode Name="transc_TransaccionCancelarSeccionMatriculaEnEspera.sql">
+          <AssociatedConnectionMoniker />
+          <AssociatedConnSrvName />
+          <AssociatedConnUserName />
+          <FullPath>transc_TransaccionCancelarSeccionMatriculaEnEspera.sql</FullPath>
+        </FileNode>
         <FileNode Name="transc_TransaccionEliminarSeccion.sql">
           <AssociatedConnectionMoniker />
           <AssociatedConnSrvName />
@@ -566,9 +494,9 @@
           <FullPath>trg_triggerInsertarSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaCantidadClasesABN.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaCantidadClasesABN.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaCantidadClasesAPR.sql">
@@ -590,9 +518,9 @@
           <FullPath>view_VistaCarreraSimultanea.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaDocentesPermanente.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaDocentesPermanente.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaDocentesPorHora.sql">

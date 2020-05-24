@@ -45,7 +45,7 @@ SELECT * FROM ProyectoSistemaMatricula.unah.Aula
 SELECT A.cantidadMaximaDeEstudiante FROM ProyectoSistemaMatricula.unah.Aula A
 	WHERE A.idCodigoAula = '101' AND A.idCodigoEdificio ='B2' 
 
-SELECT [unah].[fn_ValidarUbicacionSeccion] ('101','B2',25) as Respuesta
-SELECT [unah].[fn_ValidarUbicacionSeccion] ('101','B2',45) as Respuesta
-SELECT [unah].[fn_ValidarUbicacionSeccion] ('101','B2',-45) as Respuesta
+SELECT [unah].[fnValidarUbicacionSeccion] ('101','B2',35) as Respuesta
+SELECT [unah].[fnValidarUbicacionSeccion] ('101','B2',45) as Respuesta
+SELECT [unah].[fnValidarUbicacionSeccion] ('101','B2',-45) as Respuesta
 */

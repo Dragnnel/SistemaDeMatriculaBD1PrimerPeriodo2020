@@ -10,7 +10,7 @@ GO
 -- Description:	Procedimiento con una transaccion para eliminar una SeccionMatriculada 
 -- =============================================
 CREATE PROCEDURE [unah].[spTransactionCancelarSeccionMatricula](
-	@idEstudiante INT,
+	@idMatricula INT,
 	@idAsignatura VARCHAR(15),
 	@idSeccion VARCHAR(15)
 )
@@ -19,16 +19,24 @@ BEGIN
 	SET NOCOUNT ON;
 	BEGIN TRY
 		BEGIN TRAN
-			DECLARE @idHistorial INT;
-			DECLARE @idMatricula INT;
+			DECLARE @idHistorial VARCHAR(11);
+			DECLARE @idEstudiante VARCHAR(11);
 			DECLARE @nomAsignatura VARCHAR(100);
 			DECLARE @mensajeConfirmacion VARCHAR(160);
 		
+			SET @idEstudiante = (SELECT M.idEstudiante	
+											FROM ProyectoSistemaMatricula.unah.Matricula M
+									  INNER JOIN ProyectoSistemaMatricula.unah.Estudiante E
+											  ON E.idEstudiante = M.idEstudiante
+										   WHERE M.idMatricula = @idMatricula
+			
+								 )
+
 			SET @idHistorial = (SELECT HA.idHistorial
 									 FROM ProyectoSistemaMatricula.unah.HistorialAcademico HA
 									WHERE HA.idEstudiante = @idEstudiante
 								);
-
+			/*
 			SET @idMatricula = (SELECT M.idMatricula
 										  FROM ProyectoSistemaMatricula.unah.Matricula M
 									INNER JOIN ProyectoSistemaMatricula.unah.SeccionMatricula SM
@@ -38,7 +46,7 @@ BEGIN
 										   AND SM.idAsignatura = @idAsignatura
 										   AND SM.idSeccion = @idSeccion
 								);
-
+			*/
 			SET @nomAsignatura = (SELECT A.nombreAsignatura
 										 FROM ProyectoSistemaMatricula.unah.Asignatura A
 										WHERE A.idAsignatura = @idAsignatura 
@@ -96,4 +104,14 @@ SELECT *
 
 SELECT * 
 	FROM ProyectoSistemaMatricula.unah.Matricula
+
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.Seccion
+
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.Asignatura
+
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.Estudiante
 */
+--EXECUTE [unah].[spTransactionCancelarSeccionMatricula] 1,'FS100','0700'

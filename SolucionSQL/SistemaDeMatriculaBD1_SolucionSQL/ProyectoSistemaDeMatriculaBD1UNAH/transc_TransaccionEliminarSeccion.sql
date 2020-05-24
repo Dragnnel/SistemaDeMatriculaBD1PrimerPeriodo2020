@@ -55,6 +55,6 @@ EXEC [unah].[SP_CreacionSeccionClasePresencial] 'IS412','0802',0800,0900,004,'10
 												001,008,'2013-01-01','I','2020-01-01',001
 
 
-EXEC [unah].[trans_sp_EliminarSeccion] 'MM401','0803' 
+EXEC [unah].[spTransactionEliminarSeccion] 'FS100','0700' 
 		
 */

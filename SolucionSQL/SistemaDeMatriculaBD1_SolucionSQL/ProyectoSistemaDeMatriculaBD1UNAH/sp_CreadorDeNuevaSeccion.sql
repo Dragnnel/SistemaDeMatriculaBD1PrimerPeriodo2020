@@ -45,6 +45,7 @@ BEGIN TRY
 			 IF (SELECT [unah].[fnVerificarCreacionHoraSeccion] (@pidSeccion,@phoraInicial,@CalculoHoraFinal)) = 1 --Verificar si la hora inicial y final este acorde a la seccion
 					AND (SELECT [unah].[fnValidarUbicacionSeccion] (@pidCodigoAula,@pidCodigoEdificio,@pcuposDisponibles)) = 1 --Verifica si los datos de ubicacion son correctos y si caben en los cupos del aula 
 					AND (SELECT [unah].[fnVerificaPeriodoAcademico] (@pidPeriodo,@pfechaInicioPeriodo,@pidTipoPeriodo) )=1 --verifica que si se ingreso un periodo correcto 
+					AND (SELECT [unah].[fnVerificaEmpleado] (@pidDocente,@pfechaInicioCargo))=1 --	verifica si existe el docente en la bd 
 				BEGIN
 					INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
 													  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
@@ -79,13 +80,13 @@ INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaI
 												001,008,'2015-02-05','I','2020-01-01',002);
 
 
-EXEC [unah].[sp_CreadorDeNuevaSeccion] 'FS100','1001',1000,004,'101','C1','Clase presencial',35,
+EXEC [unah].[spCreadorDeNuevaSeccion] 'FS100','1001',1000,004,'101','C1','Clase presencial',35,
 												001,008,'2013-01-01','I','2020-01-01',001
 
-EXEC [unah].[sp_CreadorDeNuevaSeccion] 'FF101','1001',1000,004,'101','H1','Clase presencial',35,
+EXEC [unah].[spCreadorDeNuevaSeccion] 'FF101','1001',1000,004,'101','H1','Clase presencial',35,
 												001,008,'2013-01-01','I','2020-01-01',001
 												
-EXEC [unah].[sp_CreadorDeNuevaSeccion] 'EN011','1001',1000,009,'101','H1','Clase presencial',35,
+EXEC [unah].[spCreadorDeNuevaSeccion] 'EN011','1001',1000,009,'101','H1','Clase presencial',35,
 												001,008,'2013-01-01','I','2020-01-01',002
 
 SELECT * from ProyectoSistemaMatricula.unah.Asignatura
