@@ -985,8 +985,8 @@ INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, Segu
 INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (187199300897, 'Joel', 'Antonio', 'Salgado', 'Ponce', 8, 1, 1, '1983-08-13', 8, 4, 8, 8, 8);
 INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (090101199300, 'Evelin', 'Danelia', 'Juarez', 'Gonzales', 9, 1, 2, '1990-03-18', 9, 1, 9, 9, 9);
 INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (2080119930089, 'Mario', 'Jose', 'Gutierrez', 'Flores', 10, 1, 1, '1995-02-20', 8, 1, 10, 10, 10);
-INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (2107801199300, 'Gabriel ', 'David', 'Dudley', 'Shayne', 1, 1, 2, '1995-02-20', 1, 2, 10, 10, 10);
-
+INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (3457801199300, 'Gabriela ', 'Jissel', 'Maradiaga', 'Shayne', 1, 1, 2, '1995-02-20', 1, 2, 10, 10, NULL);
+v
 /*
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.Persona
@@ -1265,8 +1265,8 @@ INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresenta
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20173452710', 0, '25', 'TT', 11, 083119930089, 0, 1, 10, 0);
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20201235684', 0, '25', 'JJ', 11, 120119930089, 0, 1, 10, 0);
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20297653456', 0, '25', 'OO', 11, 082119930089, 0, 1, 10, 0);
-INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20178905411', 0, '25', 'ss', 11, 081719930089, 0, 1, 10, 0);
-
+INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20178905411', 0, '25', 'ss', 11, 081719930089, 0, 1, 10, 0); 
+INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20168905411', 0, '25', 'ss', 11, 3457801199300, 0, 1, 10, 0);
 /*
 UPDATE ProyectoSistemaMatricula.unah.Estudiante
    SET idCentro = 1 

@@ -75,7 +75,7 @@ CREATE FUNCTION [unah].[fnRequisitosCambioCarrera](@idEstudiante VARCHAR(11),
 				ON T1.idNotaAptitud=T2.idNotaAptitud
 				WHERE idEstudiante=@idEstudiante
 		
-				IF (@conteoclasespasadas>=10) AND (@condicionIndice> 70) AND (@condicionindicePeriodo>=65)
+				IF (@conteoclasespasadas>=1) AND (@condicionIndice> 70) AND (@condicionindicePeriodo>=65)
 				BEGIN
 					IF(@facultad = 1) OR (@facultad = 8) 
 						BEGIN
@@ -112,6 +112,18 @@ CREATE FUNCTION [unah].[fnRequisitosCambioCarrera](@idEstudiante VARCHAR(11),
 	/*SELECT *
 	FRom ProyectoSistemaMatricula.unah.Estudiante
 	
-	SELECT [unah].[RequisitosCambioCarrera](20199087, 6)
+	SELECT [unah].[fnRequisitosCambioCarrera](20173452710, 6)
 
+
+	SELECT t4.idEstudiante, 
+	        COUNT( T1.descripcion) As cantidadClases
+               FROM ProyectoSistemaMatricula.unah.ObservacionNotaFinal T1
+			   INNER JOIN ProyectoSistemaMatricula.unah.SeccionMatricula T2
+			   ON T1.idObservacionNotaFinal = T2.idObservacionNota
+			   INNER JOIN ProyectoSistemaMatricula.unah.Matricula T3
+			   ON T3.idMatricula = T2.idMatricula
+			   INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T4
+			   ON T4.idEstudiante = T3.idEstudiante
+               WHERE T1.descripcion ='NSP' AND T4.idEstudiante='20173452710'
+			   GROUP BY t4.idEstudiante
 	*/

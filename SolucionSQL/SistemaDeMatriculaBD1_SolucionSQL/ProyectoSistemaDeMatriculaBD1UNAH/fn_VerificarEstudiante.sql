@@ -43,6 +43,9 @@ GO
 
 
 /*
-SELECT [unah].[VerificarEstudiante](20191018932) estudiante que existe
-SELECT [unah].[VerificarEstudiante](7058640)   Estudiante que no esta registrado
+SELECT [unah].[fnVerificarEstudiante](20173452710) estudiante que existe
+SELECT [unah].[fnVerificarEstudiante](7058640)   Estudiante que no esta registrado
 */
+
+SElECT *
+FROM ProyectoSistemaMatricula.unah.Estudiante
