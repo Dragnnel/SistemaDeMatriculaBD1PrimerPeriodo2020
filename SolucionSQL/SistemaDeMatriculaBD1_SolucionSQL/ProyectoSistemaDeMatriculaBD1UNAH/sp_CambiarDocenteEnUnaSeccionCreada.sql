@@ -46,7 +46,7 @@ SELECT * FROM ProyectoSistemaMatricula.unah.Seccion AS S
 WHERE S.idAsignatura = 'EN011' AND S.idSeccion ='0800'
 AND	idPeriodo='I' AND fechaInicioPeriodo='2020-01-01' AND idTipoPeriodo=2
 
-EXECUTE [dbo].[spCambiarDocenteEnUnaSeccionCreada] 'MM401','1101',006,'2016-01-01','I','2020-01-01',001
+EXECUTE [unah].[spCambiarDocenteEnUnaSeccionCreada] 'FS200','0900',007,'2014-01-01','I','2020-01-01',001
 */
 
 
