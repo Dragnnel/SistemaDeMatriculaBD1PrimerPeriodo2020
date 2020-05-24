@@ -1,4 +1,4 @@
--- =============================================
+ -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
@@ -75,7 +75,7 @@ CREATE FUNCTION [unah].[fnRequisitosCambioCarrera](@idEstudiante VARCHAR(11),
 				ON T1.idNotaAptitud=T2.idNotaAptitud
 				WHERE idEstudiante=@idEstudiante
 		
-				IF (@conteoclasespasadas>=1) AND (@condicionIndice> 70) AND (@condicionindicePeriodo>=65)
+				IF (@conteoclasespasadas>=10) AND (@condicionIndice> 70) AND (@condicionindicePeriodo>=65)
 				BEGIN
 					IF(@facultad = 1) OR (@facultad = 8) 
 						BEGIN
@@ -112,7 +112,7 @@ CREATE FUNCTION [unah].[fnRequisitosCambioCarrera](@idEstudiante VARCHAR(11),
 	/*SELECT *
 	FRom ProyectoSistemaMatricula.unah.Estudiante
 	
-	SELECT [unah].[fnRequisitosCambioCarrera](20173452710, 6)
+	2
 
 
 	SELECT t4.idEstudiante, 
