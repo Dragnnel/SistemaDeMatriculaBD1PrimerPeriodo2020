@@ -18,7 +18,7 @@ BEGIN
 	DECLARE @respuesta INT = 0 ;
 
 	IF EXISTS (SELECT * FROM ProyectoSistemaMatricula.unah.Periodo as P
-					WHERE		P.idPeriodo = @pidPeriodo --CAST (@pidPeriodo AS CHAR)
+					WHERE		P.idPeriodo = @pidPeriodo
 							AND P.fechaInicio = @pfechaInicio 
 							AND P.idTipoPeriodo = @pidTipoPeriodo
 							)
