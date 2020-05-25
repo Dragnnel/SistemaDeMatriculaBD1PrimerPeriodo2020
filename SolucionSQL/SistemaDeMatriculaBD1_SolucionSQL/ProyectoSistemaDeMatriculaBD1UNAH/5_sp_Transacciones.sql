@@ -101,7 +101,7 @@ GO
 --				 reduce en uno los cupos disponibles en la seccion de la asignatura correspondiente
 -- =============================================
 
-ALTER PROCEDURE [unah].[spTransactionInsertSeccionMatricula](
+CREATE PROCEDURE [unah].[spTransactionInsertSeccionMatricula](
 			@idMatricula INT,
 			@idSeccion INT,
 			@idAsignatura INT,
@@ -187,7 +187,7 @@ GO
 -- Description:	 Transaccion con la que se actualizara el correo de una determinada persona
 -- =============================================
 
-ALTER PROCEDURE [unah].[spTransactionUpdateCorreo](
+CREATE PROCEDURE [unah].[spTransactionUpdateCorreo](
 		@idPersona VARCHAR(15),
 		@idCorreo INT,
 		@TipoCorreo INT, -- 0, 1; 0 = personal, 1 = Institucional

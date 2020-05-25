@@ -986,7 +986,7 @@ INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, Segu
 INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (090101199300, 'Evelin', 'Danelia', 'Juarez', 'Gonzales', 9, 1, 2, '1990-03-18', 9, 1, 9, 9, 9);
 INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (2080119930089, 'Mario', 'Jose', 'Gutierrez', 'Flores', 10, 1, 1, '1995-02-20', 8, 1, 10, 10, 10);
 INSERT INTO ProyectoSistemaMatricula.unah.Persona (idPersona, primerNombre, SegundoNombre, primerApellido, SegundoApellido, idNacionalidad, idSexo, idestadoCivil, fechaNacimiento, idGrupoEtnico, idDiscapacidad, idDireccion, idCorreo, idReferencia) VALUES (3457801199300, 'Gabriela ', 'Jissel', 'Maradiaga', 'Shayne', 1, 1, 2, '1995-02-20', 1, 2, 10, 10, NULL);
-v
+
 /*
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.Persona

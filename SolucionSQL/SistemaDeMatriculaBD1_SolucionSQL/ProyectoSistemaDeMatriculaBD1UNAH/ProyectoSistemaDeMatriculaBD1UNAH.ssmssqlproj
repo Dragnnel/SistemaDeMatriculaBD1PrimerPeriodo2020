@@ -98,8 +98,8 @@
           <FullPath>2_insertar_DatosPrueba.sql</FullPath>
         </FileNode>
         <FileNode Name="3_view_VistasSistemaDeMatricula.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>3_view_VistasSistemaDeMatricula.sql</FullPath>
         </FileNode>
@@ -116,9 +116,9 @@
           <FullPath>5_sp_Transacciones.sql</FullPath>
         </FileNode>
         <FileNode Name="6_index_IndicesSistemaDeMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>6_index_IndicesSistemaDeMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="7_Consultas.sql">
@@ -182,15 +182,15 @@
           <FullPath>consulta_RepresentantesArtisticosUNAH.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_CalculoIndiceGlobal.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_CalculoIndiceGlobal.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_CalculoIndicePeriodo.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_CalculoIndicePeriodo.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_cambioCarrera.sql">
@@ -200,63 +200,63 @@
           <FullPath>fn_cambioCarrera.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ChoqueDeHoraMatriculada.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_ChoqueDeHoraMatriculada.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ChoqueDeHoraMatriculadaEnEspera.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_ChoqueDeHoraMatriculadaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_CumpleRequisitos.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_CumpleRequisitos.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_cuposSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_cuposSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ExisteAsignaturaMatriculada.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_ExisteAsignaturaMatriculada.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ExisteAsignaturaMatriculadaEnEspera.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_ExisteAsignaturaMatriculadaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ExisteSeccionMatriculada.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_ExisteSeccionMatriculada.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ExisteSeccionMatriculadaEnEspera.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_ExisteSeccionMatriculadaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_uvAsignatura.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_uvAsignatura.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_uvEstudiante.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_uvEstudiante.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_ValidarUbicacionSeccion.sql">
@@ -272,8 +272,8 @@
           <FullPath>fn_VerificarCreacionHoraSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarDiaMatricula.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_VerificarDiaMatricula.sql</FullPath>
         </FileNode>
@@ -296,8 +296,8 @@
           <FullPath>fn_VerificarDocente.sql</FullPath>
         </FileNode>
         <FileNode Name="fn_VerificarEstudiante.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>fn_VerificarEstudiante.sql</FullPath>
         </FileNode>
@@ -308,51 +308,51 @@
           <FullPath>fn_VerificarPeriodoAcademico_.sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaAsignatura(nombreAsignatura).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaAsignatura(nombreAsignatura).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaCarrera(nombreCarrera).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaCarrera(nombreCarrera).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaContinente(continente).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaContinente(continente).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaDepartamento(departamento).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaDepartamento(departamento).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaGradoAcademico(tituloObtenido).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaGradoAcademico(tituloObtenido).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaMunicipio(municipio).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaMunicipio(municipio).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaPais(pais).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaPais(pais).sql</FullPath>
         </FileNode>
         <FileNode Name="indice_TablaPersona(primerApellido).sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>indice_TablaPersona(primerApellido).sql</FullPath>
         </FileNode>
         <FileNode Name="job_VaciarTablaMatriculaEspera.sql">
@@ -386,21 +386,21 @@
           <FullPath>sp_CambioAulaSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CambioCarreraActualizar.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_CambioCarreraActualizar.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CancelarSeccionMatriculada.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_CancelarSeccionMatriculada.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CancelarSeccionMatriculadaEnEspera.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_CancelarSeccionMatriculadaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_CreadorDeNuevaSeccion.sql">
@@ -410,57 +410,57 @@
           <FullPath>sp_CreadorDeNuevaSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_Estudianteexiste.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_Estudianteexiste.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_HistorialAcademico.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_HistorialAcademico.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_InsertarDatosSeccionMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_InsertarDatosSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="sp_ObtenerForma003.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>sp_ObtenerForma003.sql</FullPath>
         </FileNode>
         <FileNode Name="trans_sp_InsertPersona.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trans_sp_InsertPersona.sql</FullPath>
         </FileNode>
         <FileNode Name="trans_sp_InsertSeccionMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trans_sp_InsertSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="trans_sp_UpdateCorreo.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trans_sp_UpdateCorreo.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_TransaccionCancelarSeccionMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_TransaccionCancelarSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_TransaccionCancelarSeccionMatriculaEnEspera.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>transc_TransaccionCancelarSeccionMatriculaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="transc_TransaccionEliminarSeccion.sql">
@@ -470,98 +470,98 @@
           <FullPath>transc_TransaccionEliminarSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_AsignacionIdHistorial.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trg_AsignacionIdHistorial.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_CancelarSeccionMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trg_CancelarSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_CancelarSeccionMatriculaEnEspera.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trg_CancelarSeccionMatriculaEnEspera.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_EliminarSeccion.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trg_EliminarSeccion.sql</FullPath>
         </FileNode>
         <FileNode Name="trg_triggerInsertarSeccionMatricula.sql">
-          <AssociatedConnectionMoniker />
-          <AssociatedConnSrvName />
-          <AssociatedConnUserName />
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
+          <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>trg_triggerInsertarSeccionMatricula.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaCantidadClasesABN.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaCantidadClasesABN.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaCantidadClasesAPR.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaCantidadClasesAPR.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaCantidadClasesNSP.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaCantidadClasesNSP.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaCarreraSimultanea.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaCarreraSimultanea.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaDocentesPermanente.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaDocentesPermanente.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaDocentesPorHora.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaDocentesPorHora.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaEstudiantesconriesgosancion.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaEstudiantesconriesgosancion.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaExcelenciaAcademica.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaExcelenciaAcademica.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaForma003.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaForma003.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaHisorialAcademico.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaHisorialAcademico.sql</FullPath>
         </FileNode>
         <FileNode Name="view_VistaListaRepresentantesArtisticos.sql">
-          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-D62KKT0:False:is</AssociatedConnectionMoniker>
-          <AssociatedConnSrvName>DESKTOP-D62KKT0</AssociatedConnSrvName>
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:DESKTOP-OQK3OK8:False:is</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>DESKTOP-OQK3OK8</AssociatedConnSrvName>
           <AssociatedConnUserName>is</AssociatedConnUserName>
           <FullPath>view_VistaListaRepresentantesArtisticos.sql</FullPath>
         </FileNode>

@@ -73,9 +73,9 @@ SELECT * FROM ProyectoSistemaMatricula.unah.Aula
 								       
 EXECUTE unah.spCambiarAulaSeccion  @pidAsignatura ,	@pidSeccion ,@pidCodigoAula,@pidCodigoEdificio ,@pfechaInicioPeriodo ,@pidTipoPeriodo
 
-EXECUTE [unah].[spCambiarAulaSeccion] 'FS200','1000','101','G1','2020-01-01','1'
+EXECUTE [unah].[spCambiarAulaSeccion] 'FS200','1000','402','D1','2020-01-01','1'
 
-EXECUTE [unah].[spCambiarAulaSeccion] 'FS200','1100','101','C2','2020-01-01','1'
+EXECUTE [unah].[spCambiarAulaSeccion] 'FS200','1100','101','B2','2020-01-01','1'
 
 EXECUTE [unah].[spCambiarAulaSeccion] 'BI04311','1100','101','F1','2020-01-01','2'
 
