@@ -11,7 +11,7 @@
 /*------------------------------------------------------------------
 	TABLA: Continente
 */
-CREATE PROCEDURE [unah].[InsertarDatosContinente](
+CREATE PROCEDURE [unah].[spspInsertarDatosContinente](
 			@idContinente INT,
 			@continente VARCHAR(45)
 	)
@@ -33,7 +33,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Pais
 */
-CREATE PROCEDURE [unah].[InsertarDatosPais](
+CREATE PROCEDURE [unah].[spspInsertarDatosPais](
 			@codigoPais VARCHAR(6),
 			@pais VARCHAR(45),
 			@idContinente INT
@@ -58,7 +58,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Departamento
 */
-CREATE PROCEDURE [unah].[InsertarDatosDepartamento](
+CREATE PROCEDURE [unah].[spspInsertarDatosDepartamento](
 			@idDepartamento INT,
 			@departamento VARCHAR(45),
 			@codigoPais INT
@@ -81,7 +81,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Municipio
 */
-CREATE PROCEDURE [unah].[InsertarDatosMunicipio](
+CREATE PROCEDURE [unah].[spspInsertarDatosMunicipio](
 			@idMunicipio INT,
 			@municipio VARCHAR(45),
 			@idDepartamento INT
@@ -105,7 +105,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Direccion
 */
-CREATE PROCEDURE [unah].[InsertarDatosDireccion](
+CREATE PROCEDURE [unah].[spspInsertarDatosDireccion](
 			@idDireccion INT,
 			@idMunicipio INT,
 			@idDepartamento INT,
@@ -138,7 +138,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: CentroUniversitario
 */
-CREATE PROCEDURE [unah].[InsertarDatosCentroUniversitario](
+CREATE PROCEDURE [unah].[spspInsertarDatosCentroUniversitario](
 			@idCentro INT,
 			@centroUniversitario VARCHAR(70),
 			@sigla VARCHAR(10),
@@ -170,26 +170,23 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Edificio
 */
-CREATE PROCEDURE [unah].[InsertarDatosEdificio](
+CREATE PROCEDURE [unah].[spspInsertarDatosEdificio](
 			@idEdificio INT,
 			@edificio VARCHAR(45),
-			@codigoEdificio VARCHAR(10),
 			@fechaFundacion DATE,
 			@observacion VARCHAR(45),
 			@idCentroUniversitario INT
 	)
 AS
 BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.Edificio(idEdificio,
+	INSERT INTO ProyectoSistemaMatricula.unah.Edificio(idCodigoEdificio,
 													   edificio,
-													   codigoEdificio,
 													   fechaFundacion,
 													   observacion,
 													   idCentroUniversitario
 													   )
 												VALUES(@idEdificio,
 													   @edificio,
-													   @codigoEdificio,
 													   @fechaFundacion,
 													   @observacion,
 													   @idCentroUniversitario
@@ -205,26 +202,24 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Aula
 */
-CREATE PROCEDURE [unah].[InsertarDatosAula](
-			@idAula INT,
-			@codigoAula VARCHAR(10),
+CREATE PROCEDURE [unah].[spInsertarDatosAula](
+			@idCodigoAula VARCHAR(25),
+			@idCodigoEdificio VARCHAR(25),
 			@cantidadMaximaEstudiante INT,
 			@observacion VARCHAR(45),
 			@idEdificio INT
 	)
 AS
 BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.Aula(idAula,
-												   codigoAula,
+	INSERT INTO ProyectoSistemaMatricula.unah.Aula(idCodigoAula,
+												   idCodigoEdificio,
 												   cantidadMaximaDeEstudiante,
-												   observacion,
-												   idEdificio
+												   observacion 
 												   )
-											VALUES(@idAula,
-												   @codigoAula,
+											VALUES(@idCodigoAula,
+												   @idCodigoEdificio,
 												   @cantidadMaximaEstudiante,
-												   @observacion,
-												   @idEdificio
+												   @observacion
 												   )
 END TRY
 BEGIN CATCH
@@ -237,7 +232,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Facultad
 */
-CREATE PROCEDURE [unah].[InsertarDatosFacultad](
+CREATE PROCEDURE [unah].[spInsertarDatosFacultad](
 			@idFacultad INT,
 			@facultad VARCHAR(50),
 			@idEdificio INT,
@@ -270,7 +265,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: GrupoEtnico
 */
-CREATE PROCEDURE [unah].[InsertarDatosGruposEtnico](
+CREATE PROCEDURE [unah].[spInsertarDatosGruposEtnico](
 			@idGrupoEtnico INT,
 			@descripcion VARCHAR(15)
 	)
@@ -291,7 +286,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: TipoDiscapacidad
 */
-CREATE PROCEDURE [unah].[InsertarDatosTipoDiscapacidad](
+CREATE PROCEDURE [unah].[spInsertarDatosTipoDiscapacidad](
 			@idDiscapacidad INT,
 			@descripcion VARCHAR(15)
 	)
@@ -312,7 +307,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Nacionalidad
 */
-CREATE PROCEDURE [unah].[InsertarDatosNacionalidad](
+CREATE PROCEDURE [unah].[spInsertarDatosNacionalidad](
 			@idNacionalidad INT,
 			@descripcion VARCHAR(45)
 	)
@@ -333,7 +328,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: EstadoCivil
 */
-CREATE PROCEDURE [unah].[InsertarDatosEstadoCivil](
+CREATE PROCEDURE [unah].[spInsertarDatosEstadoCivil](
 			@idEstado INT,
 			@descripcion VARCHAR(15)
 	)
@@ -354,7 +349,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Sexo
 */
-CREATE PROCEDURE [unah].[InsertarDatosSexo](
+CREATE PROCEDURE [unah].[spInsertarDatosSexo](
 			@idSexo INT,
 			@descripcion VARCHAR(15)
 	)
@@ -375,7 +370,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Parentesco
 */
-CREATE PROCEDURE [unah].[InsertarDatosParentesco](
+CREATE PROCEDURE [unah].[spInsertarDatosParentesco](
 			@idParentesco INT,
 			@descripcion VARCHAR(45)
 	)
@@ -396,7 +391,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Referencia
 */
-CREATE PROCEDURE [unah].[InsertarDatosReferencia](
+CREATE PROCEDURE [unah].[spInsertarDatosReferencia](
 			@idReferencia INT,
 			@nombreCompleto VARCHAR(100),
 			@numeroTelefono VARCHAR(15),
@@ -423,7 +418,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Correo
 */
-CREATE PROCEDURE [unah].[InsertarDatosCorreo](
+CREATE PROCEDURE [unah].[spInsertarDatosCorreo](
 			@idCorreo INT,
 			@correoPersonal VARCHAR(45),
 			@correoInstitucional VARCHAR(45)
@@ -448,7 +443,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Persona
 */
-CREATE PROCEDURE [unah].[InsertarDatosPersona](
+CREATE PROCEDURE [unah].[spInsertarDatosPersona](
 			@idPersona VARCHAR(15),
 			@primerNombre VARCHAR(35),
 			@segundoNombre VARCHAR(35),
@@ -507,7 +502,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Telefono
 */
-CREATE PROCEDURE [unah].[InsertarDatosTelefono](
+CREATE PROCEDURE [unah].[spInsertarDatosTelefono](
 			@idTelefono INT,
 			@telefono VARCHAR(15),
 			@idPersona VARCHAR(15)
@@ -535,7 +530,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: TipoEmpleado
 */
-CREATE PROCEDURE [unah].[InsertarDatosTipoEmpleado](
+CREATE PROCEDURE [unah].[spInsertarDatosTipoEmpleado](
 			@idTipoEmpleado INT,
 			@descripcion VARCHAR(50)
 	)
@@ -556,7 +551,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Cargo
 */
-CREATE PROCEDURE [unah].[InsertarDatosCargo](
+CREATE PROCEDURE [unah].[spInsertarDatosCargo](
 			@idCargo INT,
 			@tipoCargo VARCHAR(45)
 	)
@@ -577,7 +572,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Contrato
 */
-CREATE PROCEDURE [unah].[InsertarDatosContrato](
+CREATE PROCEDURE [unah].[spInsertarDatosContrato](
 			@idContrato INT,
 			@descripcion VARCHAR(45)
 	)
@@ -598,7 +593,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: PlanEstudio
 */
-CREATE PROCEDURE [unah].[InsertarDatosPlanEstudio](
+CREATE PROCEDURE [unah].[spInsertarDatosPlanEstudio](
 			@idPlanEstudio INT,
 			@nombre VARCHAR(80),
 			@duracionCarrera VARCHAR(25),
@@ -629,7 +624,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Carrera
 */
-CREATE PROCEDURE [unah].[InsertarDatosCarrera](
+CREATE PROCEDURE [unah].[spInsertarDatosCarrera](
 			@idCarrera INT,
 			@nombreCarrera VARCHAR(100),
 			@requisitoIngreso INT,
@@ -663,7 +658,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Empleado
 */
-CREATE PROCEDURE [unah].[InsertarDatosEmpleado](
+CREATE PROCEDURE [unah].[spInsertarDatosEmpleado](
 			@idEmpleado INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaFinEmpleado VARCHAR(8),
@@ -702,7 +697,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: JefeDepartamento
 */
-CREATE PROCEDURE [unah].[InsertarDatosJefeDepartamento](
+CREATE PROCEDURE [unah].[spInsertarDatosJefeDepartamento](
 			@idJefe INT,
 			@fechaInicioCargo VARCHAR(8),
 			@fechaInicioEmpleado VARCHAR(8),
@@ -732,7 +727,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: CoordinadorDepartamento
 */
-CREATE PROCEDURE [unah].[InsertarDatosCoordinadorDepartamento](
+CREATE PROCEDURE [unah].[spInsertarDatosCoordinadorDepartamento](
 			@idCoordinadorDepto INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
@@ -762,7 +757,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Decano
 */
-CREATE PROCEDURE [unah].[InsertarDatosDecano](
+CREATE PROCEDURE [unah].[spInsertarDatosDecano](
 			@idDecano INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
@@ -793,7 +788,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: GradoAcademico
 */
-CREATE PROCEDURE [unah].[InsertarDatosGradoAcademico](
+CREATE PROCEDURE [unah].[spInsertarDatosGradoAcademico](
 			@idGradoAcademico INT,
 			@tituloObtenido VARCHAR(50),
 			@nombreInstitucion VARCHAR(45),
@@ -831,7 +826,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Instructor
 */
-CREATE PROCEDURE [unah].[InsertarDatosInstructor](
+CREATE PROCEDURE [unah].[spInsertarDatosInstructor](
 			@idInstructor INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
@@ -867,7 +862,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Docente
 */
-CREATE PROCEDURE [unah].[InsertarDatosDocente](
+CREATE PROCEDURE [unah].[spInsertarDatosDocente](
 			@idDocente INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
@@ -903,7 +898,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: TipoPeriodo
 */
-CREATE PROCEDURE [unah].[InsertarDatosTipoPeriodo](
+CREATE PROCEDURE [unah].[spInsertarDatosTipoPeriodo](
 			@idTipoPeriodo INT,
 			@descripcion VARCHAR(15)
 	)
@@ -924,7 +919,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Asignatura
 */
-CREATE PROCEDURE [unah].[InsertarDatosAsignatura](
+CREATE PROCEDURE [unah].[spInsertarDatosAsignatura](
 			@idAsignatura  VARCHAR(15),
 			@nombreAsignatura VARCHAR(45),
 			@unidadesValorativas INT,
@@ -958,7 +953,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: CoordinadorAsignatura
 */
-CREATE PROCEDURE [unah].[InsertarDatosCoordinadorAsignatura](
+CREATE PROCEDURE [unah].[spInsertarDatosCoordinadorAsignatura](
 			@idCoordinadorAsignatura INT,
 			@fechaInicioEmpleado VARCHAR(8),
 			@fechaInicioCargo VARCHAR(8),
@@ -993,7 +988,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: NotaExamenAptitud
 */
-CREATE PROCEDURE [unah].[InsertarDatosNotaExamenAptitud](
+CREATE PROCEDURE [unah].[spInsertarDatosNotaExamenAptitud](
 			@idNotaAptitud INT,
 			@notaPaa INT,
 			@notaPam INT,
@@ -1020,7 +1015,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Periodo
 */
-CREATE PROCEDURE [unah].[InsertarDatosPeriodo](
+CREATE PROCEDURE [unah].[spInsertarDatosPeriodo](
 			@idPeriodo CHAR(3),
 			@fechaInicio VARCHAR(8),
 			@fechaFinalizacion VARCHAR(8),
@@ -1050,7 +1045,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: TipoSeccion
 */
-CREATE PROCEDURE [unah].[InsertarDatosTipoSeccion](
+CREATE PROCEDURE [unah].[spInsertarDatosTipoSeccion](
 			@idTipoSeccion INT,
 			@tipo VARCHAR (25)
 	)
@@ -1069,68 +1064,9 @@ GO
 
 
 /*------------------------------------------------------------------
-	TABLA: Seccion
-*/
-CREATE PROCEDURE [unah].[InsertarDatosSeccion](
-			@idSeccion INT,
-            @horaInicial INT,
-			@horaFinal INT,
-			@observaciones VARCHAR(45),
-			@cuposDisponibles INT,
-			@idTipoSeccion INT,
-			@idDocente INT,
-			@fechaInicioCargo VARCHAR(8),
-			@idAsignatura INT,
-			@idAula INT,
-			@idEdificio INT,
-			@idPeriodo INT,
-			@fechaInicioPeriodo VARCHAR(8),
-			@idTipoPeriodo INT
-	)
-AS
-BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.Seccion(idSeccion,
-													  horaInicial,
-													  horaFinal,
-													  observaciones,
-													  cuposDisponibles,
-													  idTipoSeccion,
-													  idDocente,
-													  fechaInicioCargo,
-													  idAsignatura,
-													  idAula,
-													  idEdificio,
-													  idPeriodo,
-													  fechaInicioPeriodo,
-													  idTipoPeriodo
-													  )
-											   VALUES(@idSeccion,
-													  @horaInicial,
-													  @horaFinal,
-													  @observaciones,
-													  @cuposDisponibles,
-													  @idTipoSeccion,
-													  @idDocente,
-													  @fechaInicioCargo,
-													  @idAsignatura,
-													  @idAula,
-													  @idEdificio,
-													  @idPeriodo,
-													  @fechaInicioPeriodo,
-													  @idTipoPeriodo
-											          )
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
-/*------------------------------------------------------------------
 	TABLA: Estudiante
 */
-CREATE PROCEDURE [unah].[InsertarDatosEstudiante](
+CREATE PROCEDURE [unah].[spInsertarDatosEstudiante](
 			@idEstudiante INT,
 			@perteneceDeportes BIT,
 			@UVDisponibles INT,
@@ -1145,7 +1081,7 @@ CREATE PROCEDURE [unah].[InsertarDatosEstudiante](
 AS
 BEGIN TRY
 	INSERT INTO ProyectoSistemaMatricula.unah.Estudiante(idEstudiante,
-														 perteneceDeportes,
+														 esRepresentanteArteoDeporte,
 														 UVDisponibles,
 														 contrasenia,
 														 idCentro,
@@ -1177,7 +1113,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: HistorialAcademico
 */
-CREATE PROCEDURE [unah].[InsertarDatosHistorialAcademico](
+CREATE PROCEDURE [unah].[spInsertarDatosHistorialAcademico](
 			@idHistorial INT,
 			@indicePeriodo INT,
 			@indiceGlobal INT,
@@ -1204,7 +1140,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Matricula
 */
-CREATE PROCEDURE [unah].[InsertarDatosMatricula](
+CREATE PROCEDURE [unah].[spInsertarDatosMatricula](
 			@idMatricula INT,
 			@confirmacionPago BIT,
 			@fechaInicio VARCHAR(8),
@@ -1247,7 +1183,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: ObservacionNotaFinal
 */
-CREATE PROCEDURE [unah].[InsertarDatosObservacionNotaFinal](
+CREATE PROCEDURE [unah].[spInsertarDatosObservacionNotaFinal](
 			@idObservacionNotaFinal INT,
 			@descripcion VARCHAR(20)
 	)
@@ -1264,70 +1200,10 @@ END CATCH
 
 GO
 
-
-/*------------------------------------------------------------------
-	TABLA: SeccionMatricula
-*/
-CREATE PROCEDURE [unah].[InsertarDatosSeccionMatricula](
-			@idMatricula INT,
-			@idAsignatura INT,
-			@idSeccion INT,
-			@notaFinal DECIMAL (2,2),
-			@idObservacionNota INT
-	)
-AS
-BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,
-															   idAsignatura,
-															   idSeccion,
-															   notaFinal,
-															   idObservacionNota)
-														VALUES(@idMatricula,
-															   @idAsignatura,
-															   @idSeccion,
-															   @notaFinal,
-															   @idObservacionNota)
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
-/*------------------------------------------------------------------
-	TABLA: SeccionMatriculaEnEspera
-*/
-CREATE PROCEDURE [unah].[InsertarDatosSeccionMatriculaEnEspera](
-			@idMatricula INT,
-			@idAsignatura VARCHAR(15),
-			@idSeccion INT,
-			@fechaLimite VARCHAR(8)
-	)
-AS
-BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatriculaEnEspera(idMatricula,
-																	   idAsignatura,
-																	   idSeccion,
-																	   fechaLimite
-																	   )
-																VALUES(@idMatricula,
-																	   @idAsignatura,
-																	   @idSeccion,
-																	   @fechaLimite
-																	   )
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
 /*------------------------------------------------------------------
 	TABLA: PensumAcademico
 */
-CREATE PROCEDURE [unah].[InsertarDatosPensumAcademico](
+CREATE PROCEDURE [unah].[spInsertarDatosPensumAcademico](
 			@idAsignatura INT,
 			@idPlanEstudio INT 
 	)
@@ -1348,7 +1224,7 @@ GO
 /*------------------------------------------------------------------
 	TABLA: Requisitos
 */
-CREATE PROCEDURE [unah].[InsertarDatosRequisitos](
+CREATE PROCEDURE [unah].[spInsertarDatosRequisitos](
 			@idAsignatura INT,
 			@idPlanEstudio INT,  /* DUDAS no se si dejaarla como lo tenemos en word o en lo otro*/
 			@idRequisito1 INT,
@@ -1370,87 +1246,14 @@ BEGIN CATCH
 END CATCH
 
 GO
-
-
-/*------------------------------------------------------------------
-	TABLA: HorarioDocente
-*/
-CREATE PROCEDURE [unah].[InsertarDatosHorarioDocente](
-			@idHorario INT,
-			@idDocente INT, 
-			@idPeriodo INT,
-			@idFechaInicioDocente VARCHAR(8),
-			@HoraInicio INT,
-			@HoraFin	INT
-	)
-AS
-BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.HorarioDocente(idHorario,
-															 idDocente,
-															 idPeriodo,
-															 idFechaInicioDocente,
-															 HoraInicio,
-															 HoraFin
-															 )
-													  VALUES(@idHorario,
-															 @idDocente,
-															 @idPeriodo,
-															 @idFechaInicioDocente,
-															 @HoraInicio,
-															 @HoraFin
-															 )
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
-/*------------------------------------------------------------------
-	TABLA: HorarioInstructor
-*/
-CREATE PROCEDURE [unah].[InsertarDatosHorarioInstructor](
-			@idHorario INT,
-			@idInstructor INT, 
-			@idPeriodo INT,
-			@idFechaInicioInstructor VARCHAR(8),
-			@HoraInicio INT,
-			@HoraFin	INT
-	)
-AS
-BEGIN TRY
-	INSERT INTO ProyectoSistemaMatricula.unah.HorarioInstructor(idHorario,
-																idInstructor,
-																idPeriodo,
-																idFechaInicioInstructor,
-																HoraInicio,
-																HoraFin
-																)
-														 VALUES(@idHorario,
-															    @idInstructor,
-															    @idPeriodo,
-															    @idFechaInicioInstructor,
-															    @HoraInicio,
-															    @HoraFin
-															   )
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
 --------------------------------------
 --CORRECCION: Inserción de Estudiante y empleado = Persona
 --------------------------------------
 
-
 /*------------------------------------------------------------------
 	TABLAS: Persona y Estudiante 
 */
-CREATE PROCEDURE [unah].[InsertarDatosPersonaEstudiante](
+CREATE PROCEDURE [unah].[spInsertarDatosPersonaEstudiante](
 			@idPersona VARCHAR(15),
 			@primerNombre VARCHAR(35),
 			@segundoNombre VARCHAR(35),
@@ -1525,7 +1328,7 @@ BEGIN TRY
 													  )
 
 	INSERT INTO ProyectoSistemaMatricula.unah.Estudiante(idEstudiante,
-														 perteneceDeportes,
+														 esRepresentanteArteoDeporte,
 														 UVDisponibles,
 														 contrasenia,
 														 idCentro,
@@ -1586,7 +1389,7 @@ GO
 /*------------------------------------------------------------------
 	TABLAS: Persona y Empleado 
 */
-CREATE PROCEDURE [unah].[InsertarDatosPersonaEmpleado](
+CREATE PROCEDURE [unah].[spInsertarDatosPersonaEmpleado](
 			@idPersona VARCHAR(15),
 			@primerNombre VARCHAR(35),
 			@segundoNombre VARCHAR(35),
@@ -1703,23 +1506,6 @@ BEGIN TRY
 														 @nombreCompleto,
 														 @numeroTelefono,
 														 @idParentesco)
-END TRY
-BEGIN CATCH
-	PRINT 'No se pudo registrar'
-END CATCH
-
-GO
-
-
-/*------------------------------------------------------------------
-	TABLA: 
-*/
-CREATE PROCEDURE [unah].[](
-			
-	)
-AS
-BEGIN TRY
-	
 END TRY
 BEGIN CATCH
 	PRINT 'No se pudo registrar'

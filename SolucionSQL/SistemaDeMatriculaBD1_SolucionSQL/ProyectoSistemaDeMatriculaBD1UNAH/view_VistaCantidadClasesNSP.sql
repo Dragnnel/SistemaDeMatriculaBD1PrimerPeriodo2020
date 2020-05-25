@@ -30,6 +30,6 @@
 
 /*
 SELECT *
-FROM VistaCantidadClasesNSP
+FROM [unah].[vwVistaCantidadClasesNSP]
 */
 

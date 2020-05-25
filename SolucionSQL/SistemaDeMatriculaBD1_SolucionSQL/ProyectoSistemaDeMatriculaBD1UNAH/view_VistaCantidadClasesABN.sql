@@ -28,6 +28,6 @@
 )
 /*
 SELECT *
-FROM VistaCantidadClasesABN
+FROM [unah].[vwVistaCantidadClasesABN]
 
 */

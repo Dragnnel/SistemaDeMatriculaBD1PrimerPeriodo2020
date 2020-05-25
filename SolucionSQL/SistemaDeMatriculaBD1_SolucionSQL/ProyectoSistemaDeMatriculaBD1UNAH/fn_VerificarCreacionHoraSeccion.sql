@@ -46,9 +46,12 @@ END
 
 /*
 SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
-SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0801',0800,0900) as Respuesta
+SELECT [unah].[fnVerificarCreacionHoraSeccion] ('0801',0800,0900) as Respuesta
 
-SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0901',0800,0900) as Respuesta
+SELECT [unah].[fnVerificarCreacionHoraSeccion] ('0901',0800,0900) as Respuesta
 
-SELECT [unah].[fn_VerificarCreacionHoraSeccion] ('0901',0900,0700) as Respuesta
+SELECT [unah].[fnVerificarCreacionHoraSeccion] ('0901',0900,0700) as Respuesta
+
+SELECT [unah].[fnVerificarCreacionHoraSeccion] ('0401',0400,0600) as Respuesta
+
 */

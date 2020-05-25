@@ -26,5 +26,5 @@ WHERE T2.indiceGlobal >=80
 
 /*
 SELECT *
-FROM VistaExcelenciaAcademica
+FROM [unah].[vwVistaExcelenciaAcademica]
 */

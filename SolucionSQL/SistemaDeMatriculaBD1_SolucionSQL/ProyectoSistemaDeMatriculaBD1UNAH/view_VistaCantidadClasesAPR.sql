@@ -28,5 +28,5 @@
 
 /*
 SELECT *
-FROM VistaCantidadClasesAPR
+FROM [unah].[vwVistaCantidadClasesAPR]
 */

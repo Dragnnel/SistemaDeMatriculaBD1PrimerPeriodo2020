@@ -14,7 +14,7 @@ CREATE PROCEDURE [unah].[spEstudianteExiste](
 									                   
 As
 BEGIN
-    DECLARE @resp INT =(SELECT [unah].[VerificarEstudiante](@idEstudiante));
+    DECLARE @resp INT =(SELECT [unah].[fnVerificarEstudiante](@idEstudiante));
 	
 
 	IF  @resp = 1
@@ -34,3 +34,5 @@ BEGIN
 
 END
 GO
+
+EXECUTE [unah].[spEstudianteExiste] '20173452710' , '  '

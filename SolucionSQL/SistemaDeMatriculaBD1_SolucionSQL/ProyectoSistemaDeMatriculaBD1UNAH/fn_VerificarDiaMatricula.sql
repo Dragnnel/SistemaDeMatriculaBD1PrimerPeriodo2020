@@ -1,4 +1,4 @@
--- =============================================
+  -- =============================================
 -- Author:		Francis Ruby Gonzales					
 --				Luis Fernando Estrada
 --				David Alexander Palacios
@@ -34,21 +34,35 @@ CREATE FUNCTION [unah].[fnVerificarDiaMatricula](
 	DECLARE @conteoclasesrepro INT;
 	DECLARE @primeringreso INT;
 	DECLARE @clasesCarrera INT;
-	DECLARE @suma INT = (@conteoclasespasadas + @conteoclasesrepro);
+	DECLARE @conteoclasesNsp INT;
+	DECLARE @conteoclasesAbn INT;
+	DECLARE @sumaClasesApnRpbAbnNsp INT = (@conteoclasespasadas + @conteoclasesrepro + @conteoclasesAbn + @conteoclasesNsp);
 	set @respuesta = 0;
 	
 	
-	            SELECT @conteoclasesrepro=T3.descripcion
-						FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
-						INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
-						ON t1.idObservacionNota = t3.idObservacionNotaFinal
-						WHERE T3.descripcion IS NULL 
+	            SELECT @conteoclasesrepro= COUNT( T1.idObservacionNota) 
+								   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+									INNER JOIN ProyectoSistemaMatricula.unah.Matricula T2
+									ON T1.idMatricula =T2.idMatricula
+									WHERE T2.idEstudiante= @idEstudiante AND T2.idHistorial =@idEstudiante AND T1.idObservacionNota ='RPB' 
 
-                SELECT @conteoclasespasadas =T3.descripcion
-						FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
-						INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
-						ON t1.idObservacionNota =t3.idObservacionNotaFinal
-						WHERE T3.descripcion IS NULL
+				 SELECT @conteoclasesAbn= COUNT( T1.idObservacionNota) 
+								   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+									INNER JOIN ProyectoSistemaMatricula.unah.Matricula T2
+									ON T1.idMatricula =T2.idMatricula
+									WHERE T2.idEstudiante= @idEstudiante AND T2.idHistorial =@idEstudiante AND T1.idObservacionNota ='ABN' 
+
+				 SELECT @conteoclasesNsp= COUNT( T1.idObservacionNota) 
+								   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+									INNER JOIN ProyectoSistemaMatricula.unah.Matricula T2
+									ON T1.idMatricula =T2.idMatricula
+									WHERE T2.idEstudiante= @idEstudiante AND T2.idHistorial =@idEstudiante AND T1.idObservacionNota ='NSP' 
+
+                SELECT @conteoclasespasadas =  COUNT( T1.idObservacionNota) 
+								   FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
+									INNER JOIN ProyectoSistemaMatricula.unah.Matricula T2
+									ON T1.idMatricula =T2.idMatricula
+									WHERE T2.idEstudiante= @idEstudiante AND T2.idHistorial =@idEstudiante AND T1.idObservacionNota ='APR' 
 
 				SELECT @primeringreso=T2.notaPaa 
 						FROM ProyectoSistemaMatricula.unah.Estudiante T1
@@ -56,9 +70,13 @@ CREATE FUNCTION [unah].[fnVerificarDiaMatricula](
 						ON T1.idNotaAptitud=T2.idNotaAptitud
 						WHERE idEstudiante=@idEstudiante 
 
-				/*SELECT @clasesCarrera= cantidadClasesCarrera
-                      FROM ProyectoSistemaMatricula.unah.PlanEstudio
-					  WHERE idEstudiante=@idEstudiante */
+				SELECT @clasesCarrera= T1.cantidadClasesCarrera
+						FROM ProyectoSistemaMatricula.unah.PlanEstudio T1
+						INNER JOIN ProyectoSistemaMatricula.unah.Carrera T2
+						ON T2.idPlanEstudio =T1.idPlanEstudio
+						INNER JOIN ProyectoSistemaMatricula.unah.Estudiante T3
+						ON T3.idCarrera = T2.idCarrera
+						WHERE T3.idEstudiante =@idEstudiante
 
 
 						SELECT @condicionDeporte=esRepresentanteArteoDeporte 
@@ -74,44 +92,44 @@ CREATE FUNCTION [unah].[fnVerificarDiaMatricula](
 				WHERE idEstudiante=@idEstudiante  
 
 
-				IF(@conteoclasesrepro IS NULL) AND (@conteoclasespasadas IS NULL) AND ( @condicion IS NULL) AND ( @condicionindicePeriodo IS NULL)
+				IF(@sumaClasesApnRpbAbnNsp =0)  
 				   IF (@primeringreso>=1000) OR (@primeringreso<=1600)
 				       BEGIN
-						   IF(@prueba='2020-05-10')
+						   IF(@prueba='2020-05-25')
 							 SET @respuesta =1
 						END
 				   ELSE
 				      BEGIN
 						 IF (@primeringreso>=7000) OR (@primeringreso<=999)
 						   BEGIN
-				            IF(@prueba='2020-05-10')
+				            IF(@prueba='2020-05-26')
 					          SET @respuesta =1
 						   END
 					  END
 				ELSE
 				    BEGIN
-						IF(60 - @conteoclasespasadas)<=10 AND (@prueba='2020-05-10')
+						IF(@clasesCarrera - @conteoclasespasadas)<=10 AND (@prueba='2020-05-26')
 							SET @respuesta =1
 						ELSE
 							BEGIN
-								IF (@condicionDeporte=1) and (@prueba='2020-05-10')
+								IF (@condicionDeporte=1) and (@prueba='2020-05-24')
 									SET @respuesta =1
 								ELSE
 									BEGIN
-										IF (@condicion>=80)  and ( @prueba='2020-05-10')
+										IF (@condicion>=80)  and ( @prueba='2020-05-24')
 											IF(@conteoclasespasadas>=10) ---se puede probar con 3 porque segun los datos que ingrese el que tiene mas es igual a 3
 									         SET @respuesta = 1;
 										ELSE
 											BEGIN
-												IF (@condicionindicePeriodo>=90) and (@condicionindicePeriodo <=100) and (@prueba='2020-05-10') 
+												IF (@condicionindicePeriodo>=90) and (@condicionindicePeriodo <=100) and (@prueba='2020-05-24') 
 													SET @respuesta = 1;
 												ELSE
 													BEGIN
-														IF (@condicionindicePeriodo>=70) and (@condicionindicePeriodo <=89) and ( @prueba='2020-05-10') 
+														IF (@condicionindicePeriodo>=70) and (@condicionindicePeriodo <=89) and ( @prueba='2020-05-24') 
 															SET @respuesta = 1;	
 														ELSE
 															BEGIN
-																IF (@condicionindicePeriodo>=0) and (@condicionindicePeriodo <=69) and (@prueba='2020-05-15') 
+																IF (@condicionindicePeriodo>=0) and (@condicionindicePeriodo <=69) and (@prueba='2020-05-24') 
 																	 SET @respuesta = 1;
 																ELSE
 																	 SET @respuesta = 0;
@@ -132,24 +150,10 @@ CREATE FUNCTION [unah].[fnVerificarDiaMatricula](
     END
     GO
 
-/*SELECT [dbo].[VerificarDiaMatricula](2020499755) ---Primer Ingreso Regresa 1
-SELECT [dbo].[VerificarDiaMatricula](304499755)---- Reingreso regresa 0
+/*3  Regresa 1
+SELECT [unah].[fnVerificarDiaMatricula](20168905411) ---- Reingreso regresa 0
+2 
 
-SELECT [dbo].[VerificarDiaMatricula](705864082)---Indice periodo 87 por su indice regresa 1
-SELECT [dbo].[VerificarDiaMatricula](881059432)----- indice periodo 65
-
-SELECT * 
-	FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
-	INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal NF
-	ON NF.idObservacionNotaFinal = SM.idObservacionNota
-
-DECLARE @conteoclasesrepro INT
-
-SELECT @conteoclasesrepro= SUM(T3.descripcion)
-					FROM ProyectoSistemaMatricula.unah.SeccionMatricula T1
-					INNER JOIN ProyectoSistemaMatricula.unah.ObservacionNotaFinal T3
-					ON t1.idObservacionNota = t3.idObservacionNotaFinal
-					WHERE T3.idObservacionNotaFinal = 'RPB' 
-
-PRINT @conteoclasesrepro
+SELECT *FROM ProyectoSistemaMatricula.unah.Estudiante
 */
+

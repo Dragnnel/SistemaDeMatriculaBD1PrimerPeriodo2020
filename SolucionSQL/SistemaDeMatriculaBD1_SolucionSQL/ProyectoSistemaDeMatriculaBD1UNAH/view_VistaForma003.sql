@@ -53,5 +53,5 @@ ON SE.idCodigoAula=AULA.idCodigoAula
 
 /*
 SELECT *
-FROM VistaForma003
+FROM [unah].[vwVistaForma003]
 */

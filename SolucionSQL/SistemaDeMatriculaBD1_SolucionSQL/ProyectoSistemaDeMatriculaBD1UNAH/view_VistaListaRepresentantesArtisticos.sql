@@ -28,6 +28,6 @@
 
 /*
 SELECT *
-FROM VistaListaRepresentantesArtisticos
+FROM [unah].[vwVistaListaRepresentantesArtisticos]
 
 */

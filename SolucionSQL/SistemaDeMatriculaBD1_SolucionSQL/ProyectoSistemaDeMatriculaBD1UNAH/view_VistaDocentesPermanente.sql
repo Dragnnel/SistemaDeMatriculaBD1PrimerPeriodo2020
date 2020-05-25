@@ -25,6 +25,6 @@
 
 /*
 SELECT *
-FROM VistaDocentesPermanente
+FROM [unah].[vwVistaDocentesPermanente]
 */
 
