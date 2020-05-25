@@ -14,7 +14,7 @@ GO
 --													* Un 0 si no se encuentra activo estudiando en un respectivo periodo academico (aqui se necesitara calcular un ultimo idMatricula)
 -- =============================================
 
-CREATE PROCEDURE [unah].[spObtenerHistorialAcademico] (
+ALTER PROCEDURE [unah].[spObtenerHistorialAcademico] (
 		@idEstudiante VARCHAR(11),
 		@EstudiandoActualmente INT
 	)
@@ -86,8 +86,10 @@ BEGIN
 					ON A.idAsignatura = S.idAsignatura
 			INNER JOIN ProyectoSistemaMatricula.unah.Docente D
 					ON D.idDocente = S.idDocente
+			INNER JOIN ProyectoSistemaMatricula.unah.Empleado E
+					ON E.idEmpleado = D.idDocente
 			INNER JOIN ProyectoSistemaMatricula.unah.Persona Pe
-					ON Pe.idPersona = D.idDocente
+					ON Pe.idPersona = E.idPersona
 			INNER JOIN ProyectoSistemaMatricula.unah.Periodo P
 				    ON (    S.idPeriodo = P.idPeriodo 
 						AND S.fechaInicioPeriodo = P.fechaInicio 
@@ -266,6 +268,16 @@ SELECT SM.idAsignatura,
 	WHERE M.idEstudiante = @idEstudiante
 	  AND M.idHistorial = @idHistorial
 	  AND SM.idObservacionNota IN ('APR','NSP','RPB')
+
+SELECT * 
+	FROM ProyectoSistemaMatricula.unah.Empleado E
+	INNER JOIN ProyectoSistemaMatricula.unah.Docente D
+	ON D.idDocente = E.idEmpleado
+	INNER JOIN ProyectoSistemaMatricula.unah.Persona P
+	ON P.idPersona = E.idPersona
 */
 
 ---------------------------------------------------------------------------------------------------------------
+EXECUTE [unah].[spObtenerHistorialAcademico] '20118976876',0
+
+--EXECUTE [unah].[spObtenerForma003]

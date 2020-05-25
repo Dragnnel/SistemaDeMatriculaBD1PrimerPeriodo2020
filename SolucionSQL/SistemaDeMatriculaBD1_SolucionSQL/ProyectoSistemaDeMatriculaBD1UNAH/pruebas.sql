@@ -1,4 +1,4 @@
-
+/*
 -------------------------------------------------------------------------------------------------------------------------------------
 SELECT SM.idAsignatura
 	FROM ProyectoSistemaMatricula.unah.SeccionMatricula SM
@@ -217,3 +217,91 @@ UPDATE ProyectoSistemaMatricula.unah.SeccionMatricula
 
 SELECT *
 	FROM ProyectoSistemaMatricula.unah.Asignatura
+*/
+
+	
+SELECT * FROM ProyectoSistemaMatricula.unah.Persona
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Asignatura
+SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
+
+SELECT * FROM ProyectoSistemaMatricula.unah.Matricula
+SELECT * FROM ProyectoSistemaMatricula.unah.Estudiante
+SELECT * FROM ProyectoSistemaMatricula.unah.Carrera
+
+SELECT * FROM ProyectoSistemaMatricula.unah.PlanEstudio
+SELECT * FROM ProyectoSistemaMatricula.unah.PensumAcademico
+
+SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+
+
+/*
+	PLAN DE ESTUDIO
+*/
+EXECUTE [unah].[spObtenerPlanDeEstudio] 1
+EXECUTE [unah].[spObtenerPlanDeEstudio] 2
+EXECUTE [unah].[spObtenerPlanDeEstudio] 10
+
+
+
+/*
+	SECCIONMATRICULA
+*/
+
+SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+
+--Estudiante de La carrera de Ing. Sistemas
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  5, 'MM110', '0700', NULL, NULL  --Carrera ya cursada
+
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  5, 'BI043', '1100', NULL, NULL  --Asignatura que no esta en el plan de estudio
+
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  5, 'FS100', '0700', NULL, NULL  --Faltan Requisitos
+
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  5, 'MM111', '1000', NULL, NULL  --Matriculada Con exito
+
+
+--Estudiante de la carrera de Matematicas
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  2, 'MM111', '1000', NULL, NULL  --Matricula con exito
+
+UPDATE ProyectoSistemaMatricula.unah.SeccionMatricula
+	SET	notaFinal = 80,
+	    idObservacionNota = 'APR'
+  WHERE idMatricula = 2
+	AND	idAsignatura = 'MM111'
+	AND idSeccion = '1000'
+
+--Estudiante de Pedagogia Primer ingreso
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  14, 'EG011', '0600', NULL, NULL --Matricula con exito
+
+EXECUTE [unah].[spInsertarDatosSeccionMatricula]  14, 'MM110', '0700', NULL, NULL --No tiene la asignatura en plan de estudio
+
+
+
+/*
+	FORMA 003
+*/
+EXECUTE [unah].[spObtenerForma003] '20118976876'    --Estudiante Ingenieria
+
+EXECUTE [unah].[spObtenerForma003] '20197619851'	--Estudiante de Matematicas
+
+EXECUTE [unah].[spObtenerForma003] '20201235684'	--Estudiante de Pedagogia
+
+
+
+/*
+	CANCELAR SECCION MATRICULADA
+*/
+
+EXECUTE [unah].[spCancelarSeccionMatriculada] 14, 'EG011' , '0600'   --Cancela con exito
+
+EXECUTE [unah].[spCancelarSeccionMatriculada] 14, 'MM110' , '0700'   --No esta Matriculada
+
+
+/*
+	OBTENER HISTORIAL ACADEMICO
+*/
+EXECUTE [unah].[spObtenerHistorialAcademico] '20118976876',1
+
+EXECUTE [unah].[spObtenerHistorialAcademico] '20197619851',1
+
+EXECUTE [unah].[spObtenerHistorialAcademico] '20201235684',1
