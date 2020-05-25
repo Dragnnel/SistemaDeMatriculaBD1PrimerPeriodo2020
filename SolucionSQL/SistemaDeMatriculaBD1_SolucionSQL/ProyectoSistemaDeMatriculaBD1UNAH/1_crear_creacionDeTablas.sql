@@ -489,6 +489,20 @@ CREATE TABLE ProyectoSistemaMatricula.unah.log_SeccionEliminada(
 														PRIMARY KEY (idSeccionLog,idAsignatura,fecha)
 														);
 
+CREATE TABLE ProyectoSistemaMatricula.unah.log_SeccionModificada(
+														idSeccionLog  VARCHAR(15),
+														idAsignatura  VARCHAR(15), 
+														idCodigoAula VARCHAR(25),
+														dCodigoEdificio VARCHAR (25),
+														idDocente INT,
+														fechaInicioCargo DATE,
+														idPeriodo CHAR(3),
+														fechaInicioPeriodo DATE,
+														observacion VARCHAR(300),
+														fecha DATETIME ,
+														PRIMARY KEY (idSeccionLog,idAsignatura,idPeriodo,fechaInicioPeriodo,fecha)
+														);
+
 
 
 
