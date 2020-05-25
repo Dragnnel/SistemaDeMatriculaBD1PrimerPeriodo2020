@@ -36,7 +36,7 @@ INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) 
 INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('EC', 'Ecuador',1);
 INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('ID', 'Indonesia',3);
 INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('PY', 'Paraguay',1);
-INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('SP', 'España',2);
+INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('SP', 'Espaï¿½a',2);
 INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('FR', 'France',2);
 INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('CA', 'Canada',1);
 INSERT INTO ProyectoSistemaMatricula.unah.Pais (codigoPais, Pais, idContinente) VALUES ('MD', 'Madagascar',4);
@@ -206,7 +206,7 @@ INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatu
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
 											('EN011','Enf. Pres. y Futuro I',3,1,1,2);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
-											('BI043','	Ecología y Salud I',4,0,0,2);
+											('BI043','	Ecologï¿½a y Salud I',4,0,0,2);
 
 ----------------------------------------------
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
@@ -222,7 +222,7 @@ INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatu
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
 											('MM314','PROGRAMACION I',3,0,0,1);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
-											('EG011','ESPAÑOL GENERAL 1',4,0,0,1);
+											('EG011','ESPAï¿½OL GENERAL 1',4,0,0,1);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
 											('IS210','PROGRAMACION II',4,0,0,1);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
@@ -295,9 +295,9 @@ INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatu
 											('FS321','ELECTRICIDAD Y MAGNETISMO I (L)',5,1,0,1);
 
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
-											('EE101','Español General',4,0,0,1);
+											('EE101','Espaï¿½ol General',4,0,0,1);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
-											('EE210','Español General II',4,0,0,1);
+											('EE210','Espaï¿½ol General II',4,0,0,1);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
 											('LS102','TEORIA SOCIOLOGICA',4,0,0,1);
 INSERT INTO ProyectoSistemaMatricula.unah.Asignatura(idAsignatura,nombreAsignatura,unidadesValorativas,examenUnificado,poseeLaboratorio,idTipoPeriodo) VALUES
@@ -418,16 +418,16 @@ CREATE TABLE ProyectoSistemaMatricula.unah.PlanEstudio(
 														 );
 SELECT * FROM ProyectoSistemaMatricula.unah.PlanEstudio
 */
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (1, 'Ingenieria en sistemas', '5 años', 225, '2005-07-03', 56);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (2, 'Licenciatura en Matecaticas', '4 años', 250, '2018-03-10', 60);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (3, 'Licenciatura en Biologia', '6 años', 180, '2004-03-02', 48);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (4, 'Ingenieria Quimica', '5 años', 300, '2001-06-16', 56);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (5, 'Ingenieria Electrica', '6 años', 210, '2015-12-17', 54);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (6, 'Licenciatura en sociologia', '5 años', 212, '2007-02-23', 44);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (7, 'Licenciatura en Informatica Administrativa', '4 años', 253, '2008-03-09', 48);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (8, 'Ingenieria Industrial', '5 años', 354, '2006-09-27', 49);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (9, 'Medicina', '10 años', 160, '2001-08-19',60);
-INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (10, 'Licenciatura en pedagogia', '4 años', 165, '2006-08-18', 44);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (1, 'Ingenieria en sistemas', '5 aï¿½os', 225, '2005-07-03', 56);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (2, 'Licenciatura en Matecaticas', '4 aï¿½os', 250, '2018-03-10', 60);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (3, 'Licenciatura en Biologia', '6 aï¿½os', 180, '2004-03-02', 48);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (4, 'Ingenieria Quimica', '5 aï¿½os', 300, '2001-06-16', 56);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (5, 'Ingenieria Electrica', '6 aï¿½os', 210, '2015-12-17', 54);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (6, 'Licenciatura en sociologia', '5 aï¿½os', 212, '2007-02-23', 44);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (7, 'Licenciatura en Informatica Administrativa', '4 aï¿½os', 253, '2008-03-09', 48);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (8, 'Ingenieria Industrial', '5 aï¿½os', 354, '2006-09-27', 49);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (9, 'Medicina', '10 aï¿½os', 160, '2001-08-19',60);
+INSERT INTO ProyectoSistemaMatricula.unah.PlanEstudio (idPlanEstudio, nombre, duracionCarrera, totalUV, fechaRevision, cantidadClasesCarrera) VALUES (10, 'Licenciatura en pedagogia', '4 aï¿½os', 165, '2006-08-18', 44);
 
 
 /*
@@ -884,10 +884,10 @@ INSERT INTO ProyectoSistemaMatricula.unah.Aula(idCodigoAula, idCodigoEdificio, c
 */
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (1, 'Facultad De Ingenieria', 'B2', 1);
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (2, 'Facultad Ciencias Sociales',  'G1', 1);
-INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (3, 'Facultad Química y Farmacia', 'B2', 1);
+INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (3, 'Facultad Quï¿½mica y Farmacia', 'B2', 1);
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (4, 'Facultad Medicina', 'G1', 1);
-INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (5, 'Facultad Odontología',  'G1', 1);
-INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (6, 'Facultad Ciencias Jurídicas',  'D1', 1);					  
+INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (5, 'Facultad Odontologï¿½a',  'G1', 1);
+INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (6, 'Facultad Ciencias Jurï¿½dicas',  'D1', 1);					  
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (7, 'Facultad Humanidades y Artes',  'D1', 1);					  
 INSERT INTO  ProyectoSistemaMatricula.unah.Facultad(idFacultad, facultad,  idEdificio, idCentroUniversitario) VALUES (8, 'Facultad Ciencias Espaciales',  'H1', 1);					  
 
@@ -902,8 +902,8 @@ INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripci
 INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (4, 'Tolupan');
 INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (5, 'Los Lencas');
 INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (6, 'Misquito');
-INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (7, 'Los Chortís');
-INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (8, 'Los Garífunas');
+INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (7, 'Los Chortï¿½s');
+INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (8, 'Los Garï¿½funas');
 INSERT INTO ProyectoSistemaMatricula.unah.GruposEtnico (idGrupoEtnico, descripcion) VALUES (9, 'Ninguno');
 
 
@@ -912,8 +912,8 @@ INSERT INTO ProyectoSistemaMatricula.unah.TipoDiscapacidad (idDiscapacidad, desc
 INSERT INTO ProyectoSistemaMatricula.unah.TipoDiscapacidad (idDiscapacidad, descripcion) VALUES (3, 'Motora');
 INSERT INTO ProyectoSistemaMatricula.unah.TipoDiscapacidad (idDiscapacidad, descripcion) VALUES (4, 'Ninguna');
 
-INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (1, 'Hondureño');
-INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (2, 'Salvadoreño');
+INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (1, 'Hondureï¿½o');
+INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (2, 'Salvadoreï¿½o');
 INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (3, 'Mexicano');
 INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (4, 'Costarisense');
 INSERT INTO  ProyectoSistemaMatricula.unah.Nacionalidad (idNacionalidad, descripcion) VALUES (5, 'Argentino');
@@ -1228,6 +1228,36 @@ INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaI
 											 ('BI043','1100',1100,1200,005,'101','H1','Clase presencial',65,
 												001,001,'2019-01-01','I','2020-01-01',002);
 
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('EG011','0700',0700,0800,003,'101','F1','Clase presencial',65,
+												001,001,'2019-01-01','I','2019-01-01',001);
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('EG011','0600',0700,0800,003,'101','F1','Clase presencial',65,
+												001,001,'2019-01-01','I','2020-01-01',001);
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('FF101','0900',0900,1000,003,'101','D1','Clase presencial',65,
+												001,001,'2019-01-01','I','2019-01-01',001);
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('HH101','1000',1000,1100,003,'101','D1','Clase presencial',65,
+												001,001,'2019-01-01','I','2019-01-01',001);
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('IN101','1100',1100,1200,003,'115','C1','Clase presencial',65,
+												001,001,'2019-01-01','II','2019-05-22',001);
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('MM110','0700',0700,0800,003,'101','D1','Clase presencial',65,
+												001,001,'2019-01-01','II','2019-05-22',001);
+INSERT INTO  ProyectoSistemaMatricula.unah.Seccion	(idAsignatura,idSeccion,horaInicial, horaFinal,idDias,idCodigoAula,idCodigoEdificio,observaciones,cuposDisponibles,
+											  idTipoSeccion,idDocente,fechaInicioCargo,idPeriodo,fechaInicioPeriodo,idTipoPeriodo) VALUES
+											 ('MM111','1000',1000,1100,003,'101','F1','Clase presencial',65,
+												001,001,'2019-01-01','II','2019-05-22',001);
+
+											SELECT * FROM ProyectoSistemaMatricula.unah.Aula
 SELECT * 
 	FROM  ProyectoSistemaMatricula.unah.Seccion
 
@@ -1265,8 +1295,11 @@ INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresenta
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20173452710', 0, '25', 'TT', 11, 083119930089, 0, 1, 10, 0);
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20201235684', 0, '25', 'JJ', 11, 120119930089, 0, 1, 10, 0);
 INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20297653456', 0, '25', 'OO', 11, 082119930089, 0, 1, 10, 0);
-INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20178905411', 0, '25', 'ss', 11, 081719930089, 0, 1, 10, 0); 
-INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20168905411', 0, '25', 'ss', 11, 3457801199300, 0, 1, 10, 0);
+INSERT INTO ProyectoSistemaMatricula.unah.Estudiante (idEstudiante, esRepresentanteArteoDeporte, uvDisponibles, contrasenia, idNotaAptitud, idPersona, cursoCursoModalidaDeClasesVirtuales, cursoCursoIntroduccionVidaUniversitaria, idCarrera, poseeCarreraSimultanea) VALUES ('20178905411', 0, '25', 'ss', 11, 081719930089, 0, 1, 10, 0);
+
+UPDATE ProyectoSistemaMatricula.unah.Estudiante
+	SET idCentro = 1
+
 /*
 UPDATE ProyectoSistemaMatricula.unah.Estudiante
    SET idCentro = 1 
@@ -1292,6 +1325,7 @@ SELECT *
 	FROM ProyectoSistemaMatricula.unah.HistorialAcademico
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 */
+
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (1, 1, '2020-01-01', '2020-01-29', 'I','2020-01-01', 2, '20191018932', '20191018932');
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (2, 0, '2020-07-14', '2020-04-10','I','2020-01-01', 2, '20197619851', '20197619851');
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (3, 1, '2020-07-09', '2019-09-05', 'I', '2020-01-01', 2, '20185629087', '20185629087');
@@ -1303,3 +1337,30 @@ INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPa
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (9, 1, '2020-06-17', '2019-12-15','II', '2020-05-01', 1, '20191017854' , '20191017854' );
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (10, 1, '2020-06-17', '2019-12-15','II', '2020-05-01', 1 ,'20181985678' , '20181985678');
 INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES (11, 1, '2020-06-17', '2019-12-15','II', '2020-05-01', 1, '20173452710', '20173452710');
+
+INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES 
+													(12, 1, '2019-01-10', '2019-01-20','I','2019-01-01',1 , '20118976876' , '20118976876');
+INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES 
+													(13, 1, '2019-05-25', '2019-06-2','II','2019-05-22',1 , '20118976876' , '20118976876');
+INSERT INTO ProyectoSistemaMatricula.unah.Matricula (idMatricula, confirmacionPago, fechaInicio, fechaFin, idPeriodo,  fechaInicioPeriodo, idTipoPeriodo, idEstudiante, idHistorial) VALUES 
+													(14, 1, '2020-01-01', '2020-01-15','I','2020-01-01',1 , '20201235684' , '20201235684');
+
+/*
+	SECCION MATRICULA
+*/
+
+SELECT * FROM ProyectoSistemaMatricula.unah.SeccionMatricula
+SELECT * FROM ProyectoSistemaMatricula.unah.Matricula
+SELECT * FROM ProyectoSistemaMatricula.unah.Seccion
+SELECT * FROM ProyectoSistemaMatricula.unah.Estudiante
+
+INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,idAsignatura,idSeccion,notaFinal,idObservacionNota) 
+			VALUES (12,'EG011','0700',95,'APR')
+INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,idAsignatura,idSeccion,notaFinal,idObservacionNota) 
+			VALUES (12,'FF101','0900',92,'APR')
+INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,idAsignatura,idSeccion,notaFinal,idObservacionNota) 
+			VALUES (12,'HH101','1000',99,'APR')
+INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,idAsignatura,idSeccion,notaFinal,idObservacionNota) 
+			VALUES (13,'IN101','1100',100,'APR')
+INSERT INTO ProyectoSistemaMatricula.unah.SeccionMatricula(idMatricula,idAsignatura,idSeccion,notaFinal,idObservacionNota) 
+			VALUES (13,'MM110','0700',82,'APR')

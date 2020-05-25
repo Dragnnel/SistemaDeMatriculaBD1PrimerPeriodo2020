@@ -108,7 +108,8 @@ BEGIN
 	IF NOT EXISTS(SELECT *
 					  FROM ProyectoSistemaMatricula.unah.PensumAcademico PA
 				     WHERE PA.idAsignatura = @idAsignatura
-					   AND PA.idPlanEstudio = @idPlaEstudio)
+					   AND PA.idPlanEstudio = @idPlaEstudio
+					)
 		BEGIN
 			SET @retorno = 'No tiene la asignatura en su Plan de estudio'
 		END
@@ -207,5 +208,5 @@ SELECT * FROM ProyectoSistemaMatricula.unah.PensumAcademico
 
 
 
-PRINT [unah].[fnCumpleRequisitos] (2, 'FS100')
+PRINT [unah].[fnCumpleRequisitos] (5, 'MM110')
 */

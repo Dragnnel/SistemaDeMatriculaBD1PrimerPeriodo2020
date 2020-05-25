@@ -13,8 +13,8 @@ GO
 
 CREATE PROCEDURE [unah].[spInsertarDatosSeccionMatricula](
 			@idMatricula INT,
-			@idSeccion VARCHAR(15),
 			@idAsignatura VARCHAR(15),
+			@idSeccion VARCHAR(15),
 			@notaFinal FLOAT,
 			@idObservacionNota CHAR(3)
 	)

@@ -35,7 +35,7 @@ BEGIN
 
 		--Cuenta, nombre, carrera, centro, año
 
-		SELECT E.idCarrera AS Cuenta,
+		SELECT E.idEstudiante AS Cuenta,
 		       CONCAT(P.primerNombre,' ', P.segundoNombre,' ', P.primerApellido,' ', P.segundoApellido) AS Nombre,
 			   C.nombreCarrera AS Carrera,
 			   CU.centroUniversitario AS Centro,

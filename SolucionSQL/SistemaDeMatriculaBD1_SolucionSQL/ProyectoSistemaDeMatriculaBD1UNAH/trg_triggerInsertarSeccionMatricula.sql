@@ -73,14 +73,17 @@ IF @uvAsignatura <= @uvEstudiante
 																				   @idAsignatura,
 																				   NULL)
 
+
+				DELETE ProyectoSistemaMatricula.unah.SeccionMatricula
+				  WHERE idMatricula = @idMatricula
+					AND idSeccion = @idSeccion
+				    AND idAsignatura = @idAsignatura
+
 				UPDATE ProyectoSistemaMatricula.unah.Estudiante
 				   SET UVDisponibles = UVDisponibles - @uvAsignatura
 				 WHERE idEstudiante = @idEstudiante
 
-				 DELETE ProyectoSistemaMatricula.unah.SeccionMatricula
-				  WHERE idMatricula = @idMatricula
-					AND idSeccion = @idSeccion
-				    AND idAsignatura = @idAsignatura
+				 
 				
 				PRINT 'Seccion matriculada en lista de espera'
 			END
